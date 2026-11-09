@@ -10,8 +10,8 @@ import { App } from './App'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <App />
-    {/* Cookieless. Page views are sent without the query string: the check itself
-        (district, item, price) only goes out as the price_checked event's coarse fields. */}
+    {/* Vercel Analytics: page views only (cookieless), sent without the query string.
+        Custom events go to Umami via src/analytics.ts. */}
     <Analytics beforeSend={(e) => ({ ...e, url: e.url.split('?')[0]! })} />
   </StrictMode>,
 )

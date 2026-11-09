@@ -1,5 +1,6 @@
 import type { District, Group, Item } from './data'
 import { fmtDate, fmtShortDate, rm, shopTypeByValue } from './data'
+import { rulerGeometry } from './ruler'
 import type { Band, Check, Note } from './verdict'
 
 // KPDN consumer complaints portal, checked 2026-11-09: https://eaduan.kpdn.gov.my/
@@ -42,30 +43,29 @@ function noteText(n: Note, district: string): string {
   }
 }
 
-/** Min..max ruler with the middle half (p25..p75) solid and the user's price as a hanging tag. */
+/**
+ * Range bar: the full-width track is the price axis; the shops' min..max sits on it, with the
+ * middle half (p25..p75) solid and a median notch. The user's price hangs as a yellow tag; when
+ * it falls outside the range, a dashed line links it back to the nearest end. No text on the
+ * axis: the numbers are in a sentence underneath, so nothing can collide (aria-hidden: the
+ * sentence says it all).
+ */
 function RangeBar({ g, price }: { g: Group; price: number | null }) {
-  const lo = Math.min(g.min, price ?? g.min)
-  const hi = Math.max(g.max, price ?? g.max)
-  const span = hi - lo || 1
-  const pos = (v: number) => `${(((v - lo) / span) * 100).toFixed(2)}%`
-  const pricePct = price === null ? 0 : ((price - lo) / span) * 100
-  const align = pricePct < 18 ? 'start' : pricePct > 82 ? 'end' : 'center'
+  const r = rulerGeometry({ min: g.min, p25: g.p25!, median: g.median!, p75: g.p75!, max: g.max }, price)
+  const at = (n: number) => `${n.toFixed(2)}%`
   return (
     <div className="ruler" aria-hidden="true">
-      {price !== null && (
-        <div className={`ruler-tag ruler-tag--${align}`} style={{ left: pos(price) }}>
+      {price !== null && r.marker !== null && (
+        <div className={`ruler-tag ruler-tag--${r.tagAlign}`} style={{ left: at(r.marker) }}>
           <span>{rm(price)}</span>
         </div>
       )}
       <div className="ruler-track">
-        <div className="ruler-span" style={{ left: pos(g.min), right: `calc(100% - ${pos(g.max)})` }} />
-        <div className="ruler-mid" style={{ left: pos(g.p25!), right: `calc(100% - ${pos(g.p75!)})` }} />
-        <div className="ruler-median" style={{ left: pos(g.median!) }} />
-        {price !== null && <div className="ruler-pin" style={{ left: pos(price) }} />}
-      </div>
-      <div className="ruler-scale">
-        <span style={{ left: pos(g.min) }} className="ruler-lab ruler-lab--min">{rm(g.min)}</span>
-        <span style={{ left: pos(g.max) }} className="ruler-lab ruler-lab--max">{rm(g.max)}</span>
+        <div className="ruler-range" style={{ left: at(r.range.left), width: at(r.range.width) }} />
+        <div className="ruler-mid" style={{ left: at(r.mid.left), width: at(r.mid.width) }} />
+        <div className="ruler-median" style={{ left: at(r.median) }} />
+        {r.connector && <div className="ruler-dash" style={{ left: at(r.connector.left), width: at(r.connector.width) }} />}
+        {r.marker !== null && <div className="ruler-pin" style={{ left: at(r.marker) }} />}
       </div>
     </div>
   )
@@ -139,11 +139,22 @@ export function Result(props: {
       )}
 
       <RangeBar g={g} price={price} />
-      <p className="range-text">
-        Most shops charge <strong className="num">{rm(g.p25!)} – {rm(g.p75!)}</strong>. Middle price{' '}
-        <span className="num">{rm(g.median!)}</span>, lowest <span className="num">{rm(g.min)}</span>, highest{' '}
-        <span className="num">{rm(g.max)}</span>.
-      </p>
+      {g.min === g.max ? (
+        <p className="range-ends">Every shop we track charges <strong className="num">{rm(g.min)}</strong>.</p>
+      ) : (
+        <>
+          <p className="range-ends">
+            {/* each label stays with its number; the line may only wrap at the separators */}
+            <span className="pair">Lowest <span className="num">{rm(g.min)}</span></span> ·{' '}
+            <span className="pair">Typical <span className="num">{rm(g.median!)}</span></span> ·{' '}
+            <span className="pair">Highest <span className="num">{rm(g.max)}</span></span>
+          </p>
+          <p className="range-text">
+            Most shops charge{' '}
+            <strong className="num">{g.p25 === g.p75 ? rm(g.p25!) : `${rm(g.p25!)} – ${rm(g.p75!)}`}</strong>.
+          </p>
+        </>
+      )}
       <p className="context">
         Based on {shops} in {place} · prices seen {fmtShortDate(district.window.start)} – {fmtDate(district.window.end)}
       </p>

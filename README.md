@@ -64,7 +64,7 @@ npm run dev      # copies ../data/out -> public/data, then starts Vite
 npm test         # Vitest: verdict/band logic and search ranking
 npm run build    # copies data, type-checks, builds to web/dist
 ```
-Deploy on Vercel from the repo root. `vercel.json` builds `web/` and serves `web/dist`. Enable Web Analytics in the Vercel project settings.
+Deploy on Vercel from the repo root. `vercel.json` builds `web/` and serves `web/dist`. Enable Web Analytics in the Vercel project settings. The Umami website ID is set in `web/index.html` (`data-website-id`).
 
 | Decision | Why |
 |---|---|
@@ -75,4 +75,6 @@ Deploy on Vercel from the repo root. `vercel.json` builds `web/` and serves `web
 | Results as an inline list of large buttons, not a dropdown | One-thumb friendly, never hidden behind the keyboard, plain list/button semantics. |
 | URL kept in sync with `replaceState` | A check is a shareable link, and typing a price doesn't flood the back button. |
 | Self-hosted Atkinson Hyperlegible (latin only) | Designed for low-vision legibility (glare in shops); self-hosting avoids sending visitors' IPs to Google Fonts. |
-| Analytics: cookieless, page URLs stripped of query strings | Only `price_checked` {district, item, band} and `share_clicked` leave the device; no prices or personal data. |
+| Page views via Vercel Web Analytics; custom events via Umami Cloud | Vercel Hobby doesn't collect custom events. Both are cookieless; page URLs and event URLs are stripped of query strings, so only `price_checked` {district, item, band} and `share_clicked` leave the device. |
+| All events go through `src/analytics.ts` | Call sites never import a vendor SDK: switching providers means editing one file, and that file guarantees a blocked tracker can't break the app. |
+| Umami `data-domains="harga-patut.vercel.app"` | Only production visits are tracked, not localhost or Vercel preview deployments. |

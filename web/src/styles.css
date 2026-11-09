@@ -1,6 +1,23 @@
 /* Harga Patut: built for a phone in a brightly lit shop aisle.
    Dark navy ink on white for glare; shelf-tag yellow is reserved for the user's price
    and primary actions; verdict colours always come with an icon and words. */
+@font-face {
+  font-family: 'Harga Digits';
+  src: url('./fonts/digits-400.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+0030-0039;
+  size-adjust: 91.8%; /* Inter cap height 0.728 -> Atkinson 0.668 */
+}
+@font-face {
+  font-family: 'Harga Digits';
+  src: url('./fonts/digits-700.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+  unicode-range: U+0030-0039;
+  size-adjust: 91.8%;
+}
+
 :root {
   --paper: #ffffff;
   --ink: #10233f;          /* ~15:1 on white */
@@ -13,7 +30,7 @@
   --alert: #b3261e;
   --focus: #1d4ed8;
 
-  --font: 'Atkinson Hyperlegible', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font: 'Harga Digits', 'Atkinson Hyperlegible', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --step--1: 0.875rem;
   --step-0: 1.0625rem;     /* 17px body: comfortable at arm's length */
   --step-1: 1.25rem;
@@ -36,6 +53,9 @@ body {
   font-family: var(--font);
   font-size: var(--step-0);
   line-height: 1.5;
+  /* Never a slashed zero (25.ØØ reads like a letter in a price). Atkinson has no 'zero' feature,
+     hence the digit font above; this setting guards against a future font that does. */
+  font-feature-settings: 'zero' 0;
 }
 
 p, h1, h2, h3, ol, ul { margin: 0; }
@@ -174,8 +194,9 @@ h1 {
 .chosen-sub { color: var(--ink-soft); font-size: var(--step--1); }
 .alias-note {
   margin-top: 0.5rem;
-  padding-left: 0.6rem;
-  border-left: 4px solid var(--tag);
+  padding: 0.35rem 0.6rem;
+  background: #fff4c2;
+  border-radius: 6px;
   font-size: var(--step--1);
 }
 .link-btn {
@@ -268,11 +289,22 @@ h1 {
 
 /* The ruler: the one bold element. Min..max track, solid middle half, median notch,
    and the shopper's price as a yellow shelf tag hanging over it. */
-.ruler { position: relative; padding-top: 2.6rem; margin: 0.25rem 0.1rem 0; }
+.ruler { position: relative; padding-top: 2.6rem; margin-top: 0.25rem; }
 .ruler-track { position: relative; height: 1rem; }
-.ruler-span { position: absolute; top: 0.25rem; bottom: 0.25rem; background: var(--rule); border-radius: 3px; }
+.ruler-track::before { /* the axis: full width, so the bar never looks squashed into one corner */
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 2px;
+  margin-top: -1px;
+  background: var(--rule);
+}
+.ruler-range { position: absolute; top: 0.25rem; bottom: 0.25rem; background: var(--rule); border-radius: 3px; }
 .ruler-mid { position: absolute; top: 0; bottom: 0; background: var(--ink); border-radius: 3px; }
 .ruler-median { position: absolute; top: 0.15rem; bottom: 0.15rem; width: 3px; margin-left: -1.5px; background: var(--paper); }
+.ruler-dash { position: absolute; top: 50%; height: 0; margin-top: -1px; border-top: 2px dashed var(--ink); }
 .ruler-pin { position: absolute; top: -0.8rem; bottom: -0.3rem; width: 3px; margin-left: -1.5px; background: var(--ink); }
 .ruler-tag { position: absolute; top: 0; }
 .ruler-tag span {
@@ -288,9 +320,7 @@ h1 {
 .ruler-tag--center { transform: translateX(-50%); }
 .ruler-tag--start { transform: translateX(-0.6rem); }
 .ruler-tag--end { transform: translateX(calc(-100% + 0.6rem)); }
-.ruler-scale { position: relative; height: 1.4rem; margin-top: 0.35rem; font-size: var(--step--1); color: var(--ink-soft); font-variant-numeric: tabular-nums; }
-.ruler-lab { position: absolute; top: 0; white-space: nowrap; }
-.ruler-lab--max { transform: translateX(-100%); }
+.range-ends { margin-top: -0.35rem; font-size: var(--step--1); color: var(--ink-soft); }
 
 @media (prefers-reduced-motion: no-preference) {
   .ruler-tag, .ruler-pin { transition: left 220ms ease-out; }
@@ -305,13 +335,13 @@ h1 {
   align-items: flex-start;
   padding: 0.65rem 0.75rem;
   background: #fff4c2;
-  border-left: 4px solid var(--ink);
-  border-radius: 0 6px 6px 0;
+  border: 1.5px solid #c9a400;
+  border-radius: 6px;
   font-size: var(--step--1);
   line-height: 1.45;
 }
 .note svg { flex: none; width: 1.2rem; height: 1.2rem; margin-top: 0.05rem; }
-.note--alert { background: #fdecea; border-left-color: var(--alert); font-weight: 700; }
+.note--alert { background: #fdecea; border-color: var(--alert); font-weight: 700; }
 
 .sub-heading { font-size: var(--step-0); font-weight: 700; margin-bottom: 0.5rem; }
 
@@ -381,3 +411,4 @@ h1 {
   color: var(--ink-soft);
 }
 .footer a { color: var(--ink-soft); }
+.pair { white-space: nowrap; }

@@ -1,7 +1,7 @@
-import { track } from '@vercel/analytics/react'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { District, Item, Manifest, ShopTypeCode, Town } from './data'
 import { aliasFromUrl, fmtDate, loadDistrict, loadManifest, loadTowns, SHOP_TYPES, shopTypeByCode, titleCase } from './data'
+import { track } from './analytics'
 import { Picker } from './Picker'
 import { Result } from './Result'
 import { rank } from './search'
