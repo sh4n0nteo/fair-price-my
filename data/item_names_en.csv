@@ -1,0 +1,797 @@
+item_code,name_ms,name_en,unit,needs_review,out_of_scope
+1,AYAM BERSIH - STANDARD,Whole cleaned chicken - standard,1kg,true,false
+2,AYAM BERSIH - SUPER,Whole cleaned chicken - super,1kg,true,false
+3,AYAM HIDUP,Live chicken,1kg,true,true
+9,DAGING KAMBING BEBIRI IMPORT BERTULANG (MUTTON) (AUSTRALIA - KOTAK),"Imported mutton, bone-in (Australia, boxed)",1kg,true,false
+10,DAGING KAMBING BEBIRI IMPORT BERTULANG (MUTTON) (NEW ZEALAND - KOTAK),"Imported mutton, bone-in (New Zealand, boxed)",1kg,true,false
+11,DAGING KAMBING BEBIRI IMPORT TANPA TULANG (MUTTON) (TIDAK TERMASUK PAHA - AUSTRALIA),"Imported mutton, boneless, excl. leg (Australia)",1kg,true,false
+12,DAGING KAMBING BEBIRI IMPORT TANPA TULANG (MUTTON) (TIDAK TERMASUK PAHA - NEW ZEALAND),"Imported mutton, boneless, excl. leg (New Zealand)",1kg,true,true
+14,DAGING KERBAU IMPORT (INDIA) * (TOP SIDE),"Imported buffalo meat, topside (India)",1kg,true,false
+16,BETIK BIASA,Papaya,1kg,true,false
+18,PISANG BERANGAN,Banana (pisang berangan),1kg,true,false
+19,PISANG EMAS,Banana (pisang emas),1kg,true,false
+20,TEMBIKAI MERAH BERBIJI,"Red watermelon, seeded",1kg,true,false
+21,TEMBIKAI MERAH TANPA BIJI,"Red watermelon, seedless",1kg,true,false
+22,DRAGON FRUIT MERAH,Red dragon fruit,1kg,true,false
+24,TEMBIKAI SUSU,Honeydew melon,1kg,true,false
+25,NENAS BIASA (JOSAPINE/MORRIS/SARAWAK),Pineapple (Josapine/Morris/Sarawak),1 biji,true,false
+26,ANGGUR HIJAU BERBIJI,"Green grapes, seeded",1kg,true,true
+27,ANGGUR MERAH BERBIJI,"Red grapes, seeded",1kg,true,false
+31,LAI KUNING (SAIZ M),Yellow pear (size M),1 biji,true,false
+38,JAMBU BATU BERBIJI,"Guava, seeded",1kg,true,false
+39,JAMBU BATU TANPA BIJI,"Guava, seedless",1kg,true,false
+43,IKAN BAWAL HITAM (ANTARA 2 HINGGA 5 EKOR SEKILOGRAM),Black pomfret (2-5 fish per kg),1kg,true,false
+47,IKAN CENCARU (ANTARA 4 HINGGA 6 EKOR SEKILOGRAM),Hardtail scad / ikan cencaru (4-6 fish per kg),1kg,true,false
+49,IKAN GELAMA (ANTARA 5 HINGGA 10 EKOR SEKILOGRAM),Croaker / ikan gelama (5-10 fish per kg),1kg,true,true
+51,IKAN JENAHAK (b	% 1 KILOGRAM SEEKOR),Grouper / ikan jenahak (≥1 kg each),1kg,true,true
+52,KEPALA IKAN JENAHAK,Grouper head (jenahak),1kg,true,false
+55,IKAN KEMBUNG KECIL/PELALING (ANTARA 10 HINGGA 18 EKOR SEKILOGRAM),Small Indian mackerel / ikan kembung (10-18 fish per kg),1kg,true,false
+60,IKAN MERAH (b	% 1 KILOGRAM SEEKOR),Red snapper / ikan merah (≥1 kg each),1kg,true,true
+64,KEPALA IKAN MERAH,Red snapper head,1kg,true,false
+65,IKAN KERAPU (ANTARA 2 HINGGA 5 EKOR SEKILOGRAM),Grouper / ikan kerapu (2-5 fish per kg),1kg,true,true
+66,IKAN PARANG (ANTARA 1 HINGGA 3 EKOR SEKILOGRAM),Wolf herring / ikan parang (1-3 fish per kg),1kg,true,true
+68,IKAN PARI (KEPINGAN),Stingray (sliced),1kg,true,true
+69,IKAN SELAR KUNING (≥ 11 EKOR SEKILOGRAM),Yellowstripe scad / ikan selar kuning (≥11 fish per kg),1kg,true,false
+70,IKAN SELAR/PELATA (≤ 7 EKOR SEKILOGRAM),Trevally / ikan selar (≤7 fish per kg),1kg,true,false
+71,IKAN SELAYANG/SARDIN  (≥ 13 EKOR SEKILOGRAM),Sardine / ikan selayang (≥13 fish per kg),1kg,true,true
+73,IKAN SENANGIN (ANTARA 2 HINGGA 8 EKOR SEKILOGRAM),Threadfin / ikan senangin (2-8 fish per kg),1kg,true,true
+78,IKAN TAMBAN BELURU (ANTARA 10 HINGGA 19 EKOR SEKILOGRAM),Fringescale sardinella / ikan tamban (10-19 fish per kg),1kg,true,true
+79,IKAN TENGGIRI PAPAN (ANTARA 1 HINGGA 2 EKOR SEKILOGRAM),Spanish mackerel / tenggiri papan (1-2 fish per kg),1kg,true,true
+82,IKAN TENGGIRI BATANG (ANTARA 1 HINGGA 2 EKOR SEKILOGRAM),Narrow-barred mackerel / tenggiri batang (1-2 fish per kg),1kg,true,true
+83,IKAN TONGKOL/AYA/KAYU HITAM (ANTARA 1 HINGGA 2 EKOR SEKILOGRAM),Tuna / ikan tongkol (1-2 fish per kg),1kg,true,true
+87,IKAN HARUAN (ANTARA 2 HINGGA 5 EKOR SEKILOGRAM),Snakehead / ikan haruan (2-5 fish per kg),1kg,true,true
+88,IKAN KELI (ANTARA 2 HINGGA 5 EKOR SEKILOGRAM),Catfish / ikan keli (2-5 fish per kg),1kg,true,false
+89,IKAN TILAPIA HITAM (ANTARA 2 HINGGA 5 EKOR SEKILOGRAM),Black tilapia (2-5 fish per kg),1kg,true,true
+92,CILI HIJAU,Green chilli,1kg,true,false
+93,CILI MERAH - KULAI,Red chilli (Kulai),1kg,true,false
+94,CILI MERAH - MINYAK,Red chilli (minyak),1kg,true,false
+95,HALIA BASAH (TUA),Fresh ginger (mature),1kg,true,false
+96,KACANG BENDI,Okra / lady's fingers,1kg,true,false
+97,KACANG BUNCIS,French beans,1kg,true,false
+98,KACANG PANJANG,Long beans,1kg,true,false
+101,KELAPA BIJI,Whole coconut,1 biji,true,false
+102,KELAPA PARUT (BIASA),Grated coconut,1kg,true,false
+103,SANTAN KELAPA SEGAR (BIASA),Fresh coconut milk,1kg,true,false
+104,KUBIS BULAT IMPORT (CHINA),"Round cabbage, imported (China)",1kg,true,false
+105,KUBIS BULAT (TEMPATAN),"Round cabbage, local",1kg,true,false
+108,KUNYIT HIDUP,Fresh turmeric,1kg,true,false
+109,LOBAK MERAH,Carrot,1kg,true,false
+112,TERUNG PANJANG,Long eggplant,1kg,true,true
+113,TIMUN,Cucumber,1kg,true,false
+114,TOMATO,Tomato,1kg,true,false
+118,TELUR AYAM GRED A (BERAT 65.0 GM HINGGA 69.9 GM SEBIJI),Chicken eggs grade A (65.0-69.9 g each),10 biji,true,true
+119,TELUR AYAM GRED B (BERAT 60.0 GM HINGGA 64.9 GM),Chicken eggs grade B (60.0-64.9 g),10 biji,true,true
+120,TELUR AYAM GRED C (BERAT 55.0 GM HINGGA 59.9 GM SEBIJI),Chicken eggs grade C (55.0-59.9 g each),10 biji,true,true
+124,TELUR PUYUH,Quail eggs,15 Biji,true,true
+125,TELUR ITIK,Duck eggs,10 biji,true,true
+129,BAWANG BESAR KUNING/HOLLAND,Yellow onion (Holland),1kg,true,false
+131,BAWANG KECIL MERAH ROSE IMPORT (INDIA),"Red shallots, Rose, imported (India)",1kg,true,false
+132,BAWANG KECIL MERAH IMPORT (THAILAND),"Red shallots, imported (Thailand)",1kg,true,false
+148,IKAN BILIS GRED B (KOPEK),Dried anchovies grade B (split),1kg,true,true
+152,KACANG HIJAU (IMPORT),Mung beans (imported),1kg,true,true
+154,SERBUK KUNYIT (TIDAK BERBUNGKUS),Turmeric powder (loose),100 g,true,true
+155,SERBUK CILI  (TIDAK BERBUNGKUS),Chilli powder (loose),100 g,true,true
+160,UBI KENTANG RUSSET,Russet potatoes,1kg,true,true
+171,KORDIAL SUNQUICK (OREN),Sunquick cordial (orange),840 ml,true,true
+180,TEH BOH (UNCANG),BOH tea (bags),100 beg,true,false
+190,SARDIN CAP AYAM (SOS TOMATO),Ayam Brand sardines (tomato sauce),155 g,true,true
+191,SARDIN CAP AYAM (SOS TOMATO),Ayam Brand sardines (tomato sauce),425 g,true,false
+192,SARDIN CAP KING CUP (SOS TOMATO),King Cup sardines (tomato sauce),155 g,true,true
+193,SARDIN CAP KING CUP (SOS TOMATO),King Cup sardines (tomato sauce),425 g,true,false
+195,MACKAREL CAP AYAM (SOS TOMATO),Ayam Brand mackerel (tomato sauce),425 g,true,true
+197,MACKAREL CAP KING CUP (SOS TOMATO),King Cup mackerel (tomato sauce),425 g,true,true
+199,TUNA CAP TC BOY (SANDWICH DELITE),TC Boy tuna (Sandwich Delite),150 g,true,true
+201,JEM STRAWBERI LADY'S CHOICE,Lady's Choice strawberry jam,400 g,true,false
+202,SERI KAYA YEO'S,Yeo's seri kaya (coconut jam),480 g,true,true
+203,MAINLAND CHESDALE CHEDDAR CHEESE SPREAD 12 CHEDDAR,"Mainland Chesdale cheddar cheese spread, 12 slices",250 g,true,false
+204,KRAFT HI - CALCIUM SINGLES PROCESSED CHEESE 12 SLICES,"Kraft Hi-Calcium processed cheese singles, 12 slices",250 g,true,true
+205,MARJERIN DAISY,Daisy margarine,480 g,true,false
+206,MARJERIN PLANTA,Planta margarine,480 g,true,false
+212,KICAP TAMIN (DARK SOY SAUCE),Tamin dark soy sauce,330 ml,true,true
+214,KICAP LEMAK MANIS CAP KIPAS UDANG,Kipas Udang sweet thick soy sauce,345ml,true,false
+215,KICAP LEMAK MANIS CAP JALEN,Jalen sweet thick soy sauce,650 ml,true,true
+217,SOS TOMATO MAGGI,Maggi tomato sauce,325 g,true,false
+218,SOS CILI LIFE,Life chilli sauce,340 g,true,false
+221,DRINHO SOYA (KOTAK),Drinho soy milk (carton),250 ml,true,false
+224,SUSU SEGAR DUTCH LADY,Dutch Lady fresh milk,1 liter,true,false
+225,SUSU MARIGOLD HL,Marigold HL milk,1 liter,true,true
+226,YEO'S LAICI (KOTAK),Yeo's lychee drink (carton),250 ml,true,false
+228,COCA COLA (BOTOL),Coca-Cola (bottle),1.5 liter,true,false
+229,F&N OREN (TIN),F&N Orange (can),325 ml,true,false
+230,F&N OREN (BOTOL),F&N Orange (bottle),1.5 liter,true,false
+232,MIRINDA OREN (BOTOL),Mirinda Orange (bottle),1.5 liter,true,false
+235,JUS OREN PEEL FRESH (MARIGOLD),Marigold Peel Fresh orange juice,1 liter,true,false
+236,JUS OREN SUNKIST,Sunkist orange juice,1 liter,true,true
+239,RED BULL (BOTOL),Red Bull (bottle),150 ml,true,false
+240,LIVITA WITH HONEY (BOTOL),Livita with Honey (bottle),150 ml,true,false
+246,MINYAK JAGUNG CAP MAZOLA,Mazola corn oil,1kg,true,false
+254,MINYAK MASAK SEBATIAN CAP RED EAGLE,Red Eagle blended cooking oil,5 kg,true,false
+257,MINYAK MASAK SEBATIAN CAP NEPTUNE,Neptune blended cooking oil,5 kg,true,true
+260,MINYAK MASAK SEBATIAN CAP KNIFE,Knife blended cooking oil,5 kg,true,false
+263,MINYAK MASAK TULEN CAP BURUH,Buruh pure palm cooking oil,5 kg,true,false
+266,MINYAK MASAK TULEN CAP SERI MURNI,Seri Murni pure palm cooking oil,5 kg,true,false
+267,MINYAK MASAK TULEN CAP VESAWIT,Vesawit pure palm cooking oil,1kg,true,false
+271,MINYAK SAPI CAP QBB,QBB ghee,400 g,true,false
+272,ROTI SANDWICH GARDENIA ORIGINAL CLASSIC,Gardenia Original Classic sandwich bread,400 g,true,true
+292,UBAT GIGI COLGATE (PUDINA SEGAR),Colgate toothpaste (fresh mint),250 g,true,false
+293,UBAT GIGI DARLIE DOUBLE ACTION (PUDINA ASLI),Darlie Double Action toothpaste (original mint),250 g,true,false
+295,UBAT GIGI FRESH & WHITE (PUDINA SEGAR),Fresh & White toothpaste (fresh mint),160 g,true,false
+299,LACTOGEN 1 RUMUSAN BAYI (KOTAK),Lactogen 1 infant formula (box),650g,true,false
+300,LACTOGEN 2 RUMUSAN SUSULAN (KOTAK),Lactogen 2 follow-on formula (box),650g,true,false
+303,ENFAGROW A+ MIND PRO LANGKAH 3 VANILLA (KOTAK),Enfagrow A+ Mind Pro Step 3 vanilla (box),600 g,true,true
+320,SUSU SEJAT PENUH KRIM CAP IDEAL,Ideal full-cream evaporated milk,390g,true,true
+327,SUSU TEPUNG ISIAN KURANG LEMAK 'OMEGA PLUS',Omega Plus low-fat filled milk powder,1kg,true,true
+332,SUSU TEPUNG SEGERA FERNLEAF (INSTANT),Fernleaf instant milk powder,550 g,true,true
+334,SUSU ANLENE ACTIFIT 3X PERISA ASLI,Anlene Actifit 3X milk (original),600 g,true,true
+335,SUSU ANLENE GOLD 5X,Anlene Gold 5X milk,600 g,true,true
+336,ANMUM MATERNA (BIASA/COKLAT),Anmum Materna (plain/chocolate),650g,true,true
+343,KULIT KAYU MANIS,Cinnamon bark,100 g,true,true
+344,SUSU TEPUNG SEGERA EVERYDAY,Everyday instant milk powder,550 g,true,true
+345,SUSU TEPUNG ISIAN KURANG LEMAK 'OMEGA PLUS',Omega Plus low-fat filled milk powder,600 g,true,true
+346,REMPAH KURMA (TIDAK BERBUNGKUS),Kurma spice mix (loose),100 g,true,true
+347,REMPAH SUP (TIDAK BERBUNGKUS),Soup spice mix (loose),100 g,true,true
+350,SERBUK KARI IKAN BABAS,Babas fish curry powder,250 g,true,false
+360,SUP BUNJUT ADABI,Adabi soup spice pouch,8 g,true,true
+361,SUP PUNJUT MAK SITI,Mak Siti soup spice pouch,10 g,true,true
+364,SERBUK CILI BABAS,Babas chilli powder,250 g,true,false
+365,SERBUK KUNYIT CAMPURAN (SEBATIAN) ADABI,Adabi blended turmeric powder,250 g,true,false
+367,SERBUK KUNYIT BABAS,Babas turmeric powder,250 g,true,true
+368,KACANG TANAH (IMPORT),Peanuts (imported),1kg,true,false
+388,KRIMER MANIS CAP JUNJUNG,Junjung sweetened creamer,500 g,true,true
+716,CILI API/PADI HIJAU,Green bird's eye chilli (cili padi),1kg,true,false
+843,ANMUM LACTA (BIASA),Anmum Lacta (plain),650g,true,true
+845,SOTONG (ANTARA 11 HINGGA17 EKOR SEKILOGRAM),Squid (11-17 per kg),1kg,true,false
+847,KETAM RENJONG/BUNGA (≤ 4 EKOR SEKILOGRAM),Blue swimmer crab (≤4 per kg),1kg,true,false
+849,UDANG PUTIH KECIL (b	% 61 EKOR SEKILOGRAM),Small white prawns (≥61 per kg),1kg,true,false
+850,UDANG HARIMAU (ANTARA 20 HINGGA 30 EKOR SEKILOGRAM),Tiger prawns (20-30 per kg),1kg,true,false
+861,UBI KENTANG HOLLAND,Potatoes (Holland),1kg,true,false
+863,JINTAN MANIS (KASAR),Fennel seeds (coarse),100 g,true,true
+864,BUNGA CENGKIH,Cloves,100 g,true,true
+865,BUNGA LAWANG,Star anise,100 g,true,true
+866,BUAH PELAGA,Cardamom,100 g,true,true
+867,BUAH KERAS,Candlenuts,100 g,true,true
+868,BUAH PALA,Nutmeg,100 g,true,true
+869,BIJI SAWI,Mustard seeds,100 g,true,false
+870,BIJI KETUMBAR,Coriander seeds,100 g,true,true
+871,LADA HITAM,Black pepper,100 g,true,true
+873,LADA PUTIH,White pepper,100 g,true,true
+883,KRIMER MANIS BERVITAMIN CAP F&N,F&N vitamin-enriched sweetened creamer,500 g,true,false
+884,KRIMER MANIS CAP GOLD COIN,Gold Coin sweetened creamer,500 g,true,false
+896,HALBA,Fenugreek,100 g,true,true
+904,BERAS SUPER CAP RAMBUTAN 5% (IMPORT),Rambutan super rice 5% (imported),10 kg,true,false
+910,KORDIAL F&N (PELBAGAI PERISA),F&N cordial (assorted flavours),2 liter,true,false
+917,"TEPUNG GANDUM NGP (BERBUNGKUS, CAP SAUH)","Wheat flour, Cap Sauh (packed)",1kg,true,false
+918,MINYAK MASAK PAKET (PELBAGAI JENAMA),Cooking oil polybag (assorted brands),1kg,true,false
+919,SUSU TEPUNG PENUH KRIM DUTCHLADY,Dutch Lady full-cream milk powder,600 g,true,true
+929,NESCAFE CLASSIC (PAKET),Nescafe Classic (pack),200 g,true,false
+957,SOS CILI KIMBALL,Kimball chilli sauce,340 g,true,true
+992,BERAS CAP JATI (SST5%),Jati rice (SST 5%),10 kg,true,false
+1017,FISHERMAN'S FRIEND ORIGINAL,Fisherman's Friend Original,25 g,true,true
+1019,MINYAK ANGIN CAP KAPAK,Cap Kapak medicated oil,3 ml,true,true
+1020,VICKS VAPORUB,Vicks VapoRub,10 g,true,true
+1025,LISTERINE COOL MINT,Listerine Cool Mint,250 ml,true,true
+1050,MAGGI MEE CURRY,Maggi curry noodles,79 g,true,true
+1063,KINDER BUENO - MILK & HAZELNUT,Kinder Bueno - milk & hazelnut,43 g,true,true
+1070,SOS CILI MAGGI,Maggi chilli sauce,340 g,true,false
+1080,SERBUK PENAIK ROYAL (TIN),Royal baking powder (tin),226g,true,true
+1081,MACKAREL CAP KING CUP (SOS TOMATO),King Cup mackerel (tomato sauce),155 g,true,true
+1082,MACKAREL CAP AYAM (SOS TOMATO),Ayam Brand mackerel (tomato sauce),155 g,true,true
+1084,TEH BOH (SERBUK),BOH tea (powder),500 g,true,true
+1086,MINYAK JAGUNG CAP DAISY,Daisy corn oil,1kg,true,false
+1087,MINYAK JAGUNG CAP DAISY,Daisy corn oil,3 kg,true,false
+1088,MINYAK JAGUNG CAP MAZOLA,Mazola corn oil,3 kg,true,false
+1089,MINYAK JAGUNG CAP VECORN,Vecorn corn oil,3 kg,true,false
+1090,MINYAK JAGUNG CAP VECORN,Vecorn corn oil,1kg,true,false
+1091,MINYAK MASAK SEBATIAN CAP RED EAGLE,Red Eagle blended cooking oil,1kg,true,false
+1092,MINYAK MASAK SEBATIAN CAP NEPTUNE,Neptune blended cooking oil,1kg,true,true
+1093,MINYAK MASAK SEBATIAN CAP KNIFE,Knife blended cooking oil,1kg,true,false
+1094,MINYAK MASAK TULEN CAP BURUH,Buruh pure palm cooking oil,1kg,true,false
+1095,MINYAK MASAK TULEN CAP VESAWIT,Vesawit pure palm cooking oil,5 kg,true,false
+1097,SOS CILI MAGGI,Maggi chilli sauce,500 g,true,true
+1100,MINYAK MASAK TULEN CAP SERI MURNI,Seri Murni pure palm cooking oil,1kg,true,false
+1101,MINYAK MASAK TULEN CAP SERI MURNI,Seri Murni pure palm cooking oil,2 kg,true,false
+1105,SUSU ANLENE ACTIFIT 3X COKLAT,Anlene Actifit 3X milk (chocolate),600 g,true,true
+1109,TELUR AYAM GRED A,Chicken eggs grade A,30 biji,true,false
+1110,TELUR AYAM GRED B,Chicken eggs grade B,30 biji,true,false
+1111,TELUR AYAM GRED C,Chicken eggs grade C,30 biji,true,false
+1114,SOS TIRAM KIMBALL,Kimball oyster sauce,510 g,true,true
+1115,KICAP LEMAK MASIN CAP KIPAS UDANG,Kipas Udang salty soy sauce,345ml,true,true
+1116,SOS TIRAM NONA,Nona oyster sauce,510 g,true,true
+1117,SOS TIRAM ADABI,Adabi oyster sauce,510 g,true,true
+1125,SERBUK CILI KIJANG,Kijang chilli powder,250 g,true,true
+1127,AYAM BELANDA IMPORT,Imported turkey,1kg,true,true
+1128,LADA BENGGALA HIJAU (CAPSICUM),Green capsicum,1kg,true,false
+1129,LADA BENGGALA MERAH (CAPSICUM),Red capsicum,1kg,true,true
+1130,LADA BENGGALA KUNING (CAPSICUM),Yellow capsicum,1kg,true,true
+1131,UBI KENTANG IMPORT (CHINA),"Potatoes, imported (China)",1kg,true,false
+1132,LIMAU NIPIS,Lime,1kg,true,false
+1135,KICAP MANIS ADABI,Adabi sweet soy sauce,340ml,true,false
+1136,KICAP MASIN ADABI,Adabi salty soy sauce,340ml,true,true
+1137,SOS CILI THAI LIFE,Life Thai chilli sauce,360g,true,true
+1138,SOS TIRAM MAGGI,Maggi oyster sauce,340 g,true,false
+1139,SOS TOMATO LIFE,Life tomato sauce,330 g,true,true
+1140,MARJERIN PLANTA,Planta margarine,240 g,true,true
+1141,MARJERIN DAISY,Daisy margarine,240 g,true,true
+1142,SARDIN CAP ADABI (SOS TOMATO DENGAN CILI),Adabi sardines (tomato chilli sauce),425 g,true,false
+1144,MENTEGA KACANG HALUS LADY'S CHOICE,Lady's Choice smooth peanut butter,340 g,true,false
+1145,NESTLE CERELAC BERAS - TIN,Nestle Cerelac rice (tin),500 g,true,false
+1151,SANTAN KELAPA JENAMA AYAM BRAND,Ayam Brand coconut milk,1 liter,true,false
+1153,PERENCAH TOM YAM ADABI,Adabi tom yam paste,40 g,true,false
+1157,NASI PUTIH KOSONG,Plain white rice,sepinggan,true,true
+1158,NASI AYAM,Chicken rice,sepinggan,true,true
+1159,NASI LEMAK (BERBUNGKUS),Nasi lemak (wrapped),sebungkus,true,true
+1160,NASI LEMAK (TIDAK BERBUNGKUS),Nasi lemak (plated),sepinggan,true,true
+1161,NASI + SAYUR + IKAN,Rice + vegetables + fish,sepinggan,true,true
+1162,NASI + SAYUR + AYAM,Rice + vegetables + chicken,sepinggan,true,true
+1163,NASI + SAYUR + DAGING,Rice + vegetables + beef,sepinggan,true,true
+1164,NASI + SAYUR + SOTONG,Rice + vegetables + squid,sepinggan,true,true
+1165,NASI + SAYUR + UDANG,Rice + vegetables + prawns,sepinggan,true,true
+1167,NASI GORENG KAMPUNG,Village fried rice (nasi goreng kampung),sepinggan,true,true
+1168,NASI GORENG PAPRIK,Paprik fried rice,sepinggan,true,true
+1169,NASI GORENG CINA,Chinese fried rice,sepinggan,true,true
+1170,NASI GORENG PATAYA,Pattaya fried rice (omelette-wrapped),sepinggan,true,true
+1172,NASI GORENG CILI PADI,Bird's eye chilli fried rice,sepinggan,true,true
+1173,NASI GORENG DAGING MERAH,Red beef fried rice,sepinggan,true,true
+1174,NASI GORENG USA,Fried rice USA,sepinggan,true,true
+1175,NASI GORENG AYAM,Chicken fried rice,sepinggan,true,true
+1183,BIHUN GORENG,Fried rice vermicelli,sepinggan,true,true
+1184,BIHUN HAILAM,Hainanese rice vermicelli,sepinggan,true,true
+1186,BIHUN TOMYAM,Tom yam rice vermicelli,semangkuk,true,true
+1187,BIHUN BANDUNG,Bandung rice vermicelli,semangkuk,true,true
+1188,BIHUN LADNA,Rice vermicelli in gravy (ladna),sepinggan,true,true
+1189,BIHUN KUNGFU,Kung fu rice vermicelli,sepinggan,true,true
+1198,AYAM GORENG,Fried chicken,seketul,true,true
+1199,AYAM MASAK MERAH,Chicken in red sauce (masak merah),seketul,true,true
+1200,AYAM MASAK KICAP,Chicken in soy sauce,seketul,true,true
+1201,AYAM MASAK HALIA,Ginger chicken,seketul,true,true
+1202,DAGING MASAK MERAH,Beef in red sauce (masak merah),sepiring,true,true
+1203,DAGING MASAK KICAP,Beef in soy sauce,sepiring,true,true
+1204,DAGING MASAK HALIA,Ginger beef,sepiring,true,true
+1205,DAGING MASAK PAPRIK,Paprik beef,sepiring,true,true
+1206,SOTONG GORENG,Fried squid,sepiring,true,true
+1207,SOTONG MASAK MERAH,Squid in red sauce (masak merah),sepiring,true,true
+1208,SOTONG MASAK KICAP,Squid in soy sauce,sepiring,true,true
+1209,SOTONG MASAK HALIA,Ginger squid,sepiring,true,true
+1210,UDANG GORENG,Fried prawns,sepiring,true,true
+1211,UDANG MASAK MERAH,Prawns in red sauce (masak merah),sepiring,true,true
+1212,UDANG MASAK KICAP,Prawns in soy sauce,sepiring,true,true
+1213,UDANG MASAK HALIA,Ginger prawns,sepiring,true,true
+1214,SAYUR CAMPUR,Mixed vegetables,sepiring,true,true
+1215,SAYUR KAILAN IKAN MASIN,Kailan with salted fish,sepiring,true,true
+1216,SAYUR KANGKUNG GORENG BELACAN,Kangkung stir-fried with belacan,sepiring,true,true
+1232,TELUR MATA KERBAU,Fried egg (sunny side up),sebiji,true,true
+1233,TELUR DADAR,Omelette,sebiji,true,true
+1234,TELUR BISTIK,Egg bistik (in sweet gravy),1 set,true,true
+1235,TELUR SETENGAH MASAK,Half-boiled eggs,sebiji,true,true
+1236,TELUR REBUS,Hard-boiled egg,sebiji,true,true
+1237,TELUR MASIN,Salted egg,sebiji,true,true
+1238,SUP AYAM,Chicken soup,semangkuk,true,true
+1239,SUP DAGING,Beef soup,semangkuk,true,true
+1240,SUP EKOR,Oxtail soup,semangkuk,true,true
+1241,SUP CAMPUR,Mixed soup,semangkuk,true,true
+1242,TOM YAM CAMPUR,Mixed tom yam,semangkuk,true,true
+1243,TOM YAM AYAM,Chicken tom yam,semangkuk,true,true
+1244,TOM YAM DAGING,Beef tom yam,semangkuk,true,true
+1245,TOM YAM UDANG,Prawn tom yam,semangkuk,true,true
+1246,TOM YAM SOTONG,Squid tom yam,semangkuk,true,true
+1247,MAGGI GORENG,Fried Maggi noodles,sepinggan,true,true
+1248,MAGGI SUP,Maggi noodle soup,semangkuk,true,true
+1250,ROTI TELUR,Roti telur (egg flatbread),sekeping,true,true
+1252,KUIH LAPIS,Kuih lapis (layer cake),sebiji,true,true
+1253,KUIH SERI MUKA,Kuih seri muka,sebiji,true,true
+1254,PAU KACANG MERAH,Red bean bun,sebiji,true,true
+1255,PAU AYAM,Chicken bun,sebiji,true,true
+1256,PAU KAYA,Kaya bun,sebiji,true,true
+1264,AYAM SOS LEMON,Lemon chicken,sepiring,true,true
+1265,SOTONG GORENG ASAM,Tamarind fried squid,sepiring,true,true
+1266,UDANG BUTTER,Butter prawns,sepiring,true,true
+1277,SUP IKAN,Fish soup,semangkuk,true,true
+1278,SUP SAYUR MASIN,Salted vegetable soup,semangkuk,true,true
+1279,PAU DAGING,Beef bun,sebiji,true,true
+1281,NASI BRIYANI AYAM,Chicken biryani,sepinggan,true,true
+1282,NASI BRIYANI KAMBING,Mutton biryani,sepinggan,true,true
+1284,NASI BRIYANI BUKHARA,Bukhara biryani,sepinggan,true,true
+1285,AYAM MASAK KARI,Chicken curry,seketul,true,true
+1289,SUP TULANG,Bone soup (sup tulang),semangkuk,true,true
+1290,SUP KAMBING,Mutton soup,semangkuk,true,true
+1291,ROTI PISANG,Roti pisang (banana flatbread),sekeping,true,true
+1292,ROTI BAWANG,Roti bawang (onion flatbread),sekeping,true,true
+1293,ROTI BOOM,Roti boom,sekeping,true,true
+1294,RAWA TOSAI,Rava thosai,sekeping,true,true
+1295,ROTI TISU,Roti tisu,sekeping,true,true
+1296,CAPATI,Chapati,sekeping,true,true
+1297,Ayam Tandoori,Tandoori chicken,seketul,true,true
+1298,ROTI BAKAR,Toast (roti bakar),1 set,true,true
+1299,MURTABAK AYAM,Chicken murtabak,sekeping,true,true
+1300,MURTABAK DAGING,Beef murtabak,sekeping,true,true
+1301,MURTABAK KAMBING,Mutton murtabak,sekeping,true,true
+1307,AIR SUAM,Warm water,gelas kecil,true,true
+1309,Kopi Panas,Hot coffee (with milk),gelas kecil,true,true
+1311,TEH 'O' LIMAU PANAS,"Hot lime tea, no milk (teh o limau)",gelas kecil,true,true
+1312,Teh Panas,Hot tea (with milk),gelas kecil,true,true
+1314,TEH HALIA PANAS,Hot ginger tea,gelas kecil,true,true
+1315,NESCAFE PANAS,Hot Nescafe,gelas kecil,true,true
+1317,NESLO PANAS,Hot Neslo,gelas kecil,true,true
+1318,HORLICKS PANAS,Hot Horlicks,gelas kecil,true,true
+1319,MILO PANAS,Hot Milo,gelas kecil,true,true
+1320,BARLI PANAS,Hot barley,gelas kecil,true,true
+1321,MILO 'O' PANAS,"Hot Milo, no milk (Milo O)",gelas kecil,true,true
+1322,AIR KOSONG,Plain water,gelas besar,true,true
+1339,JUS EPAL,Apple juice,segelas,true,true
+1340,JUS MANGGA,Mango juice,segelas,true,true
+1341,JUS TEMBIKAI,Watermelon juice,segelas,true,true
+1343,JUS BELIMBING,Starfruit juice,segelas,true,true
+1344,JUS LAICI,Lychee juice,segelas,true,true
+1355,100 PLUS (ORIGINAL),100 Plus (original),1.5 liter,true,false
+1358,ROTI SARDIN,Roti sardin (sardine bread),sekeping,true,true
+1359,KOPI 'O' PANAS,Hot black coffee (kopi o),gelas kecil,true,true
+1360,TEH 'O' PANAS,"Hot tea, no milk (teh o)",gelas kecil,true,true
+1364,AYAM TUA HIDUP,Live old hen,1kg,true,true
+1367,DAGING PAHA KAMBING BEBIRI IMPORT BERTULANG  (MUTTON) (AUSTRALIA),"Imported mutton leg, bone-in (Australia)",1kg,true,false
+1368,DAGING PAHA KAMBING BEBIRI IMPORT BERTULANG (MUTTON) (NEW ZEALAND),"Imported mutton leg, bone-in (New Zealand)",1kg,true,false
+1369,DAGING KAMBING TEMPATAN BERTULANG,"Local goat/mutton, bone-in",1kg,true,false
+1370,DAGING LEMBU IMPORT (TOPSIDE),Imported beef (topside),1kg,true,true
+1371,DAGING LEMBU IMPORT (BLADE),Imported beef (blade),1kg,true,true
+1372,DAGING LEMBU IMPORT (CHUCKTENDER),Imported beef (chuck tender),1kg,true,true
+1373,DAGING LEMBU IMPORT (KNUCKLE),Imported beef (knuckle),1kg,true,true
+1374,DAGING KERBAU TEMPATAN,Local buffalo meat,1kg,true,true
+1375,DAGING KERBAU IMPORT (INDIA) * (SILVERSIDE),"Imported buffalo meat, silverside (India)",1kg,true,false
+1376,DAGING KERBAU IMPORT (INDIA) * (RUMP),"Imported buffalo meat, rump (India)",1kg,true,false
+1377,DAGING KERBAU IMPORT (INDIA) * (BLADE),"Imported buffalo meat, blade (India)",1kg,true,false
+1378,DAGING KERBAU IMPORT (INDIA) * (CHUCK),"Imported buffalo meat, chuck (India)",1kg,true,false
+1379,DAGING BABI (PERUT / BELLY),Pork belly,1kg,true,false
+1380,DAGING BABI (DAGING & LEMAK / LEAN & FAT),"Pork, lean & fat",1kg,true,false
+1381,DAGING BABI (ISI DAGING / PURE LEAN),"Pork, pure lean",1kg,true,true
+1383,DAGING BABI (RUSUK DENGAN DAGING/ RIBS WITH MEAT),Pork ribs with meat,1kg,true,true
+1384,BABI HIDUP (±100KG / SEEKOR),Live pig (~100 kg each),±100kg/seekor,true,true
+1391,UDANG PUTIH BESAR (BERAT ANTARA 41 EKOR HINGGA 60 EKOR SEKILOGRAM),Large white prawns (41-60 per kg),1kg,true,false
+1396,KUBIS BULAT IMPORT (INDONESIA),"Round cabbage, imported (Indonesia)",1kg,true,true
+1399,BAWANG PERAI (LEEK) TEMPATAN,"Leek, local",1kg,true,true
+1400,BAWANG PERAI (LEEK) IMPORT,"Leek, imported",1kg,true,true
+1402,HORLICKS (PAKET),Horlicks (pack),400 g,true,true
+1412,KUBIS PANJANG CHINA - BESAR,"Chinese cabbage, large (China)",1kg,true,true
+1419,KACANG DAL BIASA (INDIA),"Dal, regular (India)",1kg,true,true
+1420,KACANG DAL MALAVI (INDIA),"Dal, Malawi (India)",1kg,true,true
+1422,KACANG DAL (AUSTRALIA),Dal (Australia),1kg,true,false
+1431,DAGING LEMBU TEMPATAN (BAHAGIAN 1 DAGING PAHA (KECUALI BATANG PINANG - TENDERLOIN),"Local beef, cut 1: leg meat (excl. tenderloin)",1kg,true,false
+1432,DAGING LEMBU TEMPATAN (BAHAGIAN 2 DAGING PEJAL (KECUALI BATANG PINANG - TENDERLOIN),"Local beef, cut 2: lean meat (excl. tenderloin)",1kg,true,false
+1436,IKAN KERISI (ANTARA 5 HINGGA 10 EKOR SEKILOGRAM),Threadfin bream / ikan kerisi (5-10 fish per kg),1kg,true,false
+1437,IKAN SIAKAP (ANTARA 2 HINGGA 4 EKOR SEKILOGRAM),Barramundi / ikan siakap (2-4 fish per kg),1kg,true,false
+1438,IKAN TENGGIRI BATANG (KEPINGAN),Narrow-barred mackerel / tenggiri (sliced),1kg,true,false
+1440,BAWANG BESAR IMPORT (INDIA),"Onion, imported (India)",1kg,true,false
+1441,BAWANG BESAR IMPORT (CHINA),"Onion, imported (China)",1kg,true,false
+1442,BAWANG KECIL MERAH BIASA IMPORT (INDIA),"Red shallots, regular, imported (India)",1kg,true,false
+1443,BAWANG KECIL MERAH IMPORT (CHINA),"Red shallots, imported (China)",1kg,true,false
+1444,BAWANG KECIL MERAH IMPORT (MYANMAR),"Red shallots, imported (Myanmar)",1kg,true,true
+1445,BERAS CAP FAIZA EMAS (SST5%),Faiza Emas rice (SST 5%),10 kg,true,false
+1458,KUBIS BULAT IMPORT (BEIJING),"Round cabbage, imported (Beijing)",1kg,true,false
+1463,KRIMER SEJAT CARNATION,Carnation evaporated creamer,390g,true,true
+1468,PANADOL FOR CHILDREN SUSPENSION 1-6,Panadol for Children suspension 1-6 yrs,60ml,true,true
+1469,NESCAFE ''O'' PANAS,Hot black Nescafe (Nescafe O),gelas kecil,true,true
+1474,BERAS BASMATHI - FAIZA (KASHMIR),Faiza basmati rice (Kashmir),5 kg,true,true
+1475,IKAN BAWAL PUTIH (ANTARA 2 HINGGA 5 EKOR SEKILOGRAM),White pomfret (2-5 fish per kg),1kg,true,false
+1476,IKAN KEMBUNG (ANTARA 8 HINGGA 12 EKOR SEKILOGRAM),Indian mackerel / ikan kembung (8-12 fish per kg),1kg,true,false
+1477,IKAN MABUNG (ANTARA 6 HINGGA 10 EKOR SEKILOGRAM),Ikan mabung (6-10 fish per kg),1kg,true,false
+1479,BROKOLI,Broccoli,1kg,true,false
+1481,KUBIS BUNGA (CAULIFLOWER),Cauliflower,1kg,true,false
+1482,KUBIS PANJANG (TEMPATAN),"Chinese cabbage, local",1kg,true,true
+1483,MEE KUNING BASAH (PELBAGAI JENAMA),Fresh yellow noodles (assorted brands),+-450g,true,false
+1484,KUETIAU BASAH (PELBAGAI JENAMA),Fresh flat rice noodles / kuey teow (assorted brands),+-450g,true,true
+1485,EPAL HIJAU GRANNY SMITH (SAIZ M),Granny Smith green apple (size M),1 biji,true,true
+1486,EPAL MERAH RED DELICIOUS (SAIZ M),Red Delicious apple (size M),1 biji,true,true
+1487,OREN VALENCIA (SAIZ M),Valencia orange (size M),1 biji,true,true
+1489,ASAM JAWA (BERBIJI) PELBAGAI JENAMA,Tamarind with seeds (assorted brands),200 g,true,false
+1491,BERAS PULUT THAILAND (SUSU) PELBAGAI JENAMA,"Thai glutinous rice, susu (assorted brands)",1kg,true,true
+1492,BERAS PULUT THAILAND (BIASA) PELBAGAI JENAMA,"Thai glutinous rice, regular (assorted brands)",1kg,true,false
+1493,BIHUN KERING TEMPATAN (CAP JASMINE),Local dried rice vermicelli (Cap Jasmine),400 g,true,true
+1494,ROTI GARDENIA BREAKTHRU - ROTI GANDUM PENUH,Gardenia Breakthru wholemeal bread,400 g,true,true
+1498,TEPUNG JAGUNG (PELBAGAI JENAMA),Corn flour (assorted brands),400 g,true,true
+1505,DUTCH LADY UHT COKLAT (KOTAK),Dutch Lady UHT chocolate milk (carton),200 ml,true,true
+1506,DUTCH LADY UHT FULL CREAM (KOTAK),Dutch Lady UHT full cream milk (carton),200 ml,true,true
+1507,COCA COLA (TIN),Coca-Cola (can),320 ml,true,false
+1512,MAMEX LANGKAH 1 - RUMUSAN BAYI (KOTAK),Mamex Step 1 infant formula (box),600 g,true,true
+1513,SUSTAGEN KID 3+ (VANILLA) - KOTAK,Sustagen Kid 3+ vanilla (box),600 g,true,true
+1514,SUSTAGEN JUNIOR 1+ (VANILLA ) - KOTAK,Sustagen Junior 1+ vanilla (box),600 g,true,true
+1515,HEINZ FARLEY RUSKS (PELBAGAI PERISA),Heinz Farley's Rusks (assorted flavours),120 g,true,false
+1517,HEINZ APPLE PUREE,Heinz apple puree,110 g,true,false
+1522,DRYPERS WEE WEE DRY,Drypers Wee Wee Dry diapers,M74,true,true
+1524,BERUS GIGI COLGATE (ZIG ZAG - SOFT),Colgate Zig Zag toothbrush (soft),1 batang,true,false
+1525,BERUS GIGI ORAL B (COMPLETE EASY CLEAN - SOFT),Oral-B Complete Easy Clean toothbrush (soft),1 batang,true,false
+1538,SABUN PENCUCI AXION PASTE (LEMON),Axion dishwashing paste (lemon),350 g,true,true
+1539,SABUN PENCUCI KUAT HARIMAU (LEMON),Kuat Harimau dishwashing liquid (lemon),400 g,true,false
+1540,SABUN PENCUCI GLO (LEMON),Glo dishwashing liquid (lemon),900ml,true,true
+1541,SABUN PENCUCI SUNLIGHT (LEMON),Sunlight dishwashing liquid (lemon),1000 ml,true,true
+1543,KIUB SUP TOMYAM (MAGGI),Maggi tom yam stock cubes,2 X 10G,true,true
+1544,SERBUK NASI GORENG CINA ADABI,Adabi Chinese fried rice seasoning,17 g,true,false
+1545,PERENCAH NASI GORENG IKAN BILIS SERI AJI,Seri Aji anchovy fried rice seasoning,26G,true,false
+1547,PEPSI COLA (TIN),Pepsi (can),320 ml,true,false
+1550,PAHA AYAM (CHICKEN DRUMSTICK),Chicken drumsticks,1kg,true,false
+1551,DADA AYAM (CHICKEN KEEL),Chicken breast (keel),1kg,true,false
+1552,THIGH AYAM,Chicken thighs,1kg,true,false
+1553,WHOLE LEG AYAM,Chicken whole leg,1kg,true,false
+1554,IKAN MERAH (KEPINGAN),Red snapper (sliced),1kg,true,false
+1555,UDANG PUTIH/VANNAMEI (TERNAK) (ANTARA 41 HINGGA 60 EKOR SEKILOGRAM),"White/vannamei prawns, farmed (41-60 per kg)",1kg,true,false
+1556,BAYAM HIJAU,Green spinach (bayam),1kg,true,false
+1557,BAYAM MERAH,Red spinach (bayam merah),1kg,true,true
+1558,SAWI HIJAU,Choy sum (sawi),1kg,true,false
+1559,KANGKUNG,Kangkung (water spinach),1kg,true,false
+1560,KAILAN,Kailan,1kg,true,false
+1561,TAUGE KACANG HIJAU,Mung bean sprouts,1kg,true,true
+1562,UDANG KERING,Dried shrimp,100 g,true,false
+1563,SOTONG KERING (SAIZ SERDAHANA),Dried squid (medium),1kg,true,false
+1564,BAWANG PUTIH IMPORT (CHINA),"Garlic, imported (China)",1kg,true,false
+1566,SERBUK KARI IKAN (TIDAK BERBUNGKUS),Fish curry powder (loose),100 g,true,true
+1567,SERBUK KARI DAGING (TIDAK BERBUNGKUS),Meat curry powder (loose),100 g,true,true
+1568,SERBUK KARI IKAN ADABI,Adabi fish curry powder,250 g,true,false
+1569,SERBUK KARI IKAN ALAGAPPAS,Alagappa's fish curry powder,250 g,true,true
+1570,SERBUK KARI AYAM DAN DAGING ADABI,Adabi chicken & meat curry powder,250 g,true,false
+1571,SERBUK KARI DAGING ALAGAPPAS,Alagappa's meat curry powder,250 g,true,true
+1572,SERBUK KARI DAGING BABAS,Babas meat curry powder,250 g,true,false
+1573,SERBUK KURMA AYAM & DAGING ADABI,Adabi chicken & meat kurma powder,250 g,true,true
+1575,SERBUK KURMA BABAS,Babas kurma powder,125 g,true,true
+1576,SERBUK KARI KURMA ALAGAPPAS,Alagappa's kurma curry powder,200 g,true,true
+1577,SERBUK PERENCAH SUP ADABI,Adabi soup seasoning powder,250 g,true,false
+1578,SERBUK REMPAH SUP MAK SITI,Mak Siti soup spice powder,250 g,true,true
+1579,SERBUK SUP FAIZA,Faiza soup powder,220 g,true,true
+1581,BERAS CAP RAMBUTAN (SST5%),Rambutan rice (SST 5%),10 kg,true,true
+1582,BERAS CAP JASMINE (SST5%),Jasmine rice (SST 5%),10 kg,true,false
+1583,BERAS SUPER CAP JATI TWR  5% (IMPORT),Jati TWR super rice 5% (imported),10 kg,true,false
+1584,BIHUN KERING TEMPATAN (PELBAGAI JENAMA),Local dried rice vermicelli (assorted brands),400 g,true,false
+1585,BIHUN KERING IMPORT (PELBAGAI JENAMA),Imported dried rice vermicelli (assorted brands),400 g,true,false
+1586,ROTI SANDWICH MASSIMO DENGAN GERMA GANDUM,Massimo wheat germ sandwich bread,400 g,true,true
+1587,GULA HALUS CASTOR (PELBAGAI JENAMA),Castor sugar (assorted brands),+- 500g,true,true
+1588,GULA MERAH LEMBUT (PELBAGAI JENAMA),Soft brown sugar (assorted brands),+- 500g,true,false
+1589,GULA PUTIH BERTAPIS KASAR (PELBAGAI JENAMA),Coarse refined white sugar (assorted brands),1kg,true,false
+1590,GULA PUTIH BERTAPIS HALUS (PELBAGAI JENAMA),Fine refined white sugar (assorted brands),1kg,true,false
+1591,TEPUNG BERAS (PELBAGAI JENAMA),Rice flour (assorted brands),500 g,true,true
+1593,TEPUNG GANDUM GP (BERBUNGKUS) PELBAGAI JENAMA,"Wheat flour, general purpose (packed, assorted brands)",1kg,true,true
+1594,TEPUNG PULUT (PELBAGAI JENAMA),Glutinous rice flour (assorted brands),500 g,true,true
+1595,MINYAK JAGUNG CAP DAISY,Daisy corn oil,2 kg,true,false
+1596,MINYAK JAGUNG CAP MAZOLA,Mazola corn oil,2 kg,true,true
+1597,MINYAK JAGUNG CAP VECORN,Vecorn corn oil,2 kg,true,false
+1598,MINYAK MASAK SEBATIAN CAP RED EAGLE,Red Eagle blended cooking oil,2 kg,true,false
+1599,MINYAK MASAK SEBATIAN CAP NEPTUNE,Neptune blended cooking oil,2 kg,true,true
+1600,MINYAK MASAK SEBATIAN CAP KNIFE,Knife blended cooking oil,2 kg,true,false
+1601,MINYAK MASAK TULEN CAP BURUH,Buruh pure palm cooking oil,2 kg,true,false
+1602,MINYAK MASAK TULEN CAP VESAWIT,Vesawit pure palm cooking oil,2 kg,true,false
+1603,MINYAK SAPI CAP WINDMILL GHEEBLEND,Windmill ghee blend,400 g,true,false
+1604,ASAM JAWA (TIDAK BERBIJI) ADABI,Adabi seedless tamarind,200 g,true,false
+1605,GARAM HALUS BIASA (PELBAGAI JENAMA),Fine table salt (assorted brands),+-350g,true,false
+1606,MENTEGA KACANG HALUS LADY'S CHOICE,Lady's Choice smooth peanut butter,500 g,true,false
+1607,LEPAAN FARMCOWS,Farmcows spread,250 g,true,true
+1608,LEPAAN BUTTERCUP,Buttercup spread,250 g,true,true
+1609,MENTEGA SCS (SALTED),SCS butter (salted),250 g,true,true
+1610,SANTAN KELAPA JENAMA M&S,M&S coconut milk,500 ml,true,false
+1611,SANTAN KELAPA JENAMA KARA,Kara coconut milk,200 ml,true,false
+1612,SANTAN KELAPA JENAMA HARMUNI,Harmuni coconut milk,200 ml,true,false
+1613,ESEN STAR BRAND 'PELBAGAI PERISA',Star Brand essence (assorted flavours),25 ml,true,false
+1615,MENTEGA ANCHOR (SALTED),Anchor butter (salted),227g,true,false
+1616,MAURIPAN YIS SEGERA,Mauripan instant yeast,11g,true,true
+1618,SUSU ISIAN PEKAT MANIS CAP F & N,F&N sweetened condensed filled milk,500 g,true,true
+1619,SUSU TEPUNG SEGERA DUTCHLADY (BIASA),Dutch Lady instant milk powder (regular),600 g,true,false
+1623,S-26 SMA RUMUSAN BAYI LANGKAH 1 - (KOTAK),S-26 SMA Step 1 infant formula (box),600 g,true,true
+1624,S-26 GOLD SMA RUMUSAN BAYI LANGKAH 1 - (KOTAK),S-26 Gold SMA Step 1 infant formula (box),600 g,true,true
+1628,NESTLE CERELAC GANDUM DAN MADU - KOTAK,Nestle Cerelac wheat & honey (box),225g,true,false
+1629,NESTLE CERELAC BERAS MERAH & SUSU - TIN,Nestle Cerelac red rice & milk (tin),350 g,true,true
+1630,BERUS GIGI COLGATE (TWISTER - SOFT),Colgate Twister toothbrush (soft),1 batang,true,false
+1635,NESTLE COFFEE-MATE,Nestle Coffee-mate,450 g,true,false
+1636,MILO (PAKET),Milo (pack),400 g,true,true
+1637,MILO (PAKET),Milo (pack),1kg,true,true
+1638,MILO 3 IN 1 (PAKET) - ORIGINAL,Milo 3-in-1 original (pack),30x33g,true,true
+1645,SERBUK KOPI CAP KAPAL API (KASAR) (BERBUNGKUS),"Kapal Api ground coffee, coarse (packed)",180 g,true,true
+1646,SERBUK KOPI HANG TUAH ROBUSTA,Hang Tuah robusta ground coffee,200 g,true,true
+1647,TEH LIPTON (SERBUK),Lipton tea (powder),400 g,true,true
+1650,TEH LIPTON (UNCANG),Lipton tea (bags),100 beg,true,false
+1651,YEO'S SOYA (KOTAK),Yeo's soy milk (carton),250 ml,true,false
+1652,PAPERMATE LIQUID PAPER (PEN),Papermate Liquid Paper (pen),7ml,true,true
+1653,UHU GLUE (GAM PELBAGAI KEGUNAAN),UHU all-purpose glue,20ml,true,true
+1654,MAJALAH CLEO,Cleo magazine,senaskah,true,true
+1657,MAJALAH MINGGUAN WANITA,Mingguan Wanita magazine,senaskah,true,true
+1658,COLGATE TOOTHBRUSH EXTRA CLEAN MEDIUM,Colgate Extra Clean toothbrush (medium),1 batang,true,true
+1659,DARLIE TRAVEL KIT ADULT,Darlie adult travel kit,1 unit,true,true
+1669,KOTEX SOFT AND SMOOTH OVERNIGHT WING 8 PADS (28CM),"Kotex Soft & Smooth Overnight Wing, 8 pads (28 cm)",paket,true,true
+1670,KOTEX SOFT & SMOOTH MAXI WING 10 PADS,"Kotex Soft & Smooth Maxi Wing, 10 pads",paket,true,true
+1671,REJOICE RICH SOFT SMOOTH SHAMPOO,Rejoice Rich Soft Smooth shampoo,70ml,true,true
+1673,HEAD AND SHOULDERS COOL MENTHOL SHAMPOO,Head & Shoulders Cool Menthol shampoo,70ml,true,true
+1677,KLEENEX FACIAL TISSUE VINTAGE SOFTPACK 50S X 3,"Kleenex Vintage facial tissue softpack, 50s x 3",paket,true,true
+1678,FUMAKILLA D1 (LINGKARAN NYAMUK) - 1 X 10'S,"Fumakilla D1 mosquito coils, 10s",paket,true,true
+1680,PANADOL ACTIFAST 10S,"Panadol ActiFast, 10s",paket,true,true
+1682,STREPSILS ORIGINAL 6 LOZENGES,"Strepsils Original, 6 lozenges",paket,true,true
+1683,MISTER POTATO CRISPS (PELBAGAI PERISA) - BOTOL,"Mister Potato crisps (assorted flavours, canister)",160 g,true,true
+1684,PRINGLES POTATO CRISPS (PELBAGAI PERISA) - BOTOL,"Pringles potato crisps (assorted flavours, canister)",110 g,true,true
+1685,MISTER POTATO CHIPS (PELBAGAI PERISA) - PAKET,"Mister Potato chips (assorted flavours, pack)",75 g,true,true
+1691,OREO BISKUT SANDWICH COKLAT JENAMA KRAFT (PELBAGAI PERISA),Oreo chocolate sandwich biscuits (assorted flavours),paket,true,true
+1692,CREAM O BISKUT SANDWICH JENAMA JACK N JILL (PELBAGAI PERISA),Jack 'n Jill Cream-O sandwich biscuits (assorted flavours),132g,true,true
+1693,CHIPSMORE ORIGINAL,Chipsmore Original,163.2g,true,true
+1695,ENO SACHET GINGER,Eno sachet (ginger),2x4.3g,true,true
+1696,CHIPSMORE MINI HAZELNUTS,Chipsmore Mini Hazelnut,88g,true,true
+1697,TIGER BISKUAT SUSU,Tiger milk biscuits,75 g,true,true
+1699,CADBURY DAIRY MILK HAZELNUT,Cadbury Dairy Milk Hazelnut,40 g,true,true
+1700,KINDER JOY FOR BOYS/FOR GIRLS,Kinder Joy (for boys/for girls),20 g,true,true
+1701,TOBLERONE (MILK CHOCOLATE),Toblerone (milk chocolate),50 g,true,true
+1704,NIPS CHOCOLATE COATED ROASTED PEANUT,Nips chocolate-coated roasted peanuts,85g,true,true
+1710,MAGGI HOT CUP (CURRY),Maggi Hot Cup (curry),64g,true,true
+1712,YAKULT (ACE/ACE LIGHT),Yakult (Ace/Ace Light),80ml,true,true
+1718,LIVITA WITH HONEY (TIN),Livita with Honey (can),250 ml,true,true
+1719,SEVEN UP LEMON & LIME,7 Up lemon & lime,500 ml,true,true
+1725,THREE LEGS COOLING WATER,Three Legs cooling water,200 ml,true,true
+1727,COOL RHINO COOLING WATER,Cool Rhino cooling water,350ml,true,true
+1728,NASI GORENG BIASA,Plain fried rice,sepinggan,true,true
+1729,NASI GORENG SEAFOOD,Seafood fried rice,sepinggan,true,true
+1730,MI GORENG BIASA,Plain fried noodles,sepinggan,true,true
+1731,MI GORENG MAMAK,Mamak fried noodles (mee goreng mamak),sepinggan,true,true
+1732,MI HAILAM,Hainanese noodles,sepinggan,true,true
+1733,MI SUP (AYAM/DAGING),Noodle soup (chicken/beef),semangkuk,true,true
+1734,MI TOM YAM,Tom yam noodles,semangkuk,true,true
+1735,MI BANDUNG,Bandung noodles,sepinggan,true,true
+1736,MI LADNA,Noodles in gravy (ladna),sepinggan,true,true
+1737,MI KUNGFU,Kung fu noodles,sepinggan,true,true
+1738,BIHUN SUP (AYAM/DAGING),Rice vermicelli soup (chicken/beef),semangkuk,true,true
+1739,KUETIAU GORENG BIASA,Plain fried kuey teow,sepinggan,true,true
+1740,KUETIAU HAILAM,Hainanese kuey teow,sepinggan,true,true
+1741,KUETIAU SUP (AYAM/DAGING),Kuey teow soup (chicken/beef),semangkuk,true,true
+1742,KUETIAU TOM YAM,Tom yam kuey teow,semangkuk,true,true
+1743,KUETIAU BANDUNG,Bandung kuey teow,semangkuk,true,true
+1744,KUETIAU LADNA,Kuey teow in gravy (ladna),sepinggan,true,true
+1745,KUETIAU KUNGFU,Kung fu kuey teow,sepinggan,true,true
+1746,CHAR KUETIAU,Char kuey teow,sepinggan,true,true
+1747,MI HOKKIEN,Hokkien mee,sepinggan,true,true
+1748,KON LOH MI (KICAP),Kon loh mee (soy sauce),sepinggan,true,true
+1749,WAN TAN MI,Wantan mee,semangkuk,true,true
+1750,MI UDANG,Prawn noodles (har mee),semangkuk,true,true
+1751,MI KARI,Curry noodles (curry mee),semangkuk,true,true
+1752,DAGING KAMBING MASAK KARI,Mutton curry,sepiring,true,true
+1753,PAK CHOY SOS TIRAM,Pak choy with oyster sauce,sepiring,true,true
+1754,SAYUR TAUGEH,Stir-fried bean sprouts,sepiring,true,true
+1755,BABI (PORK) GORENG,Fried pork,sepiring,true,true
+1756,BABI (PORK) MASAM MANIS,Sweet and sour pork,sepiring,true,true
+1757,IKAN SIAKAP GORENG (SAIZ SEDERHANA),Fried barramundi (medium),1 ekor,true,true
+1758,IKAN SIAKAP MASAM MANIS (SAIZ SEDERHANA),Sweet and sour barramundi (medium),1 ekor,true,true
+1759,IKAN SIAKAP TIGA RASA (SAIZ SEDERHANA),Three-flavour barramundi (medium),1 ekor,true,true
+1760,IKAN SIAKAP KUKUS/STIM (SAIZ SEDERHANA),Steamed barramundi (medium),1 ekor,true,true
+1761,IKAN KERAPU GORENG (SAIZ SEDERHANA),Fried grouper (medium),1 ekor,true,true
+1762,IKAN KERAPU MASAM MANIS (SAIZ SEDERHANA),Sweet and sour grouper (medium),1 ekor,true,true
+1763,IKAN KERAPU TIGA RASA (SAIZ SEDERHANA),Three-flavour grouper (medium),1 ekor,true,true
+1764,IKAN KERAPU KUKUS/STIM (SAIZ SEDERHANA),Steamed grouper (medium),1 ekor,true,true
+1765,IKAN BAWAL HITAM GORENG (SAIZ SEDERHANA),Fried black pomfret (medium),1 ekor,true,true
+1766,IKAN BAWAL HITAM MASAM MANIS (SAIZ SEDERHANA),Sweet and sour black pomfret (medium),1 ekor,true,true
+1767,IKAN BAWAL HITAM TIGA RASA (SAIZ SEDERHANA),Three-flavour black pomfret (medium),1 ekor,true,true
+1768,IKAN BAWAL HITAM KUKUS/STIM (SAIZ SEDERHANA),Steamed black pomfret (medium),1 ekor,true,true
+1769,IKAN BAWAL PUTIH GORENG (SAIZ SEDERHANA),Fried white pomfret (medium),1 ekor,true,true
+1770,IKAN BAWAL PUTIH MASAM MANIS (SAIZ SEDERHANA),Sweet and sour white pomfret (medium),1 ekor,true,true
+1771,IKAN BAWAL PUTIH KUKUS/STIM (SAIZ SEDERHANA),Steamed white pomfret (medium),1 ekor,true,true
+1772,IKAN KEMBUNG GORENG (SAIZ SEDERHANA),Fried Indian mackerel (medium),1 ekor,true,true
+1773,IKAN KEMBUNG MASAK KICAP (SAIZ SEDERHANA),Indian mackerel in soy sauce (medium),1 ekor,true,true
+1774,IKAN KEMBUNG TIGA RASA (SAIZ SEDERHANA),Three-flavour Indian mackerel (medium),1 ekor,true,true
+1775,IKAN TENGGIRI GORENG,Fried Spanish mackerel,sekeping,true,true
+1776,IKAN TENGGIRI MASAK KARI,Spanish mackerel curry,sekeping,true,true
+1777,IKAN TILAPIA GORENG BIASA (SAIZ SEDERHANA),Fried tilapia (medium),1 ekor,true,true
+1778,IKAN TILAPIA MASAM MANIS (SAIZ SEDERHANA),Sweet and sour tilapia (medium),1 ekor,true,true
+1779,IKAN TILAPIA KUKUS/STIM (SAIZ SEDERHANA),Steamed tilapia (medium),1 ekor,true,true
+1780,SUP PERUT,Tripe soup,semangkuk,true,true
+1782,ROTI NAAN,Naan,sekeping,true,true
+1783,ROTI CANAI BIASA,Roti canai (plain),sekeping,true,true
+1784,KUIH KARIPAP (KENTANG),Curry puff (potato),sebiji,true,true
+1785,VADAI MASALA,Masala vadai,sebiji,true,true
+1786,VADAI ULUNDHU,Ulundhu vadai,sebiji,true,true
+1787,ROJAK BIASA,Rojak (plain),sepinggan,true,true
+1788,ROJAK MI,Rojak mee,sepinggan,true,true
+1789,TEH TARIK PANAS,Hot teh tarik,gelas kecil,true,true
+1790,"KOPI ""O"" AIS",Iced black coffee (kopi o ais),gelas besar,true,true
+1791,KOPI AIS,Iced coffee (with milk),gelas besar,true,true
+1792,TEH AIS,Iced tea (with milk),gelas besar,true,true
+1793,NESCAFE AIS,Iced Nescafe,gelas besar,true,true
+1794,LIMAU AIS,Iced lime juice,gelas besar,true,true
+1795,JUS OREN,Orange juice,segelas,true,true
+1796,CARROT SUSU,Carrot milk,segelas,true,true
+1804,KEPAK AYAM (CHICKEN WING),Chicken wings,1kg,true,false
+1808,MENTOS (PELBAGAI PERISA),Mentos (assorted flavours),37g,true,true
+1814,LIMAU PANAS,Hot lime juice,gelas kecil,true,true
+1818,KACANG BOTOL,Winged beans,1kg,true,true
+1819,LENGKUAS,Galangal,1kg,true,false
+1820,TELUR MASIN,Salted egg,1 biji,true,true
+1821,TELUR MASIN,Salted egg,4 Biji,true,true
+1822,BERAS PUTIH IMPORT SABAH RICE VAGAS TOKOU,Sabah Rice Vagas Tokou imported white rice,10 kg,true,true
+1823,BERAS TKC SABAH CAP TQR 5%,"TKC Sabah rice, Cap TQR 5%",10 kg,true,true
+1824,BERAS TKC SUPER HUMA CAP KELISA EMAS (SABAH),"TKC Super Huma rice, Kelisa Emas (Sabah)",10 kg,true,true
+1825,BERAS SUPER SAZARICE CAP ANGGUR (BERAS PUTIH IMPORT ),Sazarice Anggur super rice (imported white rice),10 kg,true,true
+1826,BERAS SUPER SAZARICE CAP RODA (BERAS PUTIH IMPORT),Sazarice Roda super rice (imported white rice),10 kg,true,true
+1827,"TEPUNG GANDUM NGP (BERBUNGKUS, CAP MUHIBAH)","Wheat flour, Cap Muhibah (packed)",1kg,true,true
+1828,KICAP SOYA PEKAT MANIS CAP AYAM,Ayam Brand sweet thick soy sauce,330 ml,true,true
+1829,BUTTERLITE (LEPA SUSU ISTIMEWA),Butterlite special milk spread,250 g,true,true
+1832,BERAS CAP BAO-BAO GOLDEN SARAWAK (SUPER IMPORT),Bao-Bao Golden Sarawak rice (super imported),10 kg,true,true
+1833,BERAS PREMIUM CAP UNCLE TAN (SUPER IMPORT),Uncle Tan premium rice (super imported),10 kg,true,true
+1835,BIHUN KERING (CAP SWALLOW KONG MOON),Swallow Kong Moon dried rice vermicelli,400 g,true,true
+1837,KICAP TONG NAM (DARK SOY SAUCE),Tong Nam dark soy sauce,330 ml,true,true
+1838,SERBUK KARI IKAN ALAGAPPAS,Alagappa's fish curry powder,200 g,true,true
+1839,SERBUK KARI DAGING ALAGAPPAS,Alagappa's meat curry powder,200 g,true,true
+1849,TEPUNG NAIK SENDIRI CAP 'BLUE KEY',Blue Key self-raising flour,1kg,true,false
+1851,TENOM COFFEE WANG EMAS (SERBUK),Tenom Wang Emas coffee (powder),180 g,true,true
+1852,DESA FRESH MILK (KOTAK),Desa fresh milk (carton),1 liter,true,true
+1854,KORDIAL F&N SUN VALLEY (PELBAGAI PERISA),F&N Sun Valley cordial (assorted flavours),2 liter,true,true
+1856,SERBUK KOPIMAS COFFEE (BOLD TRADITIONS),Kopimas coffee powder (Bold Traditions),200 g,true,true
+1857,NASI KERABU (BIASA),Nasi kerabu (plain),sepinggan,true,true
+1858,NASI DAGANG (BIASA),Nasi dagang (plain),sepinggan,true,true
+1859,"TEH ""O"" AIS","Iced tea, no milk (teh o ais)",gelas besar,true,true
+1860,"TEH ""O"" LIMAU AIS","Iced lime tea, no milk (teh o limau ais)",gelas besar,true,true
+1861,TEH HALIA AIS,Iced ginger tea,gelas besar,true,true
+1862,"NESCAFE ""O"" AIS",Iced black Nescafe (Nescafe O ais),gelas besar,true,true
+1863,NESLO AIS,Iced Neslo,gelas besar,true,true
+1864,HORLICKS AIS,Iced Horlicks,gelas besar,true,true
+1865,MILO AIS,Iced Milo,gelas besar,true,true
+1866,"MILO ""O"" AIS","Iced Milo, no milk (Milo O ais)",gelas besar,true,true
+1867,SIRAP AIS,Iced rose syrup (sirap ais),gelas besar,true,true
+1868,SIRAP LIMAU AIS,Iced syrup with lime,gelas besar,true,true
+1869,SIRAP BANDUNG AIS,Iced bandung (rose syrup with milk),gelas besar,true,true
+1870,"TEPUNG GANDUM NGP (BERBUNGKUS, CAP  FAIZA)","Wheat flour, Cap Faiza (packed)",1kg,true,false
+1871,KRIMER SEJAT CAIR SAJI,Saji liquid evaporated creamer,390g,true,true
+1872,MAYONIS SEBENAR LADY'S CHOICE,Lady's Choice real mayonnaise,220ml,true,false
+1873,KRIMER MANIS CAP TEAPOT,Teapot sweetened creamer,500 g,true,true
+1874,DUTCH LADY 123 (BIASA),Dutch Lady 123 (plain),900 g,true,true
+1876,PELEMBUT PAKAIAN - DOWNY (PREMIUM PARFUM PASSION),Downy fabric softener (Premium Parfum Passion),800ml,true,false
+1877,NESCAFE BLEND & BREW 3 IN 1 (PAKET ) - ORIGINAL,Nescafe Blend & Brew 3-in-1 original (pack),28x19g,true,true
+1879,SEVEN UP LEMON & LIME (TIN),7 Up lemon & lime (can),320ml,true,false
+1880,YOGURT LACTEL (FAT FREE) (STRAWBERRY),Lactel fat-free yogurt (strawberry),125 g,true,true
+1881,SERBUK CABAI ALAGAPPAS,Alagappa's chilli powder,230g,true,true
+1882,TUNA CAP AYAM (TUNA MAYONNAISE),Ayam Brand tuna mayonnaise,160 g,true,true
+1884,SABUN SERBUK FAB (PERFECT),FAB washing powder (Perfect),720g,true,true
+1886,PEMBARIS PLASTIK FABER CASTELL - 15CM,"Faber-Castell plastic ruler, 15 cm",1 unit,true,true
+1887,DETTOL SHOWER FOAM ORIGINAL,Dettol shower foam original,250 ml,true,true
+1889,AMBI PUR GEL FRESH AIR FRESHENER (PELBAGAI JENIS),Ambi Pur gel air freshener (assorted),180ml,true,true
+1890,BYE BYE FEVER SUPER COOL (DEWASA),Bye Bye Fever Super Cool (adult),6sheets,true,true
+1891,SUPER RING SNACKS CHEESE,Super Ring cheese snacks,60 g,true,true
+1893,MUNCHY'S MUZIC WAFER VANILLA CUBE,Munchy's Muzic vanilla wafer cubes,90g,true,true
+1894,CALPIS (PELBAGAI PERISA),Calpis (assorted flavours),350ml,true,true
+1896,COCA COLA LIGHT,Coca-Cola Light,320ml,true,true
+1899,CILI KERING KERINTING (BERTANGKAI/TIDAK BERTANGKAI),"Dried chilli, kerinting (with/without stems)",1kg,true,false
+1900,CILI KERING LEPER (BERTANGKAI/TIDAK BERTANGKAI),"Dried chilli, flat (with/without stems)",1kg,true,false
+1902,BERAS SAZARICE SUPER WR (BERAS PUTIH IMPORT),Sazarice Super WR rice (imported white rice),10 kg,true,true
+1903,BERAS KELAS MAHIR SUPER IMPORT RICE (5%),Kelas Mahir super imported rice (5%),10 kg,true,true
+1904,DUMEX DUGRO 3 (1-3 TAHUN) (PELBAGAI PERISA),"Dumex Dugro 3 (1-3 years, assorted flavours)",850g,true,false
+1905,MAGGI 2 MINUTE NOODLE CURRY FLAVOUR (5X79G),"Maggi 2 Minute noodles, curry flavour (5x79g)",5 X 79g,true,true
+1907,DAGING KAMBING BEBIRI IMPORT BERTULANG (LAMB) (AUSTRALIA - KOTAK) (1KG),"Imported lamb, bone-in (Australia, boxed)",1kg,true,true
+1908,DAGING KAMBING BEBIRI IMPORT BERTULANG (LAMB) (NEW ZEALAND - KOTAK),"Imported lamb, bone-in (New Zealand, boxed)",1kg,true,true
+1909,DAGING KAMBING BEBIRI IMPORT TANPA TULANG (LAMB) (TIDAK TERMASUK PAHA - AUSTRALIA),"Imported lamb, boneless, excl. leg (Australia)",1kg,true,true
+1910,DAGING KAMBING BEBIRI IMPORT TANPA TULANG (LAMB) (TIDAK TERMASUK PAHA - NEW ZEALAND),"Imported lamb, boneless, excl. leg (New Zealand)",1kg,true,true
+1911,DAGING PAHA KAMBING BEBIRI IMPORT BERTULANG (LAMB) (AUSTRALIA),"Imported lamb leg, bone-in (Australia)",1kg,true,true
+1912,DAGING PAHA KAMBING BEBIRI IMPORT BERTULANG (LAMB) (NEW ZEALAND),"Imported lamb leg, bone-in (New Zealand)",1kg,true,true
+1913,DAGING LEMBU IMPORT (BLOCK),Imported beef (block),1kg,true,false
+1914,DAGING KERBAU IMPORT (INDIA) (BLOCK),"Imported buffalo meat, block (India)",1kg,true,false
+1915,IKAN JENAHAK (KEPINGAN),Grouper / jenahak (sliced),1kg,true,false
+1916,IKAN DEMUDUK/CUPAK/CERMIN (≤ 3 EKOR SEKILOGRAM),Moonfish / ikan demuduk (≤3 fish per kg),1kg,true,false
+1917,IKAN PARANG (KEPINGAN),Wolf herring / ikan parang (sliced),1kg,true,true
+1918,IKAN TERUBOK (b	$ 4 EKOR SEKILOGRAM),Toli shad / ikan terubok (≤4 fish per kg),1kg,true,true
+1919,UDANG PUTIH BESAR (ANTARA 20 HINGGA 30 EKOR SEKILOGRAM),Large white prawns (20-30 per kg),1kg,true,false
+1920,KERANG (SAIZ SEDERHANA),Cockles (medium),1kg,true,true
+1921,IKAN TILAPIA MERAH (ANTARA 2 HINGGA 5 EKOR SEKILOGRAM),Red tilapia (2-5 fish per kg),1kg,true,false
+1922,SADERI,Celery,1kg,true,true
+1923,TERUNG BULAT,Round eggplant,1kg,true,false
+1924,SERBUK KUNYIT ALAGAPPAS,Alagappa's turmeric powder,230g,true,true
+1925,CILI API/PADI MERAH,Red bird's eye chilli (cili padi),1kg,true,true
+1926,CILI AKAR HIJAU,Green chilli (cili akar),1kg,true,false
+1927,CILI AKAR MERAH,Red chilli (cili akar),1kg,true,false
+1928,LIMAU KASTURI,Calamansi lime (limau kasturi),1kg,true,false
+1929,SANTAN KELAPA SEGAR (PEKAT),Fresh coconut milk (thick),1kg,true,false
+1930,TELUR AYAM KAMPUNG,Free-range village chicken eggs (telur kampung),10 biji,true,true
+1931,BAWANG BESAR IMPORT (PAKISTAN),"Onion, imported (Pakistan)",1kg,true,true
+1933,BAWANG KECIL MERAH IMPORT (HOLLAND),"Red shallots, imported (Holland)",1kg,true,true
+1934,MINYAK MASAK SEBATIAN CAP ADELA GOLD,Adela Gold blended cooking oil,1kg,true,true
+1935,MINYAK MASAK SEBATIAN CAP ADELA GOLD,Adela Gold blended cooking oil,2 kg,true,true
+1936,MINYAK MASAK SEBATIAN CAP ADELA GOLD,Adela Gold blended cooking oil,5 kg,true,true
+1937,MINYAK MASAK TULEN CAP SAJI,Saji pure palm cooking oil,1kg,true,false
+1938,MINYAK MASAK TULEN CAP SAJI,Saji pure palm cooking oil,2 kg,true,false
+1939,MINYAK MASAK TULEN CAP SAJI,Saji pure palm cooking oil,5 kg,true,false
+1940,MINYAK MASAK TULEN CAP ALIF,Alif pure palm cooking oil,1kg,true,true
+1941,MINYAK MASAK TULEN CAP ALIF,Alif pure palm cooking oil,2 kg,true,true
+1942,MINYAK MASAK TULEN CAP ALIF,Alif pure palm cooking oil,5 kg,true,true
+1943,KACANG MERAH (IMPORT),Red kidney beans (imported),1kg,true,true
+1944,KACANG SOYA (IMPORT),Soybeans (imported),1kg,true,false
+1945,TAUHU (JENIS KERAS),Tofu (firm),sekeping,true,true
+1946,TEMPE (BUNGKUSAN PLASTIK),Tempeh (plastic-wrapped),sekeping,true,true
+1947,SERBUK PENAIK ROYAL (TIN),Royal baking powder (tin),113g,true,false
+1948,RAGI BULAT/RAGI TAPAI,Tapai yeast balls (ragi),1 biji,true,true
+1949,ROTI WHOLEMEAL (PELBAGAI JENAMA),Wholemeal bread (assorted brands),400 g,true,true
+1950,BUNGA RAYA YIS SEGERA,Bunga Raya instant yeast,11g,true,true
+1951,BERAS PREMIUM CAP 3A BOY (SUPER IMPORT),3A Boy premium rice (super imported),10 kg,true,true
+1952,KRIMER SEJAT CAP F&N,F&N evaporated creamer,390g,true,true
+1953,KRIMER MANIS PEKAT CAP SAJI,Saji sweetened condensed creamer,500 g,true,false
+1954,SUSU TEPUNG SEGERA EVERYDAY,Everyday instant milk powder,900 g,true,true
+1955,YOGURT MARIGOLD (LOW FAT) (STRAWBERRY),Marigold low-fat yogurt (strawberry),130g,true,false
+1956,NAN PRO LANGKAH 1 RUMUSAN BAYI (KOTAK),NAN Pro Step 1 infant formula (box),600 g,true,true
+1957,NAN PRO LANGKAH 2 RUMUSAN SUSULAN (KOTAK),NAN Pro Step 2 follow-on formula (box),600 g,true,true
+1958,NANKID OPTIPRO LANGKAH 3 RUMUSAN UNTUK KANAK-KANAK,NANKID Optipro Step 3 growing-up formula,600 g,true,true
+1959,SUSU SEGAR FARM FRESH,Farm Fresh fresh milk,1 liter,true,true
+1960,SUSU SEGAR KURMA FARM FRESH,Farm Fresh date (kurma) milk,700 g,true,false
+1961,ANMUM ESSENTIAL LANGKAH 4 PERISA ASLI (TANPA GULA TAMBAHAN) - TIN,"Anmum Essential Step 4 original, no added sugar (tin)",1.5kg,true,true
+1962,NESTUM (ORIGINAL),Nestum (original),500 g,true,true
+1963,ANMUM ESSENTIAL LANGKAH 4 PERISA ASLI (TANPA GULA TAMBAHAN) - KOTAK,"Anmum Essential Step 4 original, no added sugar (box)",550 g,true,false
+1964,QUAKER OATS INSTANT OATMEALS,Quaker instant oatmeal,1kg,true,false
+1965,PEDIASURE (VANILA),PediaSure (vanilla),600 g,true,true
+1966,MILNA BISKUT RUSK (PELBAGAI PERISA),Milna rusk biscuits (assorted flavours),130g,true,false
+1967,PETPET GOLD+,PetPet Gold+ diapers,M70,true,true
+1968,DRYPERS WEE WEE DRY (M74),Drypers Wee Wee Dry diapers (M74),M74,true,true
+1969,HUGGIES DRY DIAPERS (M72),Huggies Dry diapers (M72),M72,true,true
+1970,DIAPEX EASY,Diapex Easy diapers,M70,true,true
+1971,FITTI,Fitti diapers,M60,true,true
+1972,MAMYPOKO EXTRA DRY,MamyPoko Extra Dry diapers,M54,true,true
+1973,PETPET DAY NIGHT PANTS,PetPet Day Night pants,M54,true,true
+1974,DRYPERS DRYPANTZ,Drypers Drypantz,M60,true,true
+1975,HUGGIES DRY PANTS,Huggies Dry Pants,M60,true,true
+1976,MAGGI MI SEGERA PERISA KARI,"Maggi instant noodles, curry flavour",5 X 79g,true,false
+1977,CINTAN MI SEGERA PERISA AYAM,"Cintan instant noodles, chicken flavour",5 X 75g,true,true
+1978,MI SEDAP MI GORENG PERISA ASLI,"Mi Sedap mi goreng, original flavour",5 X 90g,true,true
+1979,SABUN MANDIAN LIFEBUOY (COOL FRESH),Lifebuoy bath soap (Cool Fresh),300ml,true,true
+1980,SABUN MANDIAN DETTOL ANTIBACTERIAL (FRESH),Dettol antibacterial bath soap (Fresh),500 ml,true,true
+1981,SABUN MANDIAN LUX (MAGICAL SPELL),Lux bath soap (Magical Spell),220 ml,true,true
+1982,SYAMPU REJOICE (RICH SOFT SMOOTH),Rejoice shampoo (Rich Soft Smooth),340ml,true,true
+1983,SYAMPU PANTENE PRO-V (HAIR FALL CONTROL),Pantene Pro-V shampoo (Hair Fall Control),340ml,true,true
+1984,SYAMPU HEAD & SHOULDERS (SMOOTH & SILKY),Head & Shoulders shampoo (Smooth & Silky),330 ml,true,false
+1985,TUALA WANITA KOTEX SOFT & SMOOTH (MAXI - NON WING),"Kotex Soft & Smooth sanitary pads (maxi, non-wing)",10 PAD,true,true
+1986,TUALA WANITA LIBRESSE (MAXI - NON WING),"Libresse sanitary pads (maxi, non-wing)",10 PAD,true,true
+1987,DEODORAN NIVEA MAN (BLACK & WHITE INVISIBLE - ORIGINAL),"Nivea Men deodorant (Black & White Invisible, original)",150 ml,true,false
+1988,DEODORAN NIVEA (EXTRA BRIGHTENING),Nivea deodorant (Extra Brightening),150 ml,true,false
+1989,DEODORAN REXONA MEN (SPORT DEFENSE),Rexona Men deodorant (Sport Defense),50 ml,true,false
+1990,DEODORAN REXONA (POWDER DRY BRIGHTENING),Rexona deodorant (Powder Dry Brightening),50 ml,true,false
+1991,SABUN SERBUK BREEZE (POWER CLEAN),Breeze washing powder (Power Clean),750 g,true,true
+1992,SABUN SERBUK ATTACK (AROMA FRESH + COLOUR),Attack washing powder (Aroma Fresh + Colour),800 g,true,false
+1993,SABUN SERBUK TOP (SUPER COLOUR),Top washing powder (Super Colour),750 g,true,true
+1994,DYNAMO POWER GEL (PERFECT CLEAN),Dynamo Power Gel laundry detergent (Perfect Clean),3 kg,true,true
+1995,DAIA EXCELLENT WASHING POWER (EUA DE PARFUM),Daia Excellent washing powder (Eau de Parfum),750 g,true,true
+1996,PELEMBUT PAKAIAN - SOFTLAN (FLORAL FANTASY),Softlan fabric softener (Floral Fantasy),1 liter,true,true
+1998,PENCUCI PELBAGAI GUNA DETTOL (LAVENDER),Dettol multi-purpose cleaner (lavender),2.5 liter,true,false
+1999,PENCUCI PELBAGAI GUNA MR MUSCLE (LAVENDER),Mr Muscle multi-purpose cleaner (lavender),2 liter,true,false
+2000,PENCUCI PELBAGAI GUNA AJAX FABULOSO (LAVENDER),Ajax Fabuloso multi-purpose cleaner (lavender),2 liter,true,false
+2001,DUMEX DUPRO 2 (RUMUSAN SUSULAN),Dumex Dupro 2 follow-on formula,850g,true,false
+2002,PELUNTUR CLOROX (ORIGINAL),Clorox bleach (original),1 liter,true,false
+2003,BIHUN KERING IMPORT (PELBAGAI JENAMA),Imported dried rice vermicelli (assorted brands),400 g,true,true
+2004,BERAS SUPER IMPORT CAP FAMILY,Family super imported rice,10 kg,true,true
+2008,SUSU TEPUNG PENUH KRIM SEGERA NESPRAY,Nespray instant full-cream milk powder,480 g,true,true
+2009,DUTCH LADY 123 (PELBAGAI PERISA),Dutch Lady 123 (assorted flavours),850g,true,false
+2010,DUTCH LADY 456 (PELBAGAI PERISA),Dutch Lady 456 (assorted flavours),850g,true,false
+2011,KIUB SUP TOM YAM (MAGGI),Maggi tom yam stock cubes,6 X 10g,true,false
+2012,KICAP TAMIN (DARK SOY SAUCE),Tamin dark soy sauce,350ml,true,true
+2013,KRAFT DAIRYLEA SINGLES CHEESE 12 SLICES,"Kraft Dairylea cheese singles, 12 slices",250 g,true,true
+2014,ENFAGROW A+ MIND PRO LANGKAH 3 (PELBAGAI PERISA) (KOTAK),"Enfagrow A+ Mind Pro Step 3 (assorted flavours, box)",500 g,true,false
+2015,PETPET PANTS GOLD+,PetPet Pants Gold+,M60,true,true
+2016,SABUN SERBUK FAB (PERFECT),FAB washing powder (Perfect),680g,true,true
+2017,DYNAMO POWER GEL (PERFECT CLEAN),Dynamo Power Gel laundry detergent (Perfect Clean),2.6kg,true,true
+2018,SABUN PENCUCI SUNLIGHT (LEMON),Sunlight dishwashing liquid (lemon),900ml,true,true
+2019,NESCAFE 3 IN 1 ORIGINAL (AROMATIC & BALANCED),Nescafe 3-in-1 Original (Aromatic & Balanced),25 x 18g,true,false
+2020,YOGURT LACTEL (FAT FREE) (STRAWBERRY),Lactel fat-free yogurt (strawberry),130g,true,false
+2022,LEPAAN BUTTERCUP,Buttercup spread,227g,true,false
+2025,SUSU TEPUNG SEGERA EVERYDAY,Everyday instant milk powder,500 g,true,false
+2027,NAN LANGKAH 1 RUMUSAN BAYI (KOTAK),NAN Step 1 infant formula (box),600 g,true,false
+2030,NAN LANGKAH 2 RUMUSAN SUSULAN (KOTAK),NAN Step 2 follow-on formula (box),600 g,true,false
+2031,S-26 RUMUSAN BAYI LANGKAH 1 - (KOTAK),S-26 Step 1 infant formula (box),600 g,true,false
+2032,PETPET GOLD+,PetPet Gold+ diapers (multi-size),"M64, L54, XL42",true,true
+2036,TEPUNG GANDUM CAP KUDA HIJAU,Kuda Hijau wheat flour,1kg,true,true
+2037,BIHUN KERING (CAP LONGKOU),Longkou dried rice vermicelli,400 g,true,true
+2042,PETPET PANTS GOLD+,PetPet Pants Gold+ (multi-size),"M56, L46, XL38",true,true
+2045,IKAN SELAYANG/SARDIN (ANTARA 8-12 EKOR SEKILOGRAM),Sardine / ikan selayang (8-12 fish per kg),1kg,true,false
+2047,IKAN TONGKOL/AYA/KAYU HITAM/PUTIH (ANTARA 1 HINGGA 2 EKOR SEKILOGRAM),Tuna / ikan tongkol (1-2 fish per kg),1kg,true,false
+2056,SABUN PENCUCI AXION PASTE (PELBAGAI JENIS),Axion dishwashing paste (assorted),325 g,true,false
+2060,SUSU MARIGOLD HL,Marigold HL milk,946ML,true,false
+2062,S-26 SMA RUMUSAN BAYI LANGKAH 1 - (KOTAK) (550g),"S-26 SMA Step 1 infant formula (box, 550g)",550 g,true,false
+2066,BERAS PUTIH CAP FAIZA EMAS (IMPORT),Faiza Emas white rice (imported),10 kg,true,false
+2068,BERAS CAP JASMINE SUPER 5 SPECIAL (IMPORT),Jasmine Super 5 Special rice (imported),10 kg,true,false
+2086,SAWI PENDEK/JEPUN/SIOW PAK CHOY (1KG),Pak choy / Japanese mustard (sawi pendek),1kg,true,false
+2087,LOBAK PUTIH (1KG),White radish (daikon),1kg,true,false
+2097,SUSTAGEN ALL-IN-ONE (PELBAGAI PERISA),Sustagen All-in-One (assorted flavours),600 g,true,true
+2098,DRYPERS WEE WEE DRY,Drypers Wee Wee Dry diapers (multi-size),"S80, M60, L58, XL50",true,true
+2099,HUGGIES DRY TAPE,Huggies Dry Tape diapers (multi-size),"S80, M60, L54, XL42",true,true
+2100,DRYPERS DRYPANTZ,Drypers Drypantz (multi-size),"M58, L48, XL42",true,true
+2101,HUGGIES DRY PANTS,Huggies Dry Pants (multi-size),"S66, M50, L40, XL32",true,true
+2102,SABUN MANDIAN LIFEBUOY (PELBAGAI JENIS),Lifebuoy bath soap (assorted),920 ML,true,false
+2103,SABUN MANDIAN DETTOL (PELBAGAI JENIS),Dettol bath soap (assorted),950g,true,false
+2104,FERNLEAF 1-3 TAHUN (PELBAGAI PERISA),Fernleaf 1-3 years (assorted flavours),850g,true,false
+2105,FERNLEAF 4-6 TAHUN (PELBAGAI PERISA),Fernleaf 4-6 years (assorted flavours),850g,true,false
+2106,SYAMPU REJOICE (PELBAGAI JENIS),Rejoice shampoo (assorted),600 ml,true,false
+2107,UBI KENTANG IMPORT (PAKISTAN),"Potatoes, imported (Pakistan)",1kg,true,false
+2108,SYAMPU SUNSILK (PELBAGAI JENIS),Sunsilk shampoo (assorted),625ml,true,false
+2109,SABUN SERBUK BREEZE (PELBAGAI JENIS),Breeze washing powder (assorted),2.1kg,true,false
+2110,SABUN DETERGEN TOP (PELBAGAI JENIS),Top detergent (assorted),3.6 KG,true,false
+2111,SABUN DAIA EXCELLENT WASHING POWER (PELBAGAI JENIS),Daia Excellent washing powder (assorted),2.1kg,true,false
+2112,SABUN PENCUCI SUNLIGHT (PELBAGAI JENIS),Sunlight dishwashing liquid (assorted),800ml,true,false
+2113,KORDIAL SUNQUICK (OREN),Sunquick cordial (orange),700ml,true,false
+2114,MILO (PAKET),Milo (pack),900 g,true,false
+2115,INDOCAFE (ORIGINAL BLEND) (PAKET),Indocafe Original Blend (pack),200 g,true,false

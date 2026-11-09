@@ -1,0 +1,54 @@
+# fair-price-my pipeline config. Read by pipeline/__main__.py with stdlib tomllib.
+
+window_days = 28          # rolling window ending at the latest date in the data
+min_premises = 5          # a comparison group needs this many premises, else fall back
+outlier_low = 0.25        # drop prices < 0.25x the item's national median
+outlier_high = 4.0        # drop prices > 4x the item's national median
+
+# Price-controlled items: maximum retail prices set by KPDN under the Price Control and
+# Anti-Profiteering Act 2011 (AKHAP). Peninsular prices; all v1 districts are Peninsular.
+# Source: KPDN "Barang-barang Kawalan" price table (Gula Putih Bertapis Kasar 1kg 2.85,
+# Halus 1kg 2.95; Minyak Masak Polibeg 1kg 2.50), checked 2026-11-09. kpdn.gov.my returned
+# 404 to direct fetches, so the table was read via search-index copies; re-verify on the page.
+# https://www.kpdn.gov.my/ms/info-korporat/bahagian/timbalan-ketua-setiausaha-pembangunan-perdagangan-dalam-negeri/sektor-barang-kawalan-dan-subsidi/bahagian-subsidi-dan-bekalan/barang-barang-kawalan
+# Wheat flour is not listed: it only has standardised pricing in Sabah/Sarawak/Labuan (PPHSSL).
+controlled = [
+    { item_code = 918,  price = 2.50 },   # MINYAK MASAK PAKET (PELBAGAI JENAMA) 1kg polybag
+    { item_code = 1589, price = 2.85 },   # GULA PUTIH BERTAPIS KASAR 1kg
+    { item_code = 1590, price = 2.95 },   # GULA PUTIH BERTAPIS HALUS 1kg
+]
+
+# Data-driven cross-check of the list above (warnings only, never changes output):
+# an item "looks controlled" when >= this share of premises charge one price.
+# Measured Oct-Nov 2026: the 3 listed items 97.9-99.9%, then a cliff to 94.9% (RRP rice).
+controlled_detect_min_share = 0.97
+controlled_detect_min_premises = 100   # stops items seen at 1-2 premises from scoring 100%
+
+# Multi-size codes: one code covers several pack sizes, so prices are not comparable.
+excluded_items = [
+    2032,  # PETPET GOLD+                 M64, L54, XL42
+    2042,  # PETPET PANTS GOLD+           M56, L46, XL38
+    2098,  # DRYPERS WEE WEE DRY          S80, M60, L58, XL50
+    2099,  # HUGGIES DRY TAPE             S80, M60, L54, XL42
+    2100,  # DRYPERS DRYPANTZ             M58, L48, XL42
+    2101,  # HUGGIES DRY PANTS            S66, M50, L40, XL32
+]
+
+# v1 scope. Omit `districts` to take every district in the state.
+# Names must match lookup_premise exactly; the pipeline fails on entries that match nothing.
+[[scope]]
+state = "W.P. Kuala Lumpur"
+
+[[scope]]
+state = "W.P. Putrajaya"
+
+[[scope]]
+state = "Selangor"   # Klang Valley districts only (excludes Sabak Bernam, Hulu/Kuala Selangor)
+districts = ["Gombak", "Rawang", "Hulu Langat", "Klang", "Kuala Langat", "Petaling", "Petaling Jaya", "Sepang"]
+
+[[scope]]
+state = "Pulau Pinang"
+
+[[scope]]
+state = "Johor"
+districts = ["Johor Bahru"]

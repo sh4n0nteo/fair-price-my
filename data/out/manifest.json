@@ -1,0 +1,272 @@
+{
+  "built_at": "2026-11-09T11:11:02+00:00",
+  "window": {
+    "start": "2026-10-12",
+    "end": "2026-11-08"
+  },
+  "source_files": [
+    {
+      "file": "lookup_item.parquet",
+      "url": "https://storage.data.gov.my/pricecatcher/lookup_item.parquet"
+    },
+    {
+      "file": "lookup_premise.parquet",
+      "url": "https://storage.data.gov.my/pricecatcher/lookup_premise.parquet"
+    },
+    {
+      "file": "pricecatcher_2026-10.parquet",
+      "url": "https://storage.data.gov.my/pricecatcher/pricecatcher_2026-10.parquet"
+    },
+    {
+      "file": "pricecatcher_2026-11.parquet",
+      "url": "https://storage.data.gov.my/pricecatcher/pricecatcher_2026-11.parquet"
+    }
+  ],
+  "rows": {
+    "in": 1873950,
+    "kept": 1816311,
+    "dropped": {
+      "excluded_item": 24483,
+      "outlier": 269,
+      "unknown_item": 32887
+    }
+  },
+  "premise_item_prices": 237667,
+  "groups_out": 24105,
+  "controlled_items": [
+    {
+      "item_code": 918,
+      "name_ms": "MINYAK MASAK PAKET (PELBAGAI JENAMA)",
+      "name_en": "Cooking oil polybag (assorted brands)",
+      "unit": "1kg",
+      "controlled_price": 2.5,
+      "market_modal_price": 2.5,
+      "n_premises": 954,
+      "share_at_modal": 0.999
+    },
+    {
+      "item_code": 1589,
+      "name_ms": "GULA PUTIH BERTAPIS KASAR (PELBAGAI JENAMA)",
+      "name_en": "Coarse refined white sugar (assorted brands)",
+      "unit": "1kg",
+      "controlled_price": 2.85,
+      "market_modal_price": 2.85,
+      "n_premises": 1968,
+      "share_at_modal": 0.985
+    },
+    {
+      "item_code": 1590,
+      "name_ms": "GULA PUTIH BERTAPIS HALUS (PELBAGAI JENAMA)",
+      "name_en": "Fine refined white sugar (assorted brands)",
+      "unit": "1kg",
+      "controlled_price": 2.95,
+      "market_modal_price": 2.95,
+      "n_premises": 711,
+      "share_at_modal": 0.979
+    }
+  ],
+  "controlled_warnings": [],
+  "translations": {
+    "in_scope": 284,
+    "out_of_scope": 512
+  },
+  "districts": [
+    {
+      "slug": "bandar-tun-razak",
+      "state": "W.P. Kuala Lumpur",
+      "district": "Bandar Tun Razak",
+      "items": 266,
+      "groups": 810
+    },
+    {
+      "slug": "barat-daya",
+      "state": "Pulau Pinang",
+      "district": "Barat Daya",
+      "items": 262,
+      "groups": 1061
+    },
+    {
+      "slug": "batu",
+      "state": "W.P. Kuala Lumpur",
+      "district": "Batu",
+      "items": 262,
+      "groups": 958
+    },
+    {
+      "slug": "bukit-bintang",
+      "state": "W.P. Kuala Lumpur",
+      "district": "Bukit Bintang",
+      "items": 265,
+      "groups": 677
+    },
+    {
+      "slug": "cheras",
+      "state": "W.P. Kuala Lumpur",
+      "district": "Cheras",
+      "items": 271,
+      "groups": 1077
+    },
+    {
+      "slug": "cyberjaya",
+      "state": "W.P. Putrajaya",
+      "district": "Cyberjaya",
+      "items": 236,
+      "groups": 726
+    },
+    {
+      "slug": "gombak",
+      "state": "Selangor",
+      "district": "Gombak",
+      "items": 252,
+      "groups": 964
+    },
+    {
+      "slug": "hulu-langat",
+      "state": "Selangor",
+      "district": "Hulu Langat",
+      "items": 251,
+      "groups": 1057
+    },
+    {
+      "slug": "johor-bahru",
+      "state": "Johor",
+      "district": "Johor Bahru",
+      "items": 272,
+      "groups": 1282
+    },
+    {
+      "slug": "kepong",
+      "state": "W.P. Kuala Lumpur",
+      "district": "Kepong",
+      "items": 269,
+      "groups": 901
+    },
+    {
+      "slug": "klang",
+      "state": "Selangor",
+      "district": "Klang",
+      "items": 251,
+      "groups": 888
+    },
+    {
+      "slug": "kuala-langat",
+      "state": "Selangor",
+      "district": "Kuala Langat",
+      "items": 207,
+      "groups": 493
+    },
+    {
+      "slug": "lembah-pantai",
+      "state": "W.P. Kuala Lumpur",
+      "district": "Lembah Pantai",
+      "items": 263,
+      "groups": 996
+    },
+    {
+      "slug": "petaling",
+      "state": "Selangor",
+      "district": "Petaling",
+      "items": 261,
+      "groups": 1108
+    },
+    {
+      "slug": "petaling-jaya",
+      "state": "Selangor",
+      "district": "Petaling Jaya",
+      "items": 259,
+      "groups": 1002
+    },
+    {
+      "slug": "seberang-perai-selatan",
+      "state": "Pulau Pinang",
+      "district": "Seberang Perai Selatan",
+      "items": 242,
+      "groups": 787
+    },
+    {
+      "slug": "seberang-perai-tengah",
+      "state": "Pulau Pinang",
+      "district": "Seberang Perai Tengah",
+      "items": 265,
+      "groups": 1099
+    },
+    {
+      "slug": "seberang-perai-utara",
+      "state": "Pulau Pinang",
+      "district": "Seberang Perai Utara",
+      "items": 265,
+      "groups": 1113
+    },
+    {
+      "slug": "segambut",
+      "state": "W.P. Kuala Lumpur",
+      "district": "Segambut",
+      "items": 258,
+      "groups": 932
+    },
+    {
+      "slug": "sepang",
+      "state": "Selangor",
+      "district": "Sepang",
+      "items": 244,
+      "groups": 707
+    },
+    {
+      "slug": "seputeh",
+      "state": "W.P. Kuala Lumpur",
+      "district": "Seputeh",
+      "items": 259,
+      "groups": 645
+    },
+    {
+      "slug": "setiawangsa",
+      "state": "W.P. Kuala Lumpur",
+      "district": "Setiawangsa",
+      "items": 264,
+      "groups": 984
+    },
+    {
+      "slug": "timur-laut",
+      "state": "Pulau Pinang",
+      "district": "Timur Laut",
+      "items": 263,
+      "groups": 1092
+    },
+    {
+      "slug": "titiwangsa",
+      "state": "W.P. Kuala Lumpur",
+      "district": "Titiwangsa",
+      "items": 259,
+      "groups": 782
+    },
+    {
+      "slug": "wangsa-maju",
+      "state": "W.P. Kuala Lumpur",
+      "district": "Wangsa Maju",
+      "items": 260,
+      "groups": 819
+    },
+    {
+      "slug": "wp-putrajaya",
+      "state": "W.P. Putrajaya",
+      "district": "Wp Putrajaya",
+      "items": 241,
+      "groups": 1145
+    }
+  ],
+  "districts_without_data": [
+    {
+      "state": "Selangor",
+      "district": "Rawang"
+    }
+  ],
+  "trend": [
+    {
+      "window_end": "2026-11-08",
+      "rows_in": 1873950,
+      "unknown_item_rows": 32887,
+      "unknown_item_codes": 14,
+      "unknown_item_pct": 1.75
+    }
+  ]
+}
