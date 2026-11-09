@@ -1,3 +1,4 @@
 data/raw/
+reports/
 .venv/
 __pycache__/

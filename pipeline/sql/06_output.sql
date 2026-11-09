@@ -12,8 +12,8 @@ per_item AS (
            list({
                'premise_type':   g.premise_type,          -- NULL = all premise types
                'n_premises':     g.n_premises,
-               'n_above_controlled': g.n_above_controlled,   -- controlled items only: count, no names
                'fallback_level': g.fallback_level,
+               'type_mix':       g.type_mix,              -- all-types groups only: premises per shop type
                'min':    round(g.min, 2),
                -- Controlled items: percentiles are meaningless (everyone charges the same).
                'p25':    CASE WHEN c_price IS NULL THEN round(g.p25, 2) END,
@@ -61,6 +61,18 @@ SELECT (SELECT max(date) FROM raw_window) - getvariable('window_days') + 1 AS wi
        (SELECT count(DISTINCT item_code) FROM rows_tagged WHERE drop_reason = 'unknown_item') AS unknown_item_codes,
        (SELECT count(*) FROM latest)                                       AS premise_item_prices,
        (SELECT count(*) FROM groups)                                       AS groups_out;
+
+-- Shops above the controlled price, per district (all-types group, so it follows the same
+-- district -> state fallback as the output). Internal QA only: never exported to the public JSON.
+CREATE OR REPLACE TABLE controlled_report AS
+SELECT d.slug, g.state, g.district, g.item_code, i.name_ms, i.unit, c.controlled_price,
+       g.n_premises, g.n_above_controlled, coalesce(g.fallback_level, 'district') AS level
+FROM groups g
+JOIN controlled c USING (item_code)
+JOIN items i USING (item_code)
+JOIN scope_districts d USING (state, district)
+WHERE g.premise_type IS NULL
+ORDER BY d.slug, g.item_code;
 
 -- In scope but no file: the district's premises reported nothing in the window.
 CREATE OR REPLACE TABLE scope_without_data AS

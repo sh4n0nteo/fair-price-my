@@ -1,8 +1,8 @@
 {
-  "built_at": "2026-11-09T11:11:02+00:00",
+  "built_at": "2026-11-09T12:33:31+00:00",
   "window": {
-    "start": "2026-10-12",
-    "end": "2026-11-08"
+    "start": "2026-10-13",
+    "end": "2026-11-09"
   },
   "source_files": [
     {
@@ -23,16 +23,16 @@
     }
   ],
   "rows": {
-    "in": 1873950,
-    "kept": 1816311,
+    "in": 1689130,
+    "kept": 1643084,
     "dropped": {
-      "excluded_item": 24483,
-      "outlier": 269,
-      "unknown_item": 32887
+      "excluded_item": 19534,
+      "outlier": 241,
+      "unknown_item": 26271
     }
   },
-  "premise_item_prices": 237667,
-  "groups_out": 24105,
+  "premise_item_prices": 234568,
+  "groups_out": 24006,
   "controlled_items": [
     {
       "item_code": 918,
@@ -41,7 +41,7 @@
       "unit": "1kg",
       "controlled_price": 2.5,
       "market_modal_price": 2.5,
-      "n_premises": 954,
+      "n_premises": 892,
       "share_at_modal": 0.999
     },
     {
@@ -51,8 +51,8 @@
       "unit": "1kg",
       "controlled_price": 2.85,
       "market_modal_price": 2.85,
-      "n_premises": 1968,
-      "share_at_modal": 0.985
+      "n_premises": 1962,
+      "share_at_modal": 0.986
     },
     {
       "item_code": 1590,
@@ -61,14 +61,14 @@
       "unit": "1kg",
       "controlled_price": 2.95,
       "market_modal_price": 2.95,
-      "n_premises": 711,
-      "share_at_modal": 0.979
+      "n_premises": 699,
+      "share_at_modal": 0.98
     }
   ],
   "controlled_warnings": [],
   "translations": {
-    "in_scope": 284,
-    "out_of_scope": 512
+    "in_scope": 283,
+    "out_of_scope": 513
   },
   "districts": [
     {
@@ -82,141 +82,141 @@
       "slug": "barat-daya",
       "state": "Pulau Pinang",
       "district": "Barat Daya",
-      "items": 262,
-      "groups": 1061
+      "items": 261,
+      "groups": 1058
     },
     {
       "slug": "batu",
       "state": "W.P. Kuala Lumpur",
       "district": "Batu",
-      "items": 262,
-      "groups": 958
+      "items": 261,
+      "groups": 950
     },
     {
       "slug": "bukit-bintang",
       "state": "W.P. Kuala Lumpur",
       "district": "Bukit Bintang",
       "items": 265,
-      "groups": 677
+      "groups": 676
     },
     {
       "slug": "cheras",
       "state": "W.P. Kuala Lumpur",
       "district": "Cheras",
       "items": 271,
-      "groups": 1077
+      "groups": 1076
     },
     {
       "slug": "cyberjaya",
       "state": "W.P. Putrajaya",
       "district": "Cyberjaya",
       "items": 236,
-      "groups": 726
+      "groups": 724
     },
     {
       "slug": "gombak",
       "state": "Selangor",
       "district": "Gombak",
       "items": 252,
-      "groups": 964
+      "groups": 962
     },
     {
       "slug": "hulu-langat",
       "state": "Selangor",
       "district": "Hulu Langat",
       "items": 251,
-      "groups": 1057
+      "groups": 1052
     },
     {
       "slug": "johor-bahru",
       "state": "Johor",
       "district": "Johor Bahru",
-      "items": 272,
-      "groups": 1282
+      "items": 270,
+      "groups": 1275
     },
     {
       "slug": "kepong",
       "state": "W.P. Kuala Lumpur",
       "district": "Kepong",
       "items": 269,
-      "groups": 901
+      "groups": 899
     },
     {
       "slug": "klang",
       "state": "Selangor",
       "district": "Klang",
-      "items": 251,
-      "groups": 888
+      "items": 250,
+      "groups": 885
     },
     {
       "slug": "kuala-langat",
       "state": "Selangor",
       "district": "Kuala Langat",
-      "items": 207,
-      "groups": 493
+      "items": 206,
+      "groups": 491
     },
     {
       "slug": "lembah-pantai",
       "state": "W.P. Kuala Lumpur",
       "district": "Lembah Pantai",
-      "items": 263,
-      "groups": 996
+      "items": 261,
+      "groups": 982
     },
     {
       "slug": "petaling",
       "state": "Selangor",
       "district": "Petaling",
       "items": 261,
-      "groups": 1108
+      "groups": 1104
     },
     {
       "slug": "petaling-jaya",
       "state": "Selangor",
       "district": "Petaling Jaya",
-      "items": 259,
-      "groups": 1002
+      "items": 258,
+      "groups": 999
     },
     {
       "slug": "seberang-perai-selatan",
       "state": "Pulau Pinang",
       "district": "Seberang Perai Selatan",
       "items": 242,
-      "groups": 787
+      "groups": 785
     },
     {
       "slug": "seberang-perai-tengah",
       "state": "Pulau Pinang",
       "district": "Seberang Perai Tengah",
       "items": 265,
-      "groups": 1099
+      "groups": 1098
     },
     {
       "slug": "seberang-perai-utara",
       "state": "Pulau Pinang",
       "district": "Seberang Perai Utara",
       "items": 265,
-      "groups": 1113
+      "groups": 1109
     },
     {
       "slug": "segambut",
       "state": "W.P. Kuala Lumpur",
       "district": "Segambut",
       "items": 258,
-      "groups": 932
+      "groups": 931
     },
     {
       "slug": "sepang",
       "state": "Selangor",
       "district": "Sepang",
       "items": 244,
-      "groups": 707
+      "groups": 706
     },
     {
       "slug": "seputeh",
       "state": "W.P. Kuala Lumpur",
       "district": "Seputeh",
       "items": 259,
-      "groups": 645
+      "groups": 644
     },
     {
       "slug": "setiawangsa",
@@ -230,14 +230,14 @@
       "state": "Pulau Pinang",
       "district": "Timur Laut",
       "items": 263,
-      "groups": 1092
+      "groups": 1091
     },
     {
       "slug": "titiwangsa",
       "state": "W.P. Kuala Lumpur",
       "district": "Titiwangsa",
-      "items": 259,
-      "groups": 782
+      "items": 258,
+      "groups": 777
     },
     {
       "slug": "wangsa-maju",
@@ -250,8 +250,8 @@
       "slug": "wp-putrajaya",
       "state": "W.P. Putrajaya",
       "district": "Wp Putrajaya",
-      "items": 241,
-      "groups": 1145
+      "items": 238,
+      "groups": 1119
     }
   ],
   "districts_without_data": [
@@ -267,6 +267,13 @@
       "unknown_item_rows": 32887,
       "unknown_item_codes": 14,
       "unknown_item_pct": 1.75
+    },
+    {
+      "window_end": "2026-11-09",
+      "rows_in": 1689130,
+      "unknown_item_rows": 26271,
+      "unknown_item_codes": 14,
+      "unknown_item_pct": 1.56
     }
   ]
 }

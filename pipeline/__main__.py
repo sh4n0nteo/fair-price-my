@@ -23,7 +23,8 @@ def main() -> None:
     transform.run(con, cfg, files, names_file=ROOT / "data" / "item_names_en.csv")
 
     log.info("export")
-    m = export.run(con, ROOT / "data" / "out", files, names_file=ROOT / "data" / "item_names_en.csv")
+    m = export.run(con, ROOT / "data" / "out", files, names_file=ROOT / "data" / "item_names_en.csv",
+                   reports_dir=ROOT / "reports")
 
     rows = m["rows"]
     log.info("window %s .. %s", m["window"]["start"], m["window"]["end"])
@@ -36,6 +37,13 @@ def main() -> None:
     t = m["trend"][-1]
     log.info("unknown item codes: %d codes, %d rows (%.2f%%)", t["unknown_item_codes"], t["unknown_item_rows"], t["unknown_item_pct"])
     log.info("translations: %d items in scope, %d out_of_scope", m["translations"]["in_scope"], m["translations"]["out_of_scope"])
+    log.info("shops above controlled price (all types, per district) -> reports/controlled_above.csv")
+    by_slug: dict[str, list[str]] = {}
+    for r in m["_controlled_above"]:
+        where = "" if r["level"] == "district" else f" [{r['level']}]"
+        by_slug.setdefault(r["slug"], []).append(f"{r['item_code']} {r['n_above_controlled']}/{r['n_premises']}{where}")
+    for slug, parts in by_slug.items():
+        log.info("  %-24s %s", slug, ", ".join(parts))
     for d in m["districts_without_data"]:
         log.warning("in scope but no prices in window: %s / %s", d["state"], d["district"])
     log.info("%d districts, %d groups -> data/out/", len(m["districts"]), m["groups_out"])

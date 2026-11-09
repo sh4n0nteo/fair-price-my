@@ -12,9 +12,6 @@ from pathlib import Path
 import duckdb
 
 log = logging.getLogger(__name__)
-# `cheapest` entries are written as positional arrays in this order. Repeating the keys in every
-# entry cost ~130 KB per district file; SQL can't build these (DuckDB lists are single-typed).
-CHEAPEST_FIELDS = ("premise_code", "price", "date_seen")
 
 
 def _rows(con: duckdb.DuckDBPyConnection, table: str) -> list[dict]:
@@ -23,7 +20,8 @@ def _rows(con: duckdb.DuckDBPyConnection, table: str) -> list[dict]:
 
 
 def _write(path: Path, obj) -> None:
-    # Compact separators: district files are size-budgeted (< 500 KB). default=str covers dates.
+    # Minified: keyed objects stay readable, and gzip removes most of the repeated-key cost
+    # (tests budget 100 KiB gzipped per district). default=str covers dates.
     path.write_text(json.dumps(obj, ensure_ascii=False, separators=(",", ":"), default=str))
 
 
@@ -53,7 +51,15 @@ def mark_out_of_scope(names_file: Path, shown: set[int]) -> tuple[int, int]:
     return sum(r["out_of_scope"] == "false" for r in rows), len(rows)
 
 
-def run(con: duckdb.DuckDBPyConnection, out_dir: Path, files: dict, names_file: Path) -> dict:
+def write_report(path: Path, rows: list[dict]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=list(rows[0]) if rows else ["slug"], lineterminator="\n")
+        w.writeheader()
+        w.writerows(rows)
+
+
+def run(con: duckdb.DuckDBPyConnection, out_dir: Path, files: dict, names_file: Path, reports_dir: Path) -> dict:
     summary = _rows(con, "run_summary")[0]
     districts_dir = out_dir / "districts"
     districts_dir.mkdir(parents=True, exist_ok=True)
@@ -66,12 +72,9 @@ def run(con: duckdb.DuckDBPyConnection, out_dir: Path, files: dict, names_file: 
         raise RuntimeError(f"duplicate district slugs: {sorted(s for s in slugs if slugs.count(s) > 1)}")
     window = {"start": summary["window_start"], "end": summary["window_end"]}
     for d in districts:
-        for item in d["items"]:
-            for g in item["groups"]:
-                g["cheapest"] = [[c[f] for f in CHEAPEST_FIELDS] for c in g["cheapest"]]
-        _write(districts_dir / f"{d['slug']}.json", {**d, "window": window, "cheapest_fields": CHEAPEST_FIELDS})
+        _write(districts_dir / f"{d['slug']}.json", {**d, "window": window})
 
-    _write(out_dir / "towns.json", {r["town"]: r["slug"] for r in _rows(con, "out_towns")})
+    _write(out_dir / "towns.json", {r["town"]: {"slug": r["slug"], "alias": r["alias"]} for r in _rows(con, "out_towns")})
 
     dropped = {r["reason"]: r["n"] for r in _rows(con, "drop_counts")}
     shown = {i["item_code"] for d in districts for i in d["items"]}
@@ -102,4 +105,9 @@ def run(con: duckdb.DuckDBPyConnection, out_dir: Path, files: dict, names_file: 
     }
     out = json.dumps(manifest, ensure_ascii=False, indent=2, default=str)  # small; indent for humans
     manifest_path.write_text(out + "\n")
+
+    # Internal QA, git-ignored: how many shops charge above the controlled price, per district.
+    above = _rows(con, "controlled_report")
+    write_report(reports_dir / "controlled_above.csv", above)
+    manifest["_controlled_above"] = above  # for __main__ logging only; not in manifest.json (written above)
     return manifest

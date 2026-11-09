@@ -3,6 +3,7 @@
 They test the committed output, so they need no network or raw data, and they catch a bad
 build before it's committed. Thresholds come from config.toml so the two can't drift apart.
 """
+import gzip
 import json
 import tomllib
 from pathlib import Path
@@ -30,11 +31,14 @@ def all_groups(districts):
                 yield slug, item, g
 
 
-def test_district_files_are_valid_json_under_500kb():
+def test_district_files_are_valid_json_under_100kib_gzipped():
+    # Budget on what users download (static hosts gzip JSON), not on raw bytes.
     assert DISTRICT_FILES, "no district files: run `python -m pipeline`"
     for f in DISTRICT_FILES:
-        assert f.stat().st_size < 500_000, f"{f.name} is {f.stat().st_size} bytes"
-        json.loads(f.read_text())  # raises on invalid JSON
+        raw = f.read_bytes()
+        json.loads(raw)  # raises on invalid JSON
+        gz = len(gzip.compress(raw, compresslevel=6))
+        assert gz < 100 * 1024, f"{f.name} is {gz / 1024:.0f} KiB gzipped"
 
 
 def test_sugar_is_flagged_controlled(districts):
@@ -57,9 +61,18 @@ def test_no_small_group_without_fallback(districts):
 def test_cheapest_premises_resolve(districts):
     for slug, item, g in all_groups(districts):
         assert 1 <= len(g["cheapest"]) <= 3
-        for code, price, _ in g["cheapest"]:
-            assert str(code) in districts[slug]["premises"]
-            assert g["min"] <= price  # cheapest can't undercut the group min
+        for c in g["cheapest"]:
+            assert set(c) == {"premise_code", "price", "date_seen"}
+            assert str(c["premise_code"]) in districts[slug]["premises"]
+            assert g["min"] <= c["price"]  # cheapest can't undercut the group min
+
+
+def test_type_mix_adds_up(districts):
+    for slug, item, g in all_groups(districts):
+        if g["premise_type"] is None:
+            assert sum(g["type_mix"].values()) == g["n_premises"], f"{slug} {item['item_code']}"
+        else:
+            assert g["type_mix"] is None
 
 
 def test_manifest_counts_add_up(districts):
@@ -85,14 +98,34 @@ def test_controlled_config_consistent(districts):
             if item["controlled"]:
                 assert item["controlled_price"] == listed[code]
             for g in item["groups"]:
-                if item["controlled"]:
-                    assert isinstance(g["n_above_controlled"], int) and 0 <= g["n_above_controlled"] <= g["n_premises"]
-                else:
-                    assert g["n_above_controlled"] is None
+                assert "n_above_controlled" not in g, "internal QA count must not be exported"
+
+
+def test_controlled_above_report():
+    """reports/ is git-ignored, built by `python -m pipeline`: one row per in-scope district x listed item."""
+    path = ROOT / "reports" / "controlled_above.csv"
+    if not path.exists():
+        pytest.skip("reports/controlled_above.csv not built: run `python -m pipeline`")
+    import csv
+    rows = list(csv.DictReader(path.open()))
+    listed = {c["item_code"] for c in CFG["controlled"]}
+    assert {int(r["item_code"]) for r in rows} == listed
+    assert {r["slug"] for r in rows} == {d["slug"] for d in MANIFEST["districts"]}
+    for r in rows:
+        assert 0 <= int(r["n_above_controlled"]) <= int(r["n_premises"])
+        assert r["level"] in ("district", "state")
 
 
 def test_towns_never_point_to_missing_file():
     towns = json.loads((OUT / "towns.json").read_text())
-    missing = {slug for slug in towns.values() if not (OUT / "districts" / f"{slug}.json").is_file()}
+    missing = {t["slug"] for t in towns.values() if not (OUT / "districts" / f"{t['slug']}.json").is_file()}
     assert not missing, f"towns.json points at missing district files: {sorted(missing)}"
-    assert towns["petaling jaya"] == "petaling-jaya"
+    assert towns["petaling jaya"] == {"slug": "petaling-jaya", "alias": False}
+
+
+def test_town_aliases_from_config_are_flagged():
+    towns = json.loads((OUT / "towns.json").read_text())
+    aliases = {k.lower(): v for k, v in CFG.get("town_aliases", {}).items()}
+    assert {k for k, v in towns.items() if v["alias"]} == set(aliases)
+    for town, slug in aliases.items():
+        assert towns[town]["slug"] == slug

@@ -19,6 +19,8 @@ def run(con: duckdb.DuckDBPyConnection, cfg: dict, files: dict, names_file: Path
         "names_file": str(names_file),
         "excluded_items": cfg["excluded_items"],
         "scope": [{"state": s["state"], "districts": s.get("districts", [])} for s in cfg["scope"]],
+        "town_aliases": [{"town": t.lower(), "slug": slug} for t, slug in cfg.get("town_aliases", {}).items()]
+                        or [{"town": "", "slug": ""}],  # never empty: DuckDB can't type an empty list variable
         "controlled": [{"item_code": c["item_code"], "price": float(c["price"])} for c in cfg["controlled"]],
         **{k: cfg[k] for k in ("window_days", "min_premises", "outlier_low", "outlier_high",
                                "controlled_detect_min_share", "controlled_detect_min_premises")},
@@ -26,4 +28,6 @@ def run(con: duckdb.DuckDBPyConnection, cfg: dict, files: dict, names_file: Path
     for name, value in variables.items():
         con.execute(f"SET VARIABLE {name} = ?", [value])  # name is ours, value is bound
     for sql_file in sorted(SQL_DIR.glob("*.sql")):
-        con.execute(sql_file.read_text())
+        # fetchall(): a script may end in a guard SELECT; DuckDB 2.0 blocks the connection until
+        # that last result is consumed, and consuming it is what makes the guard's error() fire.
+        con.execute(sql_file.read_text()).fetchall()

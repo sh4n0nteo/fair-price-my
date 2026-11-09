@@ -54,3 +54,25 @@ Translations are in `data/item_names_en.csv`. Edit `name_en` there, and set `nee
 | SQL in `.sql` files, config passed as DuckDB variables | SQL stays readable and runnable on its own; values are bound, never string-pasted into SQL. |
 | Conditional GET instead of "skip if file exists" | The current month's file grows daily; an existence check would serve stale data forever. |
 | Commit `data/out/` | The frontend can be a static site with no backend; diffs show how prices moved between builds. |
+
+## Web app (`web/`)
+A Vite + React + TypeScript static site. There's no backend: it reads the pipeline's JSON.
+
+```sh
+cd web && npm install
+npm run dev      # copies ../data/out -> public/data, then starts Vite
+npm test         # Vitest: verdict/band logic and search ranking
+npm run build    # copies data, type-checks, builds to web/dist
+```
+Deploy on Vercel from the repo root. `vercel.json` builds `web/` and serves `web/dist`. Enable Web Analytics in the Vercel project settings.
+
+| Decision | Why |
+|---|---|
+| `data/out/` copied into `public/data` at build time (git-ignored) | One copy of the data in git; the site always ships what the pipeline last built. |
+| Start-up loads only `towns.json` + `manifest.json`; district files fetched on choice and cached as promises | ~25 KB to first interaction instead of ~1 MB; two quick taps share one request. |
+| Verdict, band and fallback-note logic in `src/verdict.ts`, pure and unit-tested | That's where a bug would mislead someone; the UI only renders its output. |
+| Band edges compared in whole sen; p25 and p75 count as "Normal" | Avoids float flips (8.5 vs 8.50000001); the edges belong to the middle band. |
+| Results as an inline list of large buttons, not a dropdown | One-thumb friendly, never hidden behind the keyboard, plain list/button semantics. |
+| URL kept in sync with `replaceState` | A check is a shareable link, and typing a price doesn't flood the back button. |
+| Self-hosted Atkinson Hyperlegible (latin only) | Designed for low-vision legibility (glare in shops); self-hosting avoids sending visitors' IPs to Google Fonts. |
+| Analytics: cookieless, page URLs stripped of query strings | Only `price_checked` {district, item, band} and `share_clicked` leave the device; no prices or personal data. |

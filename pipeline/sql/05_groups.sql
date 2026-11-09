@@ -8,6 +8,8 @@ SELECT p.state, p.district, p.premise_type, l.item_code,
             WHEN grouping(p.district) = 0     THEN 'district'
             ELSE 'state' END                 AS level,
        count(*)                              AS n_premises,
+       -- Shop-type mix behind an all-types number (district or state level); NULL for typed groups.
+       CASE WHEN grouping(p.premise_type) = 1 THEN histogram(p.premise_type) END AS type_mix,
        -- Controlled items only (NULL otherwise). +0.005 absorbs float noise around exact RM prices.
        CASE WHEN any_value(c.controlled_price) IS NOT NULL
             THEN count(*) FILTER (WHERE l.price > c.controlled_price + 0.005) END AS n_above_controlled,
@@ -40,7 +42,7 @@ WITH wanted AS (
 ),
 candidates AS (
     SELECT w.state, w.district, w.premise_type, w.item_code,
-           s.level, s.n_premises, s.n_above_controlled, s.min, s.p25, s.median, s.p75, s.max, s.cheapest,
+           s.level, s.n_premises, s.type_mix, s.n_above_controlled, s.min, s.p25, s.median, s.p75, s.max, s.cheapest,
            CASE s.level WHEN 'district_type' THEN 1 WHEN 'district' THEN 2 ELSE 3 END AS level_rank
     FROM wanted w
     JOIN level_stats s
@@ -51,6 +53,7 @@ candidates AS (
     WHERE s.n_premises >= getvariable('min_premises')
 )
 SELECT state, district, premise_type, item_code, n_premises, n_above_controlled,
+       CASE WHEN premise_type IS NULL THEN type_mix END AS type_mix,
        -- NULL when the group's own level had enough premises; else the level actually used.
        CASE WHEN level = CASE WHEN premise_type IS NULL THEN 'district' ELSE 'district_type' END
             THEN NULL ELSE level END AS fallback_level,

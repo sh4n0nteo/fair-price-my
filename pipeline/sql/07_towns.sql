@@ -37,10 +37,27 @@ voted AS (
     SELECT town, slug, n, sum(n) OVER (PARTITION BY town) AS total
     FROM candidates
     QUALIFY row_number() OVER (PARTITION BY town ORDER BY n DESC, slug) = 1
+),
+aliases AS (
+    SELECT a.town, a.slug FROM (SELECT unnest(getvariable('town_aliases'), recursive := true)) a
+    WHERE a.town <> ''
+),
+derived AS (
+    SELECT lower(district) AS town, slug FROM active   -- district names always win over address votes
+    UNION ALL
+    SELECT lower(town), slug FROM voted
+    WHERE n >= 0.6 * total
+      AND lower(town) NOT IN (SELECT lower(district) FROM active)
 )
-SELECT lower(district) AS town, slug FROM active   -- district names always win
+-- Hand-written aliases override derived names and are flagged so the UI can explain the jump.
+SELECT town, slug, false AS alias FROM derived WHERE town NOT IN (SELECT town FROM aliases)
 UNION ALL
-SELECT lower(town), slug FROM voted
-WHERE n >= 0.6 * total
-  AND lower(town) NOT IN (SELECT lower(district) FROM active)
+SELECT town, slug, true AS alias FROM aliases
 ORDER BY 1;
+
+-- Fail loudly: an alias must land on a district that has a file.
+SELECT CASE WHEN count(*) > 0
+            THEN error('town_aliases point at districts without data: ' || string_agg(town || ' -> ' || slug, ', '))
+       END
+FROM (SELECT unnest(getvariable('town_aliases'), recursive := true))
+WHERE town <> '' AND slug NOT IN (SELECT slug FROM out_districts);

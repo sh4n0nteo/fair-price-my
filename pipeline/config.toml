@@ -52,3 +52,9 @@ state = "Pulau Pinang"
 [[scope]]
 state = "Johor"
 districts = ["Johor Bahru"]
+
+# Town aliases: search names the address data can't resolve, mapped by hand to a district.
+# towns.json marks them alias=true so the UI can say "Showing Gombak district, which includes Rawang".
+# Must point at a district that has a file; the build fails otherwise.
+[town_aliases]
+rawang = "gombak"   # Rawang premises haven't reported since at least 2024-11 (spike/FINDINGS.md); Rawang town is in Gombak district

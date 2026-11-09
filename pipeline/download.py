@@ -54,12 +54,19 @@ def fetch(url: str, dest: Path) -> bool:
     return True
 
 
-def _months(start: date, end: date) -> list[str]:
+def window_months(end: date, window_days: int) -> list[str]:
+    """YYYY-MM of every month touched by the window [end - window_days + 1, end], oldest first."""
+    start = end - timedelta(days=window_days - 1)
     months, d = [], start.replace(day=1)
     while d <= end:
         months.append(d.strftime("%Y-%m"))
         d = (d + timedelta(days=32)).replace(day=1)
     return months
+
+
+def _prev_month(month: str) -> str:
+    y, m = map(int, month.split("-"))
+    return f"{y - 1}-12" if m == 1 else f"{y}-{m - 1:02d}"
 
 
 def run(raw_dir: Path, window_days: int) -> dict:
@@ -78,9 +85,14 @@ def run(raw_dir: Path, window_days: int) -> dict:
 
     # Which months does the window need? Only known after reading the latest file's max date.
     end = duckdb.read_parquet(str(latest_path)).max("date").fetchall()[0][0]
-    start = end - timedelta(days=window_days - 1)
+    if end is None:  # a brand-new month's file can be empty on the 1st: use the month before
+        latest_month = _prev_month(latest_month)
+        latest_url = latest_url.replace(re.search(r"\d{4}-\d{2}", latest_url).group(), latest_month)
+        latest_path = raw_dir / f"pricecatcher_{latest_month}.parquet"
+        fetch(latest_url, latest_path)
+        end = duckdb.read_parquet(str(latest_path)).max("date").fetchall()[0][0]
     prices = []
-    for month in _months(start, end):
+    for month in window_months(end, window_days):  # only months inside the window, nothing older
         path = raw_dir / f"pricecatcher_{month}.parquet"
         if month != latest_month:
             # Older months follow the catalogue's documented pricecatcher_YYYY-MM pattern.
