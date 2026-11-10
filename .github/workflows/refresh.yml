@@ -1,0 +1,67 @@
+# Weekly data refresh: rebuild data/out/ from the latest PriceCatcher files, check it against the
+# last committed build, and commit it only if every gate passes. Vercel redeploys on the push.
+name: Weekly data refresh
+
+on:
+  schedule:
+    # Tuesdays 00:23 UTC = 08:23 Malaysia time (UTC+8). Off the hour on purpose: GitHub delays or
+    # drops scheduled jobs at :00 when load peaks. Tuesday gives Monday's big survey round a day to land.
+    - cron: "23 0 * * 2"
+  workflow_dispatch: # manual "Run workflow" button
+
+# The job commits data/out/ back to the repo.
+permissions:
+  contents: write
+
+# Never two refreshes at once (a manual run during the scheduled one): they'd race on the push.
+# Queue instead of cancelling, so a half-finished run is never killed mid-commit.
+concurrency:
+  group: data-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13" # tomllib (stdlib) and the version the pipeline is developed on
+          cache: pip # keyed on requirements.txt: duckdb isn't re-downloaded every week
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # The gates compare against the last *committed* build, so save it before the pipeline overwrites it.
+      - name: Save last committed manifest
+        run: git show HEAD:data/out/manifest.json > "$RUNNER_TEMP/manifest.prev.json" || true
+
+      - name: Build data (download + transform + export)
+        run: python -m pipeline
+
+      - name: Tests on the new output
+        run: python -m pytest -q tests
+
+      - name: Sanity gates (stalled source, row drop, missing districts)
+        run: python -m pipeline.gates "$RUNNER_TEMP/manifest.prev.json" data/out
+
+      - name: Commit and push if the data changed
+        run: |
+          # manifest.json changes on every build (built_at), so it alone doesn't count as a change.
+          if git diff --quiet -- data/out ':!data/out/manifest.json'; then
+            echo "data/out/ unchanged apart from the manifest: nothing to commit."
+            exit 0
+          fi
+          start=$(python -c "import json; print(json.load(open('data/out/manifest.json'))['window']['start'])")
+          end=$(python -c "import json; print(json.load(open('data/out/manifest.json'))['window']['end'])")
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/out
+          git commit -m "data: weekly refresh (window ${start} to ${end})"
+          # Someone may have pushed while this ran: replay our data commit on top rather than fail.
+          # --autostash: the pipeline also rewrites data/item_names_en.csv (out_of_scope column), which
+          # the bot deliberately doesn't commit; without it, git refuses to rebase a dirty tree.
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

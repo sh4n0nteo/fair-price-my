@@ -30,14 +30,27 @@ mkdirSync(OUT, { recursive: true })
 const preview = spawn('npx', ['vite', 'preview', '--port', String(PORT), '--strictPort'], {
   cwd: fileURLToPath(new URL('..', import.meta.url)), stdio: 'ignore',
 })
-const chrome = spawn(CHROME, ['--headless=new', '--disable-gpu', '--remote-debugging-port=9334',
+// In CI (GitHub's Ubuntu 24.04 runners) AppArmor blocks the unprivileged user namespaces Chrome's
+// sandbox needs, so it won't start. --no-sandbox is safe here: it only ever loads our own localhost build.
+const sandbox = process.env.CI ? ['--no-sandbox'] : []
+const chrome = spawn(CHROME, ['--headless=new', '--disable-gpu', ...sandbox, '--remote-debugging-port=9334',
   `--user-data-dir=${mkdtempSync(join(tmpdir(), 'cdp-'))}`, 'about:blank'], { stdio: 'ignore' })
 const cleanup = () => { chrome.kill(); preview.kill() }
+chrome.on('error', (e) => {
+  preview.kill()
+  console.error(`Couldn't start Chrome at ${CHROME} (${e.code}). Set CHROME to a Chrome/Chromium binary.`)
+  process.exit(1)
+})
 
 let wsUrl
 for (let i = 0; i < 60 && !wsUrl; i++) {
   await sleep(250)
   try { wsUrl = (await (await fetch('http://127.0.0.1:9334/json')).json()).find((t) => t.type === 'page')?.webSocketDebuggerUrl } catch {}
+}
+if (!wsUrl) {
+  cleanup()
+  console.error(`Chrome didn't start (CHROME=${CHROME}). Set CHROME to a Chrome/Chromium binary.`)
+  process.exit(1)
 }
 for (let i = 0; i < 60; i++) { try { if ((await fetch(BASE)).ok) break } catch {} await sleep(250) }
 
