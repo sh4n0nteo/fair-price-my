@@ -1,28 +1,38 @@
 """Sanity gates for the scheduled refresh: compare a fresh build with the last committed one.
 
-Run after `python -m pipeline`:  python -m pipeline.gates <previous manifest.json> data/out
+Run after `python -m pipeline`:  python -m pipeline.gates <previous manifest.json> data/out [--today YYYY-MM-DD]
 Exits 1 with one line per failed gate, so the workflow stops before committing.
+A source that stalled but is still fresh is not a failure: exit 0 with a ::warning:: and
+stalled=true in $GITHUB_OUTPUT, so the workflow skips the commit.
 """
 import json
+import os
 import sys
 import tomllib
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 
-def check(prev: dict | None, new: dict, out_dir: Path, max_kept_drop: float) -> list[str]:
-    """Return a human-readable reason for every failed gate (empty list = all passed)."""
+def check(prev: dict | None, new: dict, out_dir: Path, max_kept_drop: float,
+          stale_days: int, today: date) -> tuple[list[str], str | None]:
+    """Return (a reason for every failed gate, a stalled-source warning or None)."""
     if prev is None:
-        return []  # first build: nothing to compare against
+        return [], None  # first build: nothing to compare against
 
-    fails = []
+    fails, warning = [], None
 
-    # a) The source must have moved on, or we'd be re-publishing last week's prices as new.
+    # a) The source must have moved on, or we'd re-publish last week's prices as new. A week or so
+    #    without a new upload happens (holidays): skip the commit quietly. Once the data is as old as
+    #    the site's stale banner threshold, someone needs to look.
     old_end, new_end = prev["window"]["end"], new["window"]["end"]
     if new_end <= old_end:  # ISO dates compare correctly as strings
-        fails.append(
-            f"Source stalled: latest data date is {new_end}, last committed was {old_end}. "
-            "PriceCatcher hasn't published anything newer."
-        )
+        age = (today - date.fromisoformat(new_end)).days
+        msg = (f"Source stalled: latest data date is {new_end} ({age} days old), last committed was {old_end}. "
+               "PriceCatcher hasn't published anything newer.")
+        if age >= stale_days:
+            fails.append(f"{msg} The site now shows its stale-data banner (stale_days = {stale_days}).")
+        else:
+            warning = f"{msg} Nothing to publish; fails once the data is {stale_days} days old."
 
     # b) A big drop in usable rows means a partial upload or a schema change upstream, not real prices.
     old_kept, new_kept = prev["rows"]["kept"], new["rows"]["kept"]
@@ -41,7 +51,7 @@ def check(prev: dict | None, new: dict, out_dir: Path, max_kept_drop: float) -> 
     if missing:
         fails.append(f"District files missing: {', '.join(missing)}. These districts are in scope and were published before.")
 
-    return fails
+    return fails, warning
 
 
 def _slug(d: dict) -> str:
@@ -55,15 +65,24 @@ def main(argv: list[str]) -> int:
     cfg = tomllib.loads((Path(__file__).parent / "config.toml").read_text())
     prev = json.loads(prev_path.read_text()) if prev_path.exists() and prev_path.stat().st_size else None
     new = json.loads((out_dir / "manifest.json").read_text())
-    fails = check(prev, new, out_dir, cfg["gate_max_kept_drop"])
+    # --today YYYY-MM-DD makes a run reproducible (tests); default is the site banner's clock (UTC days).
+    today = date.fromisoformat(argv[3]) if argv[2:3] == ["--today"] else datetime.now(timezone.utc).date()
+    fails, warning = check(prev, new, out_dir, cfg["gate_max_kept_drop"], cfg["stale_days"], today)
     if prev is None:
         print("gates: no previous manifest, skipping comparisons (first build)")
     for f in fails:
-        print(f"GATE FAILED: {f}")
-    if not fails:
+        print(f"::error::GATE FAILED: {f}")
+    if fails:
+        return 1
+    if warning:
+        print(f"::warning::{warning}")
+        if os.environ.get("GITHUB_OUTPUT"):
+            with open(os.environ["GITHUB_OUTPUT"], "a") as out:
+                out.write("stalled=true\n")
+    else:
         print(f"gates: all passed (window {new['window']['start']} to {new['window']['end']}, "
               f"{new['rows']['kept']:,} rows kept)")
-    return 1 if fails else 0
+    return 0
 
 
 if __name__ == "__main__":

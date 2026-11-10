@@ -1,0 +1,58 @@
+# The web app's checks, shared by ci.yml (every push) and refresh.yml (new data, before committing),
+# so the two can't drift. Expects the repo checked out and data/out/ in place.
+name: Web checks
+description: npm ci, type-check, Vitest, build, and the 360px/1024px layout check in headless Chrome
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-node@v7
+      with:
+        node-version: "26" # what the app is developed and tested on
+        cache: npm
+        cache-dependency-path: web/package-lock.json
+
+    - run: npm ci # exact versions from the lockfile
+      shell: bash
+      working-directory: web
+
+    - name: Type-check
+      run: npx tsc --noEmit
+      shell: bash
+      working-directory: web
+
+    - name: Unit tests (Vitest)
+      run: npx vitest run
+      shell: bash
+      working-directory: web
+
+    - name: Build
+      run: npm run build # prebuild copies ../data/out into public/data
+      shell: bash
+      working-directory: web
+
+    # check:mobile drives headless Chrome over the DevTools Protocol. setup-chrome installs a
+    # pinned stable Chrome plus its Linux libraries and gives us the binary path; the script
+    # reads it from CHROME and, because CI is set, adds --no-sandbox (Ubuntu 24.04's AppArmor
+    # blocks Chrome's sandbox on GitHub runners; the page is our own localhost build).
+    - uses: browser-actions/setup-chrome@v2
+      id: chrome
+      with:
+        chrome-version: stable
+        install-dependencies: true
+
+    - name: Layout check (360px and 1024px)
+      id: mobile
+      run: npm run check:mobile
+      shell: bash
+      working-directory: web
+      env:
+        CHROME: ${{ steps.chrome.outputs.chrome-path }}
+
+    - name: Upload layout screenshots
+      if: failure() && steps.mobile.outcome == 'failure'
+      uses: actions/upload-artifact@v7
+      with:
+        name: mobile-check-screenshots
+        path: web/mobile-check-out/
+        retention-days: 14

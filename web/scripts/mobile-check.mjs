@@ -91,7 +91,9 @@ const OVERLAP_CHECK = `(() => {
     const oy = Math.min(a.b.bottom, c.b.bottom) - Math.max(a.b.top, c.b.top)
     if (ox > 1 && oy > 1) hits.push(JSON.stringify(a.t) + ' x ' + JSON.stringify(c.t))
   }
-  return { hits, overflow: document.documentElement.scrollWidth > innerWidth, hasResult: !!document.querySelector('.result') }
+  // scrollWidth, compared with the emulated width below, not innerWidth: mobile emulation zooms out to
+  // fit wide content, so innerWidth grows with the overflow (520px page at 360px -> innerWidth 520).
+  return { hits, scrollWidth: document.documentElement.scrollWidth, hasResult: !!document.querySelector('.result') }
 })()`
 
 const rows = []
@@ -108,8 +110,9 @@ for (const width of WIDTHS) {
     const { result } = await send('Page.captureScreenshot', { captureBeyondViewport: true, clip: { x: 0, y: top, width, height: h, scale: 1 } })
     const file = join(OUT, `${name}-${width}.png`)
     writeFileSync(file, Buffer.from(result.data, 'base64'))
-    const ok = r.hasResult && !r.overflow && r.hits.length === 0
-    rows.push({ case: name, width, ok, overflow: r.overflow, overlaps: r.hits.slice(0, 4), file })
+    const overflow = r.scrollWidth > width
+    const ok = r.hasResult && !overflow && r.hits.length === 0
+    rows.push({ case: name, width, ok, overflow, overlaps: r.hits.slice(0, 4), file })
   }
 }
 ws.close(); cleanup()

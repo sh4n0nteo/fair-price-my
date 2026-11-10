@@ -25,6 +25,11 @@ def _write(path: Path, obj) -> None:
     path.write_text(json.dumps(obj, ensure_ascii=False, separators=(",", ":"), default=str))
 
 
+def _write_pretty(path: Path, obj) -> None:
+    # Small files people read and diff: indented, one trailing newline.
+    path.write_text(json.dumps(obj, ensure_ascii=False, indent=2, default=str) + "\n")
+
+
 def _trend(manifest_path: Path, entry: dict) -> list[dict]:
     """Append this build to the previous manifest's trend; a rebuild of the same window replaces its entry."""
     old = json.loads(manifest_path.read_text()).get("trend", []) if manifest_path.exists() else []
@@ -33,22 +38,10 @@ def _trend(manifest_path: Path, entry: dict) -> list[dict]:
     return [by_end[k] for k in sorted(by_end)]
 
 
-def mark_out_of_scope(names_file: Path, shown: set[int]) -> tuple[int, int]:
-    """Rewrite only the out_of_scope column of the hand-edited translations CSV. Returns (in scope, total).
-
-    Recomputed every build because coverage changes; every other column is written back verbatim.
-    """
+def needs_review(names_file: Path) -> set[int]:
+    """Item codes still marked needs_review in the hand-edited translations CSV (read-only: you own it)."""
     with names_file.open(newline="", encoding="utf-8") as f:
-        reader = csv.DictReader(f)
-        fields = [c for c in reader.fieldnames if c != "out_of_scope"] + ["out_of_scope"]
-        rows = list(reader)
-    for r in rows:
-        r["out_of_scope"] = "false" if int(r["item_code"]) in shown else "true"
-    with names_file.open("w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=fields, lineterminator="\n")
-        w.writeheader()
-        w.writerows(rows)
-    return sum(r["out_of_scope"] == "false" for r in rows), len(rows)
+        return {int(r["item_code"]) for r in csv.DictReader(f) if r["needs_review"].strip().lower() == "true"}
 
 
 def write_report(path: Path, rows: list[dict]) -> None:
@@ -59,7 +52,8 @@ def write_report(path: Path, rows: list[dict]) -> None:
         w.writerows(rows)
 
 
-def run(con: duckdb.DuckDBPyConnection, out_dir: Path, files: dict, names_file: Path, reports_dir: Path) -> dict:
+def run(con: duckdb.DuckDBPyConnection, out_dir: Path, files: dict, names_file: Path, reports_dir: Path,
+        stale_days: int) -> dict:
     summary = _rows(con, "run_summary")[0]
     districts_dir = out_dir / "districts"
     districts_dir.mkdir(parents=True, exist_ok=True)
@@ -77,8 +71,11 @@ def run(con: duckdb.DuckDBPyConnection, out_dir: Path, files: dict, names_file: 
     _write(out_dir / "towns.json", {r["town"]: {"slug": r["slug"], "alias": r["alias"]} for r in _rows(con, "out_towns")})
 
     dropped = {r["reason"]: r["n"] for r in _rows(con, "drop_counts")}
-    shown = {i["item_code"] for d in districts for i in d["items"]}
-    in_scope_items, total_items = mark_out_of_scope(names_file, shown)
+    # Items shown in some district: the translations worth reviewing. Coverage shifts each build, so
+    # it's generated here (bot-owned) rather than written back into your CSV.
+    shown = {i["item_code"]: i for d in districts for i in d["items"]}
+    _write_pretty(out_dir / "item_scope.json", [
+        {"item_code": c, "name_ms": shown[c]["name_ms"], "name_en": shown[c]["name_en"]} for c in sorted(shown)])
     manifest_path = out_dir / "manifest.json"
     trend_entry = {
         "window_end": str(summary["window_end"]),
@@ -96,15 +93,15 @@ def run(con: duckdb.DuckDBPyConnection, out_dir: Path, files: dict, names_file: 
         "groups_out": summary["groups_out"],
         "controlled_items": _rows(con, "controlled_out"),
         "controlled_warnings": _rows(con, "controlled_warnings_out"),
-        "translations": {"in_scope": in_scope_items, "out_of_scope": total_items - in_scope_items},
+        "stale_days": stale_days,  # config.toml; the site's "prices may have changed" banner threshold
+        "translations": {"in_scope": len(shown), "in_scope_needs_review": len(shown.keys() & needs_review(names_file))},
         "districts": [{"slug": d["slug"], "state": d["state"], "district": d["district"],
                        "items": len(d["items"]), "groups": sum(len(i["groups"]) for i in d["items"])}
                       for d in sorted(districts, key=lambda d: d["slug"])],
         "districts_without_data": _rows(con, "scope_without_data"),
         "trend": _trend(manifest_path, trend_entry),  # one entry per build window, oldest first
     }
-    out = json.dumps(manifest, ensure_ascii=False, indent=2, default=str)  # small; indent for humans
-    manifest_path.write_text(out + "\n")
+    _write_pretty(manifest_path, manifest)
 
     # Internal QA, git-ignored: how many shops charge above the controlled price, per district.
     above = _rows(con, "controlled_report")

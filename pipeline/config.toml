@@ -5,6 +5,8 @@ min_premises = 5          # a comparison group needs this many premises, else fa
 outlier_low = 0.25        # drop prices < 0.25x the item's national median
 outlier_high = 4.0        # drop prices > 4x the item's national median
 gate_max_kept_drop = 0.30 # refresh gate: fail if kept rows drop > 30% vs last commit (pipeline/gates.py)
+stale_days = 14           # data this many days old is stale: the site shows a warning banner
+                          # (via manifest.json) and the refresh gate fails if the source stalled
 
 # Price-controlled items: maximum retail prices set by KPDN under the Price Control and
 # Anti-Profiteering Act 2011 (AKHAP). Peninsular prices; all v1 districts are Peninsular.

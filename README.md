@@ -35,7 +35,7 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python -m pytest tests    # sanity checks on data/out/
 ```
 Settings live in `pipeline/config.toml`: scope, thresholds, excluded items and the KPDN controlled-price list.
-Translations are in `data/item_names_en.csv`. Edit `name_en` there, and set `needs_review` to `false` once you've checked a row. Rows with `out_of_scope=true` aren't shown anywhere yet, so skip them. The pipeline rewrites only that column.
+Translations are in `data/item_names_en.csv`, which only you edit; the pipeline reads it and never writes it. Edit `name_en` there, and set `needs_review` to `false` once you've checked a row. Only items listed in `data/out/item_scope.json` (regenerated every build) are shown anywhere, so review those first.
 
 ### Decisions
 | Decision | Why |
@@ -50,7 +50,7 @@ Translations are in `data/item_names_en.csv`. Edit `name_en` there, and set `nee
 | Detection (≥97% of ≥100 premises at one price) kept as warnings only | Cross-checks the list both ways: catches a newly controlled item, a delisted one, or a wrong price in config. |
 | Scope as a config list | Adding a district or state is a config edit, not a code change; typos fail the build. |
 | English names in a reviewed CSV, Malay fallback | Lookup is Malay-only; a CSV is easy to hand-edit and diff, and a missing translation never blanks a name. |
-| `out_of_scope` column recomputed each build | Only items that appear in some district file need review; coverage shifts, so a one-off mark would go stale. Other columns are written back untouched. |
+| Scope list generated to `data/out/item_scope.json`, not written into the CSV | Coverage shifts each build, so it has to be generated, but the CSV is hand-edited. Each file has one owner: the bot only ever changes `data/out/`, so its rebase can't collide with your edits. |
 | SQL in `.sql` files, config passed as DuckDB variables | SQL stays readable and runnable on its own; values are bound, never string-pasted into SQL. |
 | Conditional GET instead of "skip if file exists" | The current month's file grows daily; an existence check would serve stale data forever. |
 | Commit `data/out/` | The frontend can be a static site with no backend; diffs show how prices moved between builds. |
@@ -89,22 +89,25 @@ Two GitHub Actions workflows keep the site current without a server.
 
    | Gate | Fails when | Why |
    |---|---|---|
-   | Source stalled | the latest data date hasn't moved past the committed manifest's | Otherwise last week's prices would be re-published as new. |
+   | Source stalled | the latest data date hasn't moved past the committed manifest's **and** it is 14 or more days old (`stale_days`) | Re-publishing it would be pointless, and at that age the site shows its stale banner, so someone should look. If it's under 14 days old, the run passes with a warning and commits nothing: a quiet week upstream isn't an emergency. |
    | Row drop | kept rows fell more than 30% (`gate_max_kept_drop` in `config.toml`) | A partial upload or schema change upstream. The normal weekly swing is about 10%. |
    | Missing district | a district that had a file and is still in scope has none | Shared links point at those files. Districts that never had data (Rawang) or were removed from scope are fine. |
 
-3. Commit `data/out/` as `github-actions[bot]` with `data: weekly refresh (window <start> to <end>)` and push. This happens only if the gates pass and something besides the manifest timestamp changed. Vercel redeploys on the push.
+3. Run the web checks on the new data: the same steps as CI (`.github/actions/web-checks`). Vercel deploys whatever the bot pushes, and bot pushes don't trigger CI, so a long new item name that breaks the 360px layout has to be caught here. On failure the screenshots are uploaded as the `mobile-check-screenshots` artifact.
+4. Commit `data/out/` as `github-actions[bot]` with `data: weekly refresh (window <start> to <end>)` and push. This happens only if everything above passed and something besides the manifest timestamp changed. Vercel redeploys on the push.
+
+`stale_days` (14) in `config.toml` is the single threshold for both the gate and the site's "prices may have changed" banner. The build copies it into `manifest.json`, which the site reads.
 
 Other details:
 
 - The schedule is off the top of the hour because GitHub delays `:00` jobs under load. Tuesday gives Monday's big survey round a day to land.
 - A concurrency group queues overlapping runs instead of letting them race on the push.
 - If someone pushed in the meantime, the bot rebases its commit on top.
-- The bot doesn't commit `data/item_names_en.csv`. Its `out_of_scope` column is recomputed whenever you run the pipeline locally.
+- The bot owns `data/out/` and nothing else. If a run changes any other file, it fails before committing rather than rebase over the change.
 
 **`ci.yml`: checks on every push and pull request.**
 
 - The pipeline job runs `pytest` on the committed output.
-- The web job runs `npm ci`, the type-check, Vitest, the build, and `npm run check:mobile` in headless Chrome. It uses `browser-actions/setup-chrome`, and the script adds `--no-sandbox` in CI because Ubuntu 24.04 blocks Chrome's sandbox.
+- The web job runs `npm ci`, the type-check, Vitest, the build, and `npm run check:mobile` in headless Chrome. These steps live in one composite action that the refresh also uses, so the two can't drift. It uses `browser-actions/setup-chrome`, and the script adds `--no-sandbox` in CI because Ubuntu 24.04 blocks Chrome's sandbox.
 - If the layout check fails, the screenshots are uploaded as the `mobile-check-screenshots` artifact on the run's page.
 - Pushes made by the refresh bot don't trigger CI: GitHub doesn't start workflows from `GITHUB_TOKEN` pushes. The refresh runs `pytest` itself.

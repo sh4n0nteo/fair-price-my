@@ -61,6 +61,7 @@ export interface ManifestDistrict {
 export interface Manifest {
   built_at: string
   window: { start: string; end: string }
+  stale_days: number // pipeline/config.toml; also the refresh gate's threshold
   districts: ManifestDistrict[]
 }
 

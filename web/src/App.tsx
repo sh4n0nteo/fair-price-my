@@ -7,7 +7,6 @@ import { Result } from './Result'
 import { rank } from './search'
 import { checkPrice, parsePrice } from './verdict'
 
-const STALE_DAYS = 14
 
 // ---- URL state: ?d=district&t=type&i=item_code&p=price, so a check is a shareable link ----
 function readUrl() {
@@ -167,6 +166,8 @@ export function App() {
   }
 
   const daysOld = manifest ? Math.floor((Date.now() - Date.parse(manifest.window.end + 'T00:00:00Z')) / 86_400_000) : 0
+  // Same threshold, and same >= rule, as the refresh gate (pipeline/gates.py): config.toml -> manifest.json.
+  const stale = !!manifest && daysOld >= manifest.stale_days
   const meta = slug ? districtMeta(slug) : undefined
 
   return (
@@ -179,9 +180,9 @@ export function App() {
         <h1>Is this a fair price?</h1>
         <p className="lede">Check a shelf price against what shops near you charge.</p>
         {manifest && (
-          <p className={`freshness${daysOld > STALE_DAYS ? ' freshness--stale' : ''}`} role={daysOld > STALE_DAYS ? 'alert' : undefined}>
-            {daysOld > STALE_DAYS
-              ? `Prices last updated ${fmtDate(manifest.window.end)}, over ${STALE_DAYS} days ago. Shelf prices may have changed.`
+          <p className={`freshness${stale ? ' freshness--stale' : ''}`} role={stale ? 'alert' : undefined}>
+            {stale
+              ? `Prices last updated ${fmtDate(manifest.window.end)}, ${daysOld} days ago. Shelf prices may have changed.`
               : `Prices updated ${fmtDate(manifest.window.end)}`}
           </p>
         )}

@@ -24,7 +24,7 @@ def main() -> None:
 
     log.info("export")
     m = export.run(con, ROOT / "data" / "out", files, names_file=ROOT / "data" / "item_names_en.csv",
-                   reports_dir=ROOT / "reports")
+                   reports_dir=ROOT / "reports", stale_days=cfg["stale_days"])
 
     rows = m["rows"]
     log.info("window %s .. %s", m["window"]["start"], m["window"]["end"])
@@ -36,7 +36,8 @@ def main() -> None:
         log.warning("controlled check: %s %s: %s (%s)", w["item_code"], w["name_ms"], w["warning"], w["detail"])
     t = m["trend"][-1]
     log.info("unknown item codes: %d codes, %d rows (%.2f%%)", t["unknown_item_codes"], t["unknown_item_rows"], t["unknown_item_pct"])
-    log.info("translations: %d items in scope, %d out_of_scope", m["translations"]["in_scope"], m["translations"]["out_of_scope"])
+    log.info("translations: %d items in scope (data/out/item_scope.json), %d still needs_review",
+             m["translations"]["in_scope"], m["translations"]["in_scope_needs_review"])
     log.info("shops above controlled price (all types, per district) -> reports/controlled_above.csv")
     by_slug: dict[str, list[str]] = {}
     for r in m["_controlled_above"]:

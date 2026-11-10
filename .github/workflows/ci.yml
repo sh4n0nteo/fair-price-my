@@ -30,49 +30,6 @@ jobs:
   web:
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    defaults:
-      run:
-        working-directory: web
     steps:
       - uses: actions/checkout@v7
-
-      - uses: actions/setup-node@v7
-        with:
-          node-version: "26" # what the app is developed and tested on
-          cache: npm
-          cache-dependency-path: web/package-lock.json
-
-      - run: npm ci # exact versions from the lockfile
-
-      - name: Type-check
-        run: npx tsc --noEmit
-
-      - name: Unit tests (Vitest)
-        run: npx vitest run
-
-      - name: Build
-        run: npm run build # prebuild copies ../data/out into public/data
-
-      # check:mobile drives headless Chrome over the DevTools Protocol. setup-chrome installs a
-      # pinned stable Chrome plus its Linux libraries and gives us the binary path; the script
-      # reads it from CHROME and, because CI is set, adds --no-sandbox (Ubuntu 24.04's AppArmor
-      # blocks Chrome's sandbox on GitHub runners; the page is our own localhost build).
-      - uses: browser-actions/setup-chrome@v2
-        id: chrome
-        with:
-          chrome-version: stable
-          install-dependencies: true
-
-      - name: Layout check (360px and 1024px)
-        id: mobile
-        run: npm run check:mobile
-        env:
-          CHROME: ${{ steps.chrome.outputs.chrome-path }}
-
-      - name: Upload layout screenshots
-        if: failure() && steps.mobile.outcome == 'failure'
-        uses: actions/upload-artifact@v7
-        with:
-          name: mobile-check-screenshots
-          path: web/mobile-check-out/
-          retention-days: 14
+      - uses: ./.github/actions/web-checks # shared with refresh.yml

@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-11-09T12:33:31+00:00",
+  "built_at": "2026-11-10T10:01:45+00:00",
   "window": {
     "start": "2026-10-13",
     "end": "2026-11-09"
@@ -66,9 +66,10 @@
     }
   ],
   "controlled_warnings": [],
+  "stale_days": 14,
   "translations": {
     "in_scope": 283,
-    "out_of_scope": 513
+    "in_scope_needs_review": 283
   },
   "districts": [
     {

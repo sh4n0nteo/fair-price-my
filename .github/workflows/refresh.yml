@@ -22,7 +22,7 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30 # pipeline ~2 min + web checks ~5 min, with room for slow downloads
     steps:
       - uses: actions/checkout@v7
 
@@ -44,13 +44,32 @@ jobs:
       - name: Tests on the new output
         run: python -m pytest -q tests
 
+      # A source that stalled but is under stale_days old sets stalled=true and passes with a warning:
+      # nothing new to publish, so the steps below are skipped. At stale_days old it fails instead.
       - name: Sanity gates (stalled source, row drop, missing districts)
+        id: gates
         run: python -m pipeline.gates "$RUNNER_TEMP/manifest.prev.json" data/out
 
+      # The site must still build and lay out on the new data (new long item names, new districts)
+      # before it reaches main: Vercel deploys whatever the bot pushes, and bot pushes don't trigger CI.
+      - name: Web checks on the new data
+        if: steps.gates.outputs.stalled != 'true'
+        uses: ./.github/actions/web-checks # shared with ci.yml
+
       - name: Commit and push if the data changed
+        if: steps.gates.outputs.stalled != 'true'
         run: |
+          # The bot owns data/out/ only. Anything else changed means a step wrote outside it (e.g. into
+          # your hand-edited data/item_names_en.csv): stop rather than rebase over it or lose it.
+          dirty=$(git status --porcelain --untracked-files=all -- . ':!data/out')
+          if [ -n "$dirty" ]; then
+            echo "::error::Refresh changed files outside data/out/:"
+            echo "$dirty"
+            exit 1
+          fi
+          git add data/out
           # manifest.json changes on every build (built_at), so it alone doesn't count as a change.
-          if git diff --quiet -- data/out ':!data/out/manifest.json'; then
+          if git diff --cached --quiet -- data/out ':!data/out/manifest.json'; then
             echo "data/out/ unchanged apart from the manifest: nothing to commit."
             exit 0
           fi
@@ -58,10 +77,8 @@ jobs:
           end=$(python -c "import json; print(json.load(open('data/out/manifest.json'))['window']['end'])")
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/out
           git commit -m "data: weekly refresh (window ${start} to ${end})"
           # Someone may have pushed while this ran: replay our data commit on top rather than fail.
-          # --autostash: the pipeline also rewrites data/item_names_en.csv (out_of_scope column), which
-          # the bot deliberately doesn't commit; without it, git refuses to rebase a dirty tree.
-          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+          # The tree is clean apart from this commit (checked above), so a plain rebase works.
+          git pull --rebase origin "${GITHUB_REF_NAME}"
           git push origin "HEAD:${GITHUB_REF_NAME}"

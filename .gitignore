@@ -2,3 +2,7 @@ data/raw/
 reports/
 .venv/
 __pycache__/
+
+# Local Claude Code state: never commit
+.claude/worktrees/
+.claude/settings.local.json

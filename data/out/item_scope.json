@@ -1,0 +1,1417 @@
+[
+  {
+    "item_code": 1,
+    "name_ms": "AYAM BERSIH - STANDARD",
+    "name_en": "Whole cleaned chicken - standard"
+  },
+  {
+    "item_code": 2,
+    "name_ms": "AYAM BERSIH - SUPER",
+    "name_en": "Whole cleaned chicken - super"
+  },
+  {
+    "item_code": 9,
+    "name_ms": "DAGING KAMBING BEBIRI IMPORT BERTULANG (MUTTON) (AUSTRALIA - KOTAK)",
+    "name_en": "Imported mutton, bone-in (Australia, boxed)"
+  },
+  {
+    "item_code": 10,
+    "name_ms": "DAGING KAMBING BEBIRI IMPORT BERTULANG (MUTTON) (NEW ZEALAND - KOTAK)",
+    "name_en": "Imported mutton, bone-in (New Zealand, boxed)"
+  },
+  {
+    "item_code": 11,
+    "name_ms": "DAGING KAMBING BEBIRI IMPORT TANPA TULANG (MUTTON) (TIDAK TERMASUK PAHA - AUSTRALIA)",
+    "name_en": "Imported mutton, boneless, excl. leg (Australia)"
+  },
+  {
+    "item_code": 14,
+    "name_ms": "DAGING KERBAU IMPORT (INDIA) * (TOP SIDE)",
+    "name_en": "Imported buffalo meat, topside (India)"
+  },
+  {
+    "item_code": 16,
+    "name_ms": "BETIK BIASA",
+    "name_en": "Papaya"
+  },
+  {
+    "item_code": 18,
+    "name_ms": "PISANG BERANGAN",
+    "name_en": "Banana (pisang berangan)"
+  },
+  {
+    "item_code": 19,
+    "name_ms": "PISANG EMAS",
+    "name_en": "Banana (pisang emas)"
+  },
+  {
+    "item_code": 20,
+    "name_ms": "TEMBIKAI MERAH BERBIJI",
+    "name_en": "Red watermelon, seeded"
+  },
+  {
+    "item_code": 21,
+    "name_ms": "TEMBIKAI MERAH TANPA BIJI",
+    "name_en": "Red watermelon, seedless"
+  },
+  {
+    "item_code": 22,
+    "name_ms": "DRAGON FRUIT MERAH",
+    "name_en": "Red dragon fruit"
+  },
+  {
+    "item_code": 24,
+    "name_ms": "TEMBIKAI SUSU",
+    "name_en": "Honeydew melon"
+  },
+  {
+    "item_code": 25,
+    "name_ms": "NENAS BIASA (JOSAPINE/MORRIS/SARAWAK)",
+    "name_en": "Pineapple (Josapine/Morris/Sarawak)"
+  },
+  {
+    "item_code": 27,
+    "name_ms": "ANGGUR MERAH BERBIJI",
+    "name_en": "Red grapes, seeded"
+  },
+  {
+    "item_code": 31,
+    "name_ms": "LAI KUNING (SAIZ M)",
+    "name_en": "Yellow pear (size M)"
+  },
+  {
+    "item_code": 38,
+    "name_ms": "JAMBU BATU BERBIJI",
+    "name_en": "Guava, seeded"
+  },
+  {
+    "item_code": 39,
+    "name_ms": "JAMBU BATU TANPA BIJI",
+    "name_en": "Guava, seedless"
+  },
+  {
+    "item_code": 43,
+    "name_ms": "IKAN BAWAL HITAM (ANTARA 2 HINGGA 5 EKOR SEKILOGRAM)",
+    "name_en": "Black pomfret (2-5 fish per kg)"
+  },
+  {
+    "item_code": 47,
+    "name_ms": "IKAN CENCARU (ANTARA 4 HINGGA 6 EKOR SEKILOGRAM)",
+    "name_en": "Hardtail scad / ikan cencaru (4-6 fish per kg)"
+  },
+  {
+    "item_code": 52,
+    "name_ms": "KEPALA IKAN JENAHAK",
+    "name_en": "Grouper head (jenahak)"
+  },
+  {
+    "item_code": 55,
+    "name_ms": "IKAN KEMBUNG KECIL/PELALING (ANTARA 10 HINGGA 18 EKOR SEKILOGRAM)",
+    "name_en": "Small Indian mackerel / ikan kembung (10-18 fish per kg)"
+  },
+  {
+    "item_code": 64,
+    "name_ms": "KEPALA IKAN MERAH",
+    "name_en": "Red snapper head"
+  },
+  {
+    "item_code": 69,
+    "name_ms": "IKAN SELAR KUNING (≥ 11 EKOR SEKILOGRAM)",
+    "name_en": "Yellowstripe scad / ikan selar kuning (≥11 fish per kg)"
+  },
+  {
+    "item_code": 70,
+    "name_ms": "IKAN SELAR/PELATA (≤ 7 EKOR SEKILOGRAM)",
+    "name_en": "Trevally / ikan selar (≤7 fish per kg)"
+  },
+  {
+    "item_code": 88,
+    "name_ms": "IKAN KELI (ANTARA 2 HINGGA 5 EKOR SEKILOGRAM)",
+    "name_en": "Catfish / ikan keli (2-5 fish per kg)"
+  },
+  {
+    "item_code": 92,
+    "name_ms": "CILI HIJAU",
+    "name_en": "Green chilli"
+  },
+  {
+    "item_code": 93,
+    "name_ms": "CILI MERAH - KULAI",
+    "name_en": "Red chilli (Kulai)"
+  },
+  {
+    "item_code": 94,
+    "name_ms": "CILI MERAH - MINYAK",
+    "name_en": "Red chilli (minyak)"
+  },
+  {
+    "item_code": 95,
+    "name_ms": "HALIA BASAH (TUA)",
+    "name_en": "Fresh ginger (mature)"
+  },
+  {
+    "item_code": 96,
+    "name_ms": "KACANG BENDI",
+    "name_en": "Okra / lady's fingers"
+  },
+  {
+    "item_code": 97,
+    "name_ms": "KACANG BUNCIS",
+    "name_en": "French beans"
+  },
+  {
+    "item_code": 98,
+    "name_ms": "KACANG PANJANG",
+    "name_en": "Long beans"
+  },
+  {
+    "item_code": 101,
+    "name_ms": "KELAPA BIJI",
+    "name_en": "Whole coconut"
+  },
+  {
+    "item_code": 102,
+    "name_ms": "KELAPA PARUT (BIASA)",
+    "name_en": "Grated coconut"
+  },
+  {
+    "item_code": 103,
+    "name_ms": "SANTAN KELAPA SEGAR (BIASA)",
+    "name_en": "Fresh coconut milk"
+  },
+  {
+    "item_code": 104,
+    "name_ms": "KUBIS BULAT IMPORT (CHINA)",
+    "name_en": "Round cabbage, imported (China)"
+  },
+  {
+    "item_code": 105,
+    "name_ms": "KUBIS BULAT (TEMPATAN)",
+    "name_en": "Round cabbage, local"
+  },
+  {
+    "item_code": 108,
+    "name_ms": "KUNYIT HIDUP",
+    "name_en": "Fresh turmeric"
+  },
+  {
+    "item_code": 109,
+    "name_ms": "LOBAK MERAH",
+    "name_en": "Carrot"
+  },
+  {
+    "item_code": 113,
+    "name_ms": "TIMUN",
+    "name_en": "Cucumber"
+  },
+  {
+    "item_code": 114,
+    "name_ms": "TOMATO",
+    "name_en": "Tomato"
+  },
+  {
+    "item_code": 129,
+    "name_ms": "BAWANG BESAR KUNING/HOLLAND",
+    "name_en": "Yellow onion (Holland)"
+  },
+  {
+    "item_code": 131,
+    "name_ms": "BAWANG KECIL MERAH ROSE IMPORT (INDIA)",
+    "name_en": "Red shallots, Rose, imported (India)"
+  },
+  {
+    "item_code": 132,
+    "name_ms": "BAWANG KECIL MERAH IMPORT (THAILAND)",
+    "name_en": "Red shallots, imported (Thailand)"
+  },
+  {
+    "item_code": 180,
+    "name_ms": "TEH BOH (UNCANG)",
+    "name_en": "BOH tea (bags)"
+  },
+  {
+    "item_code": 191,
+    "name_ms": "SARDIN CAP AYAM (SOS TOMATO)",
+    "name_en": "Ayam Brand sardines (tomato sauce)"
+  },
+  {
+    "item_code": 193,
+    "name_ms": "SARDIN CAP KING CUP (SOS TOMATO)",
+    "name_en": "King Cup sardines (tomato sauce)"
+  },
+  {
+    "item_code": 201,
+    "name_ms": "JEM STRAWBERI LADY'S CHOICE",
+    "name_en": "Lady's Choice strawberry jam"
+  },
+  {
+    "item_code": 203,
+    "name_ms": "MAINLAND CHESDALE CHEDDAR CHEESE SPREAD 12 CHEDDAR",
+    "name_en": "Mainland Chesdale cheddar cheese spread, 12 slices"
+  },
+  {
+    "item_code": 205,
+    "name_ms": "MARJERIN DAISY",
+    "name_en": "Daisy margarine"
+  },
+  {
+    "item_code": 206,
+    "name_ms": "MARJERIN PLANTA",
+    "name_en": "Planta margarine"
+  },
+  {
+    "item_code": 214,
+    "name_ms": "KICAP LEMAK MANIS CAP KIPAS UDANG",
+    "name_en": "Kipas Udang sweet thick soy sauce"
+  },
+  {
+    "item_code": 217,
+    "name_ms": "SOS TOMATO MAGGI",
+    "name_en": "Maggi tomato sauce"
+  },
+  {
+    "item_code": 218,
+    "name_ms": "SOS CILI LIFE",
+    "name_en": "Life chilli sauce"
+  },
+  {
+    "item_code": 221,
+    "name_ms": "DRINHO SOYA (KOTAK)",
+    "name_en": "Drinho soy milk (carton)"
+  },
+  {
+    "item_code": 224,
+    "name_ms": "SUSU SEGAR DUTCH LADY",
+    "name_en": "Dutch Lady fresh milk"
+  },
+  {
+    "item_code": 226,
+    "name_ms": "YEO'S LAICI (KOTAK)",
+    "name_en": "Yeo's lychee drink (carton)"
+  },
+  {
+    "item_code": 228,
+    "name_ms": "COCA COLA (BOTOL)",
+    "name_en": "Coca-Cola (bottle)"
+  },
+  {
+    "item_code": 229,
+    "name_ms": "F&N OREN (TIN)",
+    "name_en": "F&N Orange (can)"
+  },
+  {
+    "item_code": 230,
+    "name_ms": "F&N OREN (BOTOL)",
+    "name_en": "F&N Orange (bottle)"
+  },
+  {
+    "item_code": 232,
+    "name_ms": "MIRINDA OREN (BOTOL)",
+    "name_en": "Mirinda Orange (bottle)"
+  },
+  {
+    "item_code": 235,
+    "name_ms": "JUS OREN PEEL FRESH (MARIGOLD)",
+    "name_en": "Marigold Peel Fresh orange juice"
+  },
+  {
+    "item_code": 239,
+    "name_ms": "RED BULL (BOTOL)",
+    "name_en": "Red Bull (bottle)"
+  },
+  {
+    "item_code": 240,
+    "name_ms": "LIVITA WITH HONEY (BOTOL)",
+    "name_en": "Livita with Honey (bottle)"
+  },
+  {
+    "item_code": 246,
+    "name_ms": "MINYAK JAGUNG CAP MAZOLA",
+    "name_en": "Mazola corn oil"
+  },
+  {
+    "item_code": 254,
+    "name_ms": "MINYAK MASAK SEBATIAN CAP RED EAGLE",
+    "name_en": "Red Eagle blended cooking oil"
+  },
+  {
+    "item_code": 260,
+    "name_ms": "MINYAK MASAK SEBATIAN CAP KNIFE",
+    "name_en": "Knife blended cooking oil"
+  },
+  {
+    "item_code": 263,
+    "name_ms": "MINYAK MASAK TULEN CAP BURUH",
+    "name_en": "Buruh pure palm cooking oil"
+  },
+  {
+    "item_code": 266,
+    "name_ms": "MINYAK MASAK TULEN CAP SERI MURNI",
+    "name_en": "Seri Murni pure palm cooking oil"
+  },
+  {
+    "item_code": 267,
+    "name_ms": "MINYAK MASAK TULEN CAP VESAWIT",
+    "name_en": "Vesawit pure palm cooking oil"
+  },
+  {
+    "item_code": 271,
+    "name_ms": "MINYAK SAPI CAP QBB",
+    "name_en": "QBB ghee"
+  },
+  {
+    "item_code": 292,
+    "name_ms": "UBAT GIGI COLGATE (PUDINA SEGAR)",
+    "name_en": "Colgate toothpaste (fresh mint)"
+  },
+  {
+    "item_code": 293,
+    "name_ms": "UBAT GIGI DARLIE DOUBLE ACTION (PUDINA ASLI)",
+    "name_en": "Darlie Double Action toothpaste (original mint)"
+  },
+  {
+    "item_code": 295,
+    "name_ms": "UBAT GIGI FRESH & WHITE (PUDINA SEGAR)",
+    "name_en": "Fresh & White toothpaste (fresh mint)"
+  },
+  {
+    "item_code": 299,
+    "name_ms": "LACTOGEN 1 RUMUSAN BAYI (KOTAK)",
+    "name_en": "Lactogen 1 infant formula (box)"
+  },
+  {
+    "item_code": 300,
+    "name_ms": "LACTOGEN 2 RUMUSAN SUSULAN (KOTAK)",
+    "name_en": "Lactogen 2 follow-on formula (box)"
+  },
+  {
+    "item_code": 350,
+    "name_ms": "SERBUK KARI IKAN BABAS",
+    "name_en": "Babas fish curry powder"
+  },
+  {
+    "item_code": 364,
+    "name_ms": "SERBUK CILI BABAS",
+    "name_en": "Babas chilli powder"
+  },
+  {
+    "item_code": 365,
+    "name_ms": "SERBUK KUNYIT CAMPURAN (SEBATIAN) ADABI",
+    "name_en": "Adabi blended turmeric powder"
+  },
+  {
+    "item_code": 368,
+    "name_ms": "KACANG TANAH (IMPORT)",
+    "name_en": "Peanuts (imported)"
+  },
+  {
+    "item_code": 716,
+    "name_ms": "CILI API/PADI HIJAU",
+    "name_en": "Green bird's eye chilli (cili padi)"
+  },
+  {
+    "item_code": 845,
+    "name_ms": "SOTONG (ANTARA 11 HINGGA17 EKOR SEKILOGRAM)",
+    "name_en": "Squid (11-17 per kg)"
+  },
+  {
+    "item_code": 847,
+    "name_ms": "KETAM RENJONG/BUNGA (≤ 4 EKOR SEKILOGRAM)",
+    "name_en": "Blue swimmer crab (≤4 per kg)"
+  },
+  {
+    "item_code": 849,
+    "name_ms": "UDANG PUTIH KECIL (b\t% 61 EKOR SEKILOGRAM)",
+    "name_en": "Small white prawns (≥61 per kg)"
+  },
+  {
+    "item_code": 850,
+    "name_ms": "UDANG HARIMAU (ANTARA 20 HINGGA 30 EKOR SEKILOGRAM)",
+    "name_en": "Tiger prawns (20-30 per kg)"
+  },
+  {
+    "item_code": 861,
+    "name_ms": "UBI KENTANG HOLLAND",
+    "name_en": "Potatoes (Holland)"
+  },
+  {
+    "item_code": 869,
+    "name_ms": "BIJI SAWI",
+    "name_en": "Mustard seeds"
+  },
+  {
+    "item_code": 883,
+    "name_ms": "KRIMER MANIS BERVITAMIN CAP F&N",
+    "name_en": "F&N vitamin-enriched sweetened creamer"
+  },
+  {
+    "item_code": 884,
+    "name_ms": "KRIMER MANIS CAP GOLD COIN",
+    "name_en": "Gold Coin sweetened creamer"
+  },
+  {
+    "item_code": 904,
+    "name_ms": "BERAS SUPER CAP RAMBUTAN 5% (IMPORT)",
+    "name_en": "Rambutan super rice 5% (imported)"
+  },
+  {
+    "item_code": 910,
+    "name_ms": "KORDIAL F&N (PELBAGAI PERISA)",
+    "name_en": "F&N cordial (assorted flavours)"
+  },
+  {
+    "item_code": 917,
+    "name_ms": "TEPUNG GANDUM NGP (BERBUNGKUS, CAP SAUH)",
+    "name_en": "Wheat flour, Cap Sauh (packed)"
+  },
+  {
+    "item_code": 918,
+    "name_ms": "MINYAK MASAK PAKET (PELBAGAI JENAMA)",
+    "name_en": "Cooking oil polybag (assorted brands)"
+  },
+  {
+    "item_code": 929,
+    "name_ms": "NESCAFE CLASSIC (PAKET)",
+    "name_en": "Nescafe Classic (pack)"
+  },
+  {
+    "item_code": 992,
+    "name_ms": "BERAS CAP JATI (SST5%)",
+    "name_en": "Jati rice (SST 5%)"
+  },
+  {
+    "item_code": 1070,
+    "name_ms": "SOS CILI MAGGI",
+    "name_en": "Maggi chilli sauce"
+  },
+  {
+    "item_code": 1086,
+    "name_ms": "MINYAK JAGUNG CAP DAISY",
+    "name_en": "Daisy corn oil"
+  },
+  {
+    "item_code": 1087,
+    "name_ms": "MINYAK JAGUNG CAP DAISY",
+    "name_en": "Daisy corn oil"
+  },
+  {
+    "item_code": 1088,
+    "name_ms": "MINYAK JAGUNG CAP MAZOLA",
+    "name_en": "Mazola corn oil"
+  },
+  {
+    "item_code": 1089,
+    "name_ms": "MINYAK JAGUNG CAP VECORN",
+    "name_en": "Vecorn corn oil"
+  },
+  {
+    "item_code": 1090,
+    "name_ms": "MINYAK JAGUNG CAP VECORN",
+    "name_en": "Vecorn corn oil"
+  },
+  {
+    "item_code": 1091,
+    "name_ms": "MINYAK MASAK SEBATIAN CAP RED EAGLE",
+    "name_en": "Red Eagle blended cooking oil"
+  },
+  {
+    "item_code": 1093,
+    "name_ms": "MINYAK MASAK SEBATIAN CAP KNIFE",
+    "name_en": "Knife blended cooking oil"
+  },
+  {
+    "item_code": 1094,
+    "name_ms": "MINYAK MASAK TULEN CAP BURUH",
+    "name_en": "Buruh pure palm cooking oil"
+  },
+  {
+    "item_code": 1095,
+    "name_ms": "MINYAK MASAK TULEN CAP VESAWIT",
+    "name_en": "Vesawit pure palm cooking oil"
+  },
+  {
+    "item_code": 1100,
+    "name_ms": "MINYAK MASAK TULEN CAP SERI MURNI",
+    "name_en": "Seri Murni pure palm cooking oil"
+  },
+  {
+    "item_code": 1101,
+    "name_ms": "MINYAK MASAK TULEN CAP SERI MURNI",
+    "name_en": "Seri Murni pure palm cooking oil"
+  },
+  {
+    "item_code": 1109,
+    "name_ms": "TELUR AYAM GRED A",
+    "name_en": "Chicken eggs grade A"
+  },
+  {
+    "item_code": 1110,
+    "name_ms": "TELUR AYAM GRED B",
+    "name_en": "Chicken eggs grade B"
+  },
+  {
+    "item_code": 1111,
+    "name_ms": "TELUR AYAM GRED C",
+    "name_en": "Chicken eggs grade C"
+  },
+  {
+    "item_code": 1128,
+    "name_ms": "LADA BENGGALA HIJAU (CAPSICUM)",
+    "name_en": "Green capsicum"
+  },
+  {
+    "item_code": 1131,
+    "name_ms": "UBI KENTANG IMPORT (CHINA)",
+    "name_en": "Potatoes, imported (China)"
+  },
+  {
+    "item_code": 1132,
+    "name_ms": "LIMAU NIPIS",
+    "name_en": "Lime"
+  },
+  {
+    "item_code": 1135,
+    "name_ms": "KICAP MANIS ADABI",
+    "name_en": "Adabi sweet soy sauce"
+  },
+  {
+    "item_code": 1138,
+    "name_ms": "SOS TIRAM MAGGI",
+    "name_en": "Maggi oyster sauce"
+  },
+  {
+    "item_code": 1142,
+    "name_ms": "SARDIN CAP ADABI (SOS TOMATO DENGAN CILI)",
+    "name_en": "Adabi sardines (tomato chilli sauce)"
+  },
+  {
+    "item_code": 1144,
+    "name_ms": "MENTEGA KACANG HALUS LADY'S CHOICE",
+    "name_en": "Lady's Choice smooth peanut butter"
+  },
+  {
+    "item_code": 1145,
+    "name_ms": "NESTLE CERELAC BERAS - TIN",
+    "name_en": "Nestle Cerelac rice (tin)"
+  },
+  {
+    "item_code": 1151,
+    "name_ms": "SANTAN KELAPA JENAMA AYAM BRAND",
+    "name_en": "Ayam Brand coconut milk"
+  },
+  {
+    "item_code": 1153,
+    "name_ms": "PERENCAH TOM YAM ADABI",
+    "name_en": "Adabi tom yam paste"
+  },
+  {
+    "item_code": 1355,
+    "name_ms": "100 PLUS (ORIGINAL)",
+    "name_en": "100 Plus (original)"
+  },
+  {
+    "item_code": 1367,
+    "name_ms": "DAGING PAHA KAMBING BEBIRI IMPORT BERTULANG  (MUTTON) (AUSTRALIA)",
+    "name_en": "Imported mutton leg, bone-in (Australia)"
+  },
+  {
+    "item_code": 1368,
+    "name_ms": "DAGING PAHA KAMBING BEBIRI IMPORT BERTULANG (MUTTON) (NEW ZEALAND)",
+    "name_en": "Imported mutton leg, bone-in (New Zealand)"
+  },
+  {
+    "item_code": 1369,
+    "name_ms": "DAGING KAMBING TEMPATAN BERTULANG",
+    "name_en": "Local goat/mutton, bone-in"
+  },
+  {
+    "item_code": 1375,
+    "name_ms": "DAGING KERBAU IMPORT (INDIA) * (SILVERSIDE)",
+    "name_en": "Imported buffalo meat, silverside (India)"
+  },
+  {
+    "item_code": 1376,
+    "name_ms": "DAGING KERBAU IMPORT (INDIA) * (RUMP)",
+    "name_en": "Imported buffalo meat, rump (India)"
+  },
+  {
+    "item_code": 1377,
+    "name_ms": "DAGING KERBAU IMPORT (INDIA) * (BLADE)",
+    "name_en": "Imported buffalo meat, blade (India)"
+  },
+  {
+    "item_code": 1378,
+    "name_ms": "DAGING KERBAU IMPORT (INDIA) * (CHUCK)",
+    "name_en": "Imported buffalo meat, chuck (India)"
+  },
+  {
+    "item_code": 1379,
+    "name_ms": "DAGING BABI (PERUT / BELLY)",
+    "name_en": "Pork belly"
+  },
+  {
+    "item_code": 1380,
+    "name_ms": "DAGING BABI (DAGING & LEMAK / LEAN & FAT)",
+    "name_en": "Pork, lean & fat"
+  },
+  {
+    "item_code": 1391,
+    "name_ms": "UDANG PUTIH BESAR (BERAT ANTARA 41 EKOR HINGGA 60 EKOR SEKILOGRAM)",
+    "name_en": "Large white prawns (41-60 per kg)"
+  },
+  {
+    "item_code": 1422,
+    "name_ms": "KACANG DAL (AUSTRALIA)",
+    "name_en": "Dal (Australia)"
+  },
+  {
+    "item_code": 1431,
+    "name_ms": "DAGING LEMBU TEMPATAN (BAHAGIAN 1 DAGING PAHA (KECUALI BATANG PINANG - TENDERLOIN)",
+    "name_en": "Local beef, cut 1: leg meat (excl. tenderloin)"
+  },
+  {
+    "item_code": 1432,
+    "name_ms": "DAGING LEMBU TEMPATAN (BAHAGIAN 2 DAGING PEJAL (KECUALI BATANG PINANG - TENDERLOIN)",
+    "name_en": "Local beef, cut 2: lean meat (excl. tenderloin)"
+  },
+  {
+    "item_code": 1436,
+    "name_ms": "IKAN KERISI (ANTARA 5 HINGGA 10 EKOR SEKILOGRAM)",
+    "name_en": "Threadfin bream / ikan kerisi (5-10 fish per kg)"
+  },
+  {
+    "item_code": 1437,
+    "name_ms": "IKAN SIAKAP (ANTARA 2 HINGGA 4 EKOR SEKILOGRAM)",
+    "name_en": "Barramundi / ikan siakap (2-4 fish per kg)"
+  },
+  {
+    "item_code": 1438,
+    "name_ms": "IKAN TENGGIRI BATANG (KEPINGAN)",
+    "name_en": "Narrow-barred mackerel / tenggiri (sliced)"
+  },
+  {
+    "item_code": 1440,
+    "name_ms": "BAWANG BESAR IMPORT (INDIA)",
+    "name_en": "Onion, imported (India)"
+  },
+  {
+    "item_code": 1441,
+    "name_ms": "BAWANG BESAR IMPORT (CHINA)",
+    "name_en": "Onion, imported (China)"
+  },
+  {
+    "item_code": 1442,
+    "name_ms": "BAWANG KECIL MERAH BIASA IMPORT (INDIA)",
+    "name_en": "Red shallots, regular, imported (India)"
+  },
+  {
+    "item_code": 1443,
+    "name_ms": "BAWANG KECIL MERAH IMPORT (CHINA)",
+    "name_en": "Red shallots, imported (China)"
+  },
+  {
+    "item_code": 1445,
+    "name_ms": "BERAS CAP FAIZA EMAS (SST5%)",
+    "name_en": "Faiza Emas rice (SST 5%)"
+  },
+  {
+    "item_code": 1458,
+    "name_ms": "KUBIS BULAT IMPORT (BEIJING)",
+    "name_en": "Round cabbage, imported (Beijing)"
+  },
+  {
+    "item_code": 1475,
+    "name_ms": "IKAN BAWAL PUTIH (ANTARA 2 HINGGA 5 EKOR SEKILOGRAM)",
+    "name_en": "White pomfret (2-5 fish per kg)"
+  },
+  {
+    "item_code": 1476,
+    "name_ms": "IKAN KEMBUNG (ANTARA 8 HINGGA 12 EKOR SEKILOGRAM)",
+    "name_en": "Indian mackerel / ikan kembung (8-12 fish per kg)"
+  },
+  {
+    "item_code": 1477,
+    "name_ms": "IKAN MABUNG (ANTARA 6 HINGGA 10 EKOR SEKILOGRAM)",
+    "name_en": "Ikan mabung (6-10 fish per kg)"
+  },
+  {
+    "item_code": 1479,
+    "name_ms": "BROKOLI",
+    "name_en": "Broccoli"
+  },
+  {
+    "item_code": 1481,
+    "name_ms": "KUBIS BUNGA (CAULIFLOWER)",
+    "name_en": "Cauliflower"
+  },
+  {
+    "item_code": 1483,
+    "name_ms": "MEE KUNING BASAH (PELBAGAI JENAMA)",
+    "name_en": "Fresh yellow noodles (assorted brands)"
+  },
+  {
+    "item_code": 1489,
+    "name_ms": "ASAM JAWA (BERBIJI) PELBAGAI JENAMA",
+    "name_en": "Tamarind with seeds (assorted brands)"
+  },
+  {
+    "item_code": 1507,
+    "name_ms": "COCA COLA (TIN)",
+    "name_en": "Coca-Cola (can)"
+  },
+  {
+    "item_code": 1515,
+    "name_ms": "HEINZ FARLEY RUSKS (PELBAGAI PERISA)",
+    "name_en": "Heinz Farley's Rusks (assorted flavours)"
+  },
+  {
+    "item_code": 1517,
+    "name_ms": "HEINZ APPLE PUREE",
+    "name_en": "Heinz apple puree"
+  },
+  {
+    "item_code": 1524,
+    "name_ms": "BERUS GIGI COLGATE (ZIG ZAG - SOFT)",
+    "name_en": "Colgate Zig Zag toothbrush (soft)"
+  },
+  {
+    "item_code": 1525,
+    "name_ms": "BERUS GIGI ORAL B (COMPLETE EASY CLEAN - SOFT)",
+    "name_en": "Oral-B Complete Easy Clean toothbrush (soft)"
+  },
+  {
+    "item_code": 1539,
+    "name_ms": "SABUN PENCUCI KUAT HARIMAU (LEMON)",
+    "name_en": "Kuat Harimau dishwashing liquid (lemon)"
+  },
+  {
+    "item_code": 1544,
+    "name_ms": "SERBUK NASI GORENG CINA ADABI",
+    "name_en": "Adabi Chinese fried rice seasoning"
+  },
+  {
+    "item_code": 1545,
+    "name_ms": "PERENCAH NASI GORENG IKAN BILIS SERI AJI",
+    "name_en": "Seri Aji anchovy fried rice seasoning"
+  },
+  {
+    "item_code": 1547,
+    "name_ms": "PEPSI COLA (TIN)",
+    "name_en": "Pepsi (can)"
+  },
+  {
+    "item_code": 1550,
+    "name_ms": "PAHA AYAM (CHICKEN DRUMSTICK)",
+    "name_en": "Chicken drumsticks"
+  },
+  {
+    "item_code": 1551,
+    "name_ms": "DADA AYAM (CHICKEN KEEL)",
+    "name_en": "Chicken breast (keel)"
+  },
+  {
+    "item_code": 1552,
+    "name_ms": "THIGH AYAM",
+    "name_en": "Chicken thighs"
+  },
+  {
+    "item_code": 1553,
+    "name_ms": "WHOLE LEG AYAM",
+    "name_en": "Chicken whole leg"
+  },
+  {
+    "item_code": 1554,
+    "name_ms": "IKAN MERAH (KEPINGAN)",
+    "name_en": "Red snapper (sliced)"
+  },
+  {
+    "item_code": 1555,
+    "name_ms": "UDANG PUTIH/VANNAMEI (TERNAK) (ANTARA 41 HINGGA 60 EKOR SEKILOGRAM)",
+    "name_en": "White/vannamei prawns, farmed (41-60 per kg)"
+  },
+  {
+    "item_code": 1556,
+    "name_ms": "BAYAM HIJAU",
+    "name_en": "Green spinach (bayam)"
+  },
+  {
+    "item_code": 1558,
+    "name_ms": "SAWI HIJAU",
+    "name_en": "Choy sum (sawi)"
+  },
+  {
+    "item_code": 1559,
+    "name_ms": "KANGKUNG",
+    "name_en": "Kangkung (water spinach)"
+  },
+  {
+    "item_code": 1560,
+    "name_ms": "KAILAN",
+    "name_en": "Kailan"
+  },
+  {
+    "item_code": 1562,
+    "name_ms": "UDANG KERING",
+    "name_en": "Dried shrimp"
+  },
+  {
+    "item_code": 1563,
+    "name_ms": "SOTONG KERING (SAIZ SERDAHANA)",
+    "name_en": "Dried squid (medium)"
+  },
+  {
+    "item_code": 1564,
+    "name_ms": "BAWANG PUTIH IMPORT (CHINA)",
+    "name_en": "Garlic, imported (China)"
+  },
+  {
+    "item_code": 1568,
+    "name_ms": "SERBUK KARI IKAN ADABI",
+    "name_en": "Adabi fish curry powder"
+  },
+  {
+    "item_code": 1570,
+    "name_ms": "SERBUK KARI AYAM DAN DAGING ADABI",
+    "name_en": "Adabi chicken & meat curry powder"
+  },
+  {
+    "item_code": 1572,
+    "name_ms": "SERBUK KARI DAGING BABAS",
+    "name_en": "Babas meat curry powder"
+  },
+  {
+    "item_code": 1577,
+    "name_ms": "SERBUK PERENCAH SUP ADABI",
+    "name_en": "Adabi soup seasoning powder"
+  },
+  {
+    "item_code": 1582,
+    "name_ms": "BERAS CAP JASMINE (SST5%)",
+    "name_en": "Jasmine rice (SST 5%)"
+  },
+  {
+    "item_code": 1583,
+    "name_ms": "BERAS SUPER CAP JATI TWR  5% (IMPORT)",
+    "name_en": "Jati TWR super rice 5% (imported)"
+  },
+  {
+    "item_code": 1584,
+    "name_ms": "BIHUN KERING TEMPATAN (PELBAGAI JENAMA)",
+    "name_en": "Local dried rice vermicelli (assorted brands)"
+  },
+  {
+    "item_code": 1585,
+    "name_ms": "BIHUN KERING IMPORT (PELBAGAI JENAMA)",
+    "name_en": "Imported dried rice vermicelli (assorted brands)"
+  },
+  {
+    "item_code": 1588,
+    "name_ms": "GULA MERAH LEMBUT (PELBAGAI JENAMA)",
+    "name_en": "Soft brown sugar (assorted brands)"
+  },
+  {
+    "item_code": 1589,
+    "name_ms": "GULA PUTIH BERTAPIS KASAR (PELBAGAI JENAMA)",
+    "name_en": "Coarse refined white sugar (assorted brands)"
+  },
+  {
+    "item_code": 1590,
+    "name_ms": "GULA PUTIH BERTAPIS HALUS (PELBAGAI JENAMA)",
+    "name_en": "Fine refined white sugar (assorted brands)"
+  },
+  {
+    "item_code": 1595,
+    "name_ms": "MINYAK JAGUNG CAP DAISY",
+    "name_en": "Daisy corn oil"
+  },
+  {
+    "item_code": 1597,
+    "name_ms": "MINYAK JAGUNG CAP VECORN",
+    "name_en": "Vecorn corn oil"
+  },
+  {
+    "item_code": 1598,
+    "name_ms": "MINYAK MASAK SEBATIAN CAP RED EAGLE",
+    "name_en": "Red Eagle blended cooking oil"
+  },
+  {
+    "item_code": 1600,
+    "name_ms": "MINYAK MASAK SEBATIAN CAP KNIFE",
+    "name_en": "Knife blended cooking oil"
+  },
+  {
+    "item_code": 1601,
+    "name_ms": "MINYAK MASAK TULEN CAP BURUH",
+    "name_en": "Buruh pure palm cooking oil"
+  },
+  {
+    "item_code": 1602,
+    "name_ms": "MINYAK MASAK TULEN CAP VESAWIT",
+    "name_en": "Vesawit pure palm cooking oil"
+  },
+  {
+    "item_code": 1603,
+    "name_ms": "MINYAK SAPI CAP WINDMILL GHEEBLEND",
+    "name_en": "Windmill ghee blend"
+  },
+  {
+    "item_code": 1604,
+    "name_ms": "ASAM JAWA (TIDAK BERBIJI) ADABI",
+    "name_en": "Adabi seedless tamarind"
+  },
+  {
+    "item_code": 1605,
+    "name_ms": "GARAM HALUS BIASA (PELBAGAI JENAMA)",
+    "name_en": "Fine table salt (assorted brands)"
+  },
+  {
+    "item_code": 1606,
+    "name_ms": "MENTEGA KACANG HALUS LADY'S CHOICE",
+    "name_en": "Lady's Choice smooth peanut butter"
+  },
+  {
+    "item_code": 1610,
+    "name_ms": "SANTAN KELAPA JENAMA M&S",
+    "name_en": "M&S coconut milk"
+  },
+  {
+    "item_code": 1611,
+    "name_ms": "SANTAN KELAPA JENAMA KARA",
+    "name_en": "Kara coconut milk"
+  },
+  {
+    "item_code": 1612,
+    "name_ms": "SANTAN KELAPA JENAMA HARMUNI",
+    "name_en": "Harmuni coconut milk"
+  },
+  {
+    "item_code": 1613,
+    "name_ms": "ESEN STAR BRAND 'PELBAGAI PERISA'",
+    "name_en": "Star Brand essence (assorted flavours)"
+  },
+  {
+    "item_code": 1615,
+    "name_ms": "MENTEGA ANCHOR (SALTED)",
+    "name_en": "Anchor butter (salted)"
+  },
+  {
+    "item_code": 1619,
+    "name_ms": "SUSU TEPUNG SEGERA DUTCHLADY (BIASA)",
+    "name_en": "Dutch Lady instant milk powder (regular)"
+  },
+  {
+    "item_code": 1628,
+    "name_ms": "NESTLE CERELAC GANDUM DAN MADU - KOTAK",
+    "name_en": "Nestle Cerelac wheat & honey (box)"
+  },
+  {
+    "item_code": 1630,
+    "name_ms": "BERUS GIGI COLGATE (TWISTER - SOFT)",
+    "name_en": "Colgate Twister toothbrush (soft)"
+  },
+  {
+    "item_code": 1635,
+    "name_ms": "NESTLE COFFEE-MATE",
+    "name_en": "Nestle Coffee-mate"
+  },
+  {
+    "item_code": 1650,
+    "name_ms": "TEH LIPTON (UNCANG)",
+    "name_en": "Lipton tea (bags)"
+  },
+  {
+    "item_code": 1651,
+    "name_ms": "YEO'S SOYA (KOTAK)",
+    "name_en": "Yeo's soy milk (carton)"
+  },
+  {
+    "item_code": 1804,
+    "name_ms": "KEPAK AYAM (CHICKEN WING)",
+    "name_en": "Chicken wings"
+  },
+  {
+    "item_code": 1819,
+    "name_ms": "LENGKUAS",
+    "name_en": "Galangal"
+  },
+  {
+    "item_code": 1849,
+    "name_ms": "TEPUNG NAIK SENDIRI CAP 'BLUE KEY'",
+    "name_en": "Blue Key self-raising flour"
+  },
+  {
+    "item_code": 1870,
+    "name_ms": "TEPUNG GANDUM NGP (BERBUNGKUS, CAP  FAIZA)",
+    "name_en": "Wheat flour, Cap Faiza (packed)"
+  },
+  {
+    "item_code": 1872,
+    "name_ms": "MAYONIS SEBENAR LADY'S CHOICE",
+    "name_en": "Lady's Choice real mayonnaise"
+  },
+  {
+    "item_code": 1876,
+    "name_ms": "PELEMBUT PAKAIAN - DOWNY (PREMIUM PARFUM PASSION)",
+    "name_en": "Downy fabric softener (Premium Parfum Passion)"
+  },
+  {
+    "item_code": 1879,
+    "name_ms": "SEVEN UP LEMON & LIME (TIN)",
+    "name_en": "7 Up lemon & lime (can)"
+  },
+  {
+    "item_code": 1899,
+    "name_ms": "CILI KERING KERINTING (BERTANGKAI/TIDAK BERTANGKAI)",
+    "name_en": "Dried chilli, kerinting (with/without stems)"
+  },
+  {
+    "item_code": 1900,
+    "name_ms": "CILI KERING LEPER (BERTANGKAI/TIDAK BERTANGKAI)",
+    "name_en": "Dried chilli, flat (with/without stems)"
+  },
+  {
+    "item_code": 1904,
+    "name_ms": "DUMEX DUGRO 3 (1-3 TAHUN) (PELBAGAI PERISA)",
+    "name_en": "Dumex Dugro 3 (1-3 years, assorted flavours)"
+  },
+  {
+    "item_code": 1913,
+    "name_ms": "DAGING LEMBU IMPORT (BLOCK)",
+    "name_en": "Imported beef (block)"
+  },
+  {
+    "item_code": 1914,
+    "name_ms": "DAGING KERBAU IMPORT (INDIA) (BLOCK)",
+    "name_en": "Imported buffalo meat, block (India)"
+  },
+  {
+    "item_code": 1915,
+    "name_ms": "IKAN JENAHAK (KEPINGAN)",
+    "name_en": "Grouper / jenahak (sliced)"
+  },
+  {
+    "item_code": 1916,
+    "name_ms": "IKAN DEMUDUK/CUPAK/CERMIN (≤ 3 EKOR SEKILOGRAM)",
+    "name_en": "Moonfish / ikan demuduk (≤3 fish per kg)"
+  },
+  {
+    "item_code": 1919,
+    "name_ms": "UDANG PUTIH BESAR (ANTARA 20 HINGGA 30 EKOR SEKILOGRAM)",
+    "name_en": "Large white prawns (20-30 per kg)"
+  },
+  {
+    "item_code": 1921,
+    "name_ms": "IKAN TILAPIA MERAH (ANTARA 2 HINGGA 5 EKOR SEKILOGRAM)",
+    "name_en": "Red tilapia (2-5 fish per kg)"
+  },
+  {
+    "item_code": 1923,
+    "name_ms": "TERUNG BULAT",
+    "name_en": "Round eggplant"
+  },
+  {
+    "item_code": 1926,
+    "name_ms": "CILI AKAR HIJAU",
+    "name_en": "Green chilli (cili akar)"
+  },
+  {
+    "item_code": 1927,
+    "name_ms": "CILI AKAR MERAH",
+    "name_en": "Red chilli (cili akar)"
+  },
+  {
+    "item_code": 1928,
+    "name_ms": "LIMAU KASTURI",
+    "name_en": "Calamansi lime (limau kasturi)"
+  },
+  {
+    "item_code": 1929,
+    "name_ms": "SANTAN KELAPA SEGAR (PEKAT)",
+    "name_en": "Fresh coconut milk (thick)"
+  },
+  {
+    "item_code": 1937,
+    "name_ms": "MINYAK MASAK TULEN CAP SAJI",
+    "name_en": "Saji pure palm cooking oil"
+  },
+  {
+    "item_code": 1938,
+    "name_ms": "MINYAK MASAK TULEN CAP SAJI",
+    "name_en": "Saji pure palm cooking oil"
+  },
+  {
+    "item_code": 1939,
+    "name_ms": "MINYAK MASAK TULEN CAP SAJI",
+    "name_en": "Saji pure palm cooking oil"
+  },
+  {
+    "item_code": 1944,
+    "name_ms": "KACANG SOYA (IMPORT)",
+    "name_en": "Soybeans (imported)"
+  },
+  {
+    "item_code": 1947,
+    "name_ms": "SERBUK PENAIK ROYAL (TIN)",
+    "name_en": "Royal baking powder (tin)"
+  },
+  {
+    "item_code": 1953,
+    "name_ms": "KRIMER MANIS PEKAT CAP SAJI",
+    "name_en": "Saji sweetened condensed creamer"
+  },
+  {
+    "item_code": 1955,
+    "name_ms": "YOGURT MARIGOLD (LOW FAT) (STRAWBERRY)",
+    "name_en": "Marigold low-fat yogurt (strawberry)"
+  },
+  {
+    "item_code": 1960,
+    "name_ms": "SUSU SEGAR KURMA FARM FRESH",
+    "name_en": "Farm Fresh date (kurma) milk"
+  },
+  {
+    "item_code": 1963,
+    "name_ms": "ANMUM ESSENTIAL LANGKAH 4 PERISA ASLI (TANPA GULA TAMBAHAN) - KOTAK",
+    "name_en": "Anmum Essential Step 4 original, no added sugar (box)"
+  },
+  {
+    "item_code": 1964,
+    "name_ms": "QUAKER OATS INSTANT OATMEALS",
+    "name_en": "Quaker instant oatmeal"
+  },
+  {
+    "item_code": 1966,
+    "name_ms": "MILNA BISKUT RUSK (PELBAGAI PERISA)",
+    "name_en": "Milna rusk biscuits (assorted flavours)"
+  },
+  {
+    "item_code": 1976,
+    "name_ms": "MAGGI MI SEGERA PERISA KARI",
+    "name_en": "Maggi instant noodles, curry flavour"
+  },
+  {
+    "item_code": 1984,
+    "name_ms": "SYAMPU HEAD & SHOULDERS (SMOOTH & SILKY)",
+    "name_en": "Head & Shoulders shampoo (Smooth & Silky)"
+  },
+  {
+    "item_code": 1987,
+    "name_ms": "DEODORAN NIVEA MAN (BLACK & WHITE INVISIBLE - ORIGINAL)",
+    "name_en": "Nivea Men deodorant (Black & White Invisible, original)"
+  },
+  {
+    "item_code": 1988,
+    "name_ms": "DEODORAN NIVEA (EXTRA BRIGHTENING)",
+    "name_en": "Nivea deodorant (Extra Brightening)"
+  },
+  {
+    "item_code": 1989,
+    "name_ms": "DEODORAN REXONA MEN (SPORT DEFENSE)",
+    "name_en": "Rexona Men deodorant (Sport Defense)"
+  },
+  {
+    "item_code": 1990,
+    "name_ms": "DEODORAN REXONA (POWDER DRY BRIGHTENING)",
+    "name_en": "Rexona deodorant (Powder Dry Brightening)"
+  },
+  {
+    "item_code": 1992,
+    "name_ms": "SABUN SERBUK ATTACK (AROMA FRESH + COLOUR)",
+    "name_en": "Attack washing powder (Aroma Fresh + Colour)"
+  },
+  {
+    "item_code": 1998,
+    "name_ms": "PENCUCI PELBAGAI GUNA DETTOL (LAVENDER)",
+    "name_en": "Dettol multi-purpose cleaner (lavender)"
+  },
+  {
+    "item_code": 1999,
+    "name_ms": "PENCUCI PELBAGAI GUNA MR MUSCLE (LAVENDER)",
+    "name_en": "Mr Muscle multi-purpose cleaner (lavender)"
+  },
+  {
+    "item_code": 2000,
+    "name_ms": "PENCUCI PELBAGAI GUNA AJAX FABULOSO (LAVENDER)",
+    "name_en": "Ajax Fabuloso multi-purpose cleaner (lavender)"
+  },
+  {
+    "item_code": 2001,
+    "name_ms": "DUMEX DUPRO 2 (RUMUSAN SUSULAN)",
+    "name_en": "Dumex Dupro 2 follow-on formula"
+  },
+  {
+    "item_code": 2002,
+    "name_ms": "PELUNTUR CLOROX (ORIGINAL)",
+    "name_en": "Clorox bleach (original)"
+  },
+  {
+    "item_code": 2009,
+    "name_ms": "DUTCH LADY 123 (PELBAGAI PERISA)",
+    "name_en": "Dutch Lady 123 (assorted flavours)"
+  },
+  {
+    "item_code": 2010,
+    "name_ms": "DUTCH LADY 456 (PELBAGAI PERISA)",
+    "name_en": "Dutch Lady 456 (assorted flavours)"
+  },
+  {
+    "item_code": 2011,
+    "name_ms": "KIUB SUP TOM YAM (MAGGI)",
+    "name_en": "Maggi tom yam stock cubes"
+  },
+  {
+    "item_code": 2014,
+    "name_ms": "ENFAGROW A+ MIND PRO LANGKAH 3 (PELBAGAI PERISA) (KOTAK)",
+    "name_en": "Enfagrow A+ Mind Pro Step 3 (assorted flavours, box)"
+  },
+  {
+    "item_code": 2019,
+    "name_ms": "NESCAFE 3 IN 1 ORIGINAL (AROMATIC & BALANCED)",
+    "name_en": "Nescafe 3-in-1 Original (Aromatic & Balanced)"
+  },
+  {
+    "item_code": 2020,
+    "name_ms": "YOGURT LACTEL (FAT FREE) (STRAWBERRY)",
+    "name_en": "Lactel fat-free yogurt (strawberry)"
+  },
+  {
+    "item_code": 2022,
+    "name_ms": "LEPAAN BUTTERCUP",
+    "name_en": "Buttercup spread"
+  },
+  {
+    "item_code": 2025,
+    "name_ms": "SUSU TEPUNG SEGERA EVERYDAY",
+    "name_en": "Everyday instant milk powder"
+  },
+  {
+    "item_code": 2027,
+    "name_ms": "NAN LANGKAH 1 RUMUSAN BAYI (KOTAK)",
+    "name_en": "NAN Step 1 infant formula (box)"
+  },
+  {
+    "item_code": 2030,
+    "name_ms": "NAN LANGKAH 2 RUMUSAN SUSULAN (KOTAK)",
+    "name_en": "NAN Step 2 follow-on formula (box)"
+  },
+  {
+    "item_code": 2031,
+    "name_ms": "S-26 RUMUSAN BAYI LANGKAH 1 - (KOTAK)",
+    "name_en": "S-26 Step 1 infant formula (box)"
+  },
+  {
+    "item_code": 2045,
+    "name_ms": "IKAN SELAYANG/SARDIN (ANTARA 8-12 EKOR SEKILOGRAM)",
+    "name_en": "Sardine / ikan selayang (8-12 fish per kg)"
+  },
+  {
+    "item_code": 2047,
+    "name_ms": "IKAN TONGKOL/AYA/KAYU HITAM/PUTIH (ANTARA 1 HINGGA 2 EKOR SEKILOGRAM)",
+    "name_en": "Tuna / ikan tongkol (1-2 fish per kg)"
+  },
+  {
+    "item_code": 2056,
+    "name_ms": "SABUN PENCUCI AXION PASTE (PELBAGAI JENIS)",
+    "name_en": "Axion dishwashing paste (assorted)"
+  },
+  {
+    "item_code": 2060,
+    "name_ms": "SUSU MARIGOLD HL",
+    "name_en": "Marigold HL milk"
+  },
+  {
+    "item_code": 2062,
+    "name_ms": "S-26 SMA RUMUSAN BAYI LANGKAH 1 - (KOTAK) (550g)",
+    "name_en": "S-26 SMA Step 1 infant formula (box, 550g)"
+  },
+  {
+    "item_code": 2066,
+    "name_ms": "BERAS PUTIH CAP FAIZA EMAS (IMPORT)",
+    "name_en": "Faiza Emas white rice (imported)"
+  },
+  {
+    "item_code": 2068,
+    "name_ms": "BERAS CAP JASMINE SUPER 5 SPECIAL (IMPORT)",
+    "name_en": "Jasmine Super 5 Special rice (imported)"
+  },
+  {
+    "item_code": 2086,
+    "name_ms": "SAWI PENDEK/JEPUN/SIOW PAK CHOY (1KG)",
+    "name_en": "Pak choy / Japanese mustard (sawi pendek)"
+  },
+  {
+    "item_code": 2087,
+    "name_ms": "LOBAK PUTIH (1KG)",
+    "name_en": "White radish (daikon)"
+  },
+  {
+    "item_code": 2102,
+    "name_ms": "SABUN MANDIAN LIFEBUOY (PELBAGAI JENIS)",
+    "name_en": "Lifebuoy bath soap (assorted)"
+  },
+  {
+    "item_code": 2103,
+    "name_ms": "SABUN MANDIAN DETTOL (PELBAGAI JENIS)",
+    "name_en": "Dettol bath soap (assorted)"
+  },
+  {
+    "item_code": 2104,
+    "name_ms": "FERNLEAF 1-3 TAHUN (PELBAGAI PERISA)",
+    "name_en": "Fernleaf 1-3 years (assorted flavours)"
+  },
+  {
+    "item_code": 2105,
+    "name_ms": "FERNLEAF 4-6 TAHUN (PELBAGAI PERISA)",
+    "name_en": "Fernleaf 4-6 years (assorted flavours)"
+  },
+  {
+    "item_code": 2106,
+    "name_ms": "SYAMPU REJOICE (PELBAGAI JENIS)",
+    "name_en": "Rejoice shampoo (assorted)"
+  },
+  {
+    "item_code": 2107,
+    "name_ms": "UBI KENTANG IMPORT (PAKISTAN)",
+    "name_en": "Potatoes, imported (Pakistan)"
+  },
+  {
+    "item_code": 2108,
+    "name_ms": "SYAMPU SUNSILK (PELBAGAI JENIS)",
+    "name_en": "Sunsilk shampoo (assorted)"
+  },
+  {
+    "item_code": 2109,
+    "name_ms": "SABUN SERBUK BREEZE (PELBAGAI JENIS)",
+    "name_en": "Breeze washing powder (assorted)"
+  },
+  {
+    "item_code": 2110,
+    "name_ms": "SABUN DETERGEN TOP (PELBAGAI JENIS)",
+    "name_en": "Top detergent (assorted)"
+  },
+  {
+    "item_code": 2111,
+    "name_ms": "SABUN DAIA EXCELLENT WASHING POWER (PELBAGAI JENIS)",
+    "name_en": "Daia Excellent washing powder (assorted)"
+  },
+  {
+    "item_code": 2112,
+    "name_ms": "SABUN PENCUCI SUNLIGHT (PELBAGAI JENIS)",
+    "name_en": "Sunlight dishwashing liquid (assorted)"
+  },
+  {
+    "item_code": 2113,
+    "name_ms": "KORDIAL SUNQUICK (OREN)",
+    "name_en": "Sunquick cordial (orange)"
+  },
+  {
+    "item_code": 2114,
+    "name_ms": "MILO (PAKET)",
+    "name_en": "Milo (pack)"
+  },
+  {
+    "item_code": 2115,
+    "name_ms": "INDOCAFE (ORIGINAL BLEND) (PAKET)",
+    "name_en": "Indocafe Original Blend (pack)"
+  }
+]

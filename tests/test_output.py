@@ -129,3 +129,15 @@ def test_town_aliases_from_config_are_flagged():
     assert {k for k, v in towns.items() if v["alias"]} == set(aliases)
     for town, slug in aliases.items():
         assert towns[town]["slug"] == slug
+
+
+def test_stale_days_reaches_the_site():
+    # One threshold for the refresh gate (config.toml) and the site's stale banner (reads manifest.json).
+    assert MANIFEST["stale_days"] == CFG["stale_days"]
+
+
+def test_item_scope_lists_exactly_the_shown_items(districts):
+    scope = json.loads((OUT / "item_scope.json").read_text())
+    shown = {i["item_code"] for d in districts.values() for i in d["items"]}
+    assert [r["item_code"] for r in scope] == sorted(shown)
+    assert MANIFEST["translations"]["in_scope"] == len(shown)
